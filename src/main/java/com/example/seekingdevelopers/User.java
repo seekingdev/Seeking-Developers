@@ -41,8 +41,11 @@ public class User {
     @JoinColumn(name="dev_type_id")
     private Dev_type dev_type;
 
-
-
-
-
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "favorite_users",
+            joinColumns={@JoinColumn(name = "picked_user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "picking_user_id")}
+    )
+    private List<User> favorite_users;
 }
