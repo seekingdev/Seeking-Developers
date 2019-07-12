@@ -1,4 +1,4 @@
-package com.example.seekingdevelopers;
+package com.example.seekingdevelopers.models;
 
 
 import javax.persistence.*;
