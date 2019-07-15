@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials/head :: head(#{users.username+'''s Profile'})">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+<body>
+<nav th:replace="partials/navbar :: nav"></nav>
+<main class="container-fluid w-50 pt-3">
+    <div class="card">
+        <div class="col-12" th:text="#{users.username+'''s Profile'}">
+            User's Profile
+        </div>
+
+        <div th:src="@{users.photo}">
+        </div>
+
+        <div th:text="${users.bio}">
+        </div>
+
+        <div>
+
+        </div>
+
+    </div>
+</main>
+</body>
+</html>
