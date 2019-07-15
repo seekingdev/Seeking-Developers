@@ -6,21 +6,26 @@
 </head>
 <body>
 
-    <ul>
-        <li>
-            <a th:href="@{/}"><img src="../img/filler-img.png"/>Home</a>
-        </li>
-        <li>
-            <a th:href="@{/login}">Login</a>
-        </li>
-        <li>
-            <a th:href="@{/signup}">Sign-up</a>
-        </li>
-        <li>
-            <a th:href="@{/about">About</a>
-        </li>
-
-    </ul>
+    <nav th:fragment="nav">
+        <ul>
+            <li>
+                <a th:href="@{/}"><img src="../img/filler-img.png"/>Home</a>
+            </li>
+            <li>
+                <a th:href="@{/login}">Login</a>
+            </li>
+            <li>
+                <a th:href="@{/signup}">Sign-up</a>
+            </li>
+            <li>
+                <a th:href="@{/about}">About</a>
+            </li>
+            <li>
+                <a th:href="@{/logout}"><form th:action="@{/logout}" th:method="post">
+                </form>Logout</a>
+            </li>
+        </ul>
+    </nav>
 
 </body>
 </html>
