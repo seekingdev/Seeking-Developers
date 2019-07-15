@@ -1,5 +1,7 @@
 package com.example.seekingdevelopers.models;
 
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -20,9 +22,10 @@ public class Project {
     @Column(nullable = false)
     private String description;
 
-    @DateTimeFormat
-    @Column(nullable = false)
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date creating_date;
+
 
     @Column(columnDefinition = "Boolean default false")
     private boolean isComplete;

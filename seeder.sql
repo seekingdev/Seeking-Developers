@@ -1,11 +1,10 @@
 USE seeking_db;
 
-<--insert into users (id, email, github, is_admin, linkedin, password, photo, username, dev_type_id) values ();
 insert into users (id, email, github, is_admin, linkedin, password, photo, username, dev_type_id) values (1, 'smumford0@clickbank.net', 'www.github.com/dummy1', 1, 'www.linkedin.com/dummy1', '8lWHK72', 'http://dummyimage.com/233x163.png/cc0000/ffffff', 'debbens0', 1));
 insert into users (id, email, github, is_admin, linkedin, password, photo, username, dev_type_id) values (2, 'dpottle1@instagram.com', 'www.github.com/dummy2', 0, 'www.linkedin.com/dummy2', 'bA1DZKyRJuV', 'http://dummyimage.com/117x218.bmp/cc0000/ffffff', 'ledgeon1', 2);
 insert into users (id, email, github, is_admin, linkedin, password, photo, username, dev_type_id) values (3, 'fcasbourne2@ning.com', 'www.github.com/dummy3', 1, 'www.linkedin.com/dummy3', 'gQA8VDbTu', 'http://dummyimage.com/129x112.png/5fa2dd/ffffff', 'emichelmore2', 3);
 
-<--insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values ();
+insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values ();
 insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values (1, '11/27/2018', 'Thylogale stigmatica', 1, 'Dangerous Liaisons', 1, 1);
 insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values (2, '5/11/2019', 'Priodontes maximus', 0, 'Swept Away', 1, 2);
 insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values (3, '10/22/2018', 'Antidorcas marsupialis', 0, 'Ali G Indahouse', 1, 3);
@@ -27,12 +26,10 @@ insert into projects (id, creating_date, description, is_complete, title, creato
 insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values (19, '4/29/2019', 'Ara chloroptera', 1, 'Play it to the Bone', 3, 1);
 insert into projects (id, creating_date, description, is_complete, title, creator_id, dev_type_id) values (20, '9/25/2018', 'Megaderma spasma', 0, 'Whole Wide World, The', 3, 2);
 
-<--insert into dev_type (id, title) values ();
 insert into dev_type (id, title) values (1, 'front-end');
 insert into dev_type (id, title) values (2, 'back-end');
 insert into dev_type (id, title) values (3, 'full-stack');
 
-<--insert into languages (id, language) values ();
 insert into languages (id, language) values (1, 'HTML');
 insert into languages (id, language) values (2, 'jQuery');
 insert into languages (id, language) values (3, 'CSS');
@@ -44,17 +41,14 @@ insert into languages (id, language) values (8, 'Bootstrap Framework');
 
 
 
-<--insert into user_languages (languages_id, users_id) values ();
 insert into user_languages (languages_id, users_id) values (1, 1);
 insert into user_languages (languages_id, users_id) values (2, 2);
 insert into user_languages (languages_id, users_id) values (3, 3);
 
-<--insert into favorite_users (picked_user_id, picking_user_id) values ();
 insert into favorite_users (picked_user_id, picking_user_id) values (2, 1);
 insert into favorite_users (picked_user_id, picking_user_id) values (2, 3);
 insert into favorite_users (picked_user_id, picking_user_id) values (1, 3);
 
-<--insert into user_projects (user_id, project_id) values ();
 insert into user_projects (user_id, project_id) values (1, 1);
 insert into user_projects (user_id, project_id) values (1, 2);
 insert into user_projects (user_id, project_id) values (1, 3);
