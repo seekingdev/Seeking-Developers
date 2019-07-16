@@ -2,28 +2,67 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="partials/head :: head(${users.username+'''s Profile'})">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
 <nav th:replace="partials/navbar :: nav"></nav>
 
-    <div class="container-fluid">
-        <div class="row navRow ">
-            <div id="LogoCol" class="col-md-auto col-sm-4 mr-md-auto">
-                <div class="row">
-                    <div id="Logo" class="col-md-4 px-sm-0 mx-sm-auto text-center hoverGrow"><a href="#home"><img class="logo" src="img/logo.png" alt=""></a></div>
-                    <div class="w-100 d-block d-md-none"></div>
-                    <div id="LogoText" class="col-md-8 pl-md-4 px-sm-0 justify-content-center"><p>codeup design</p></div>
+    <br>
+    <br>
+
+    <div class="user-container">
+        <div class="row">
+            <div class="col-lg-1 col-md-1"></div>
+                <div class="card col-lg-4 col-md-3">
+                    <img class="user" src="../img/filler-hyaluron-wien.jpg">
+                    <br>
+                    <h3 align="center">Insert username script here:</h3>
+                    <h5 align="center">Insert email script here:</h5>
+                    <h5 align="center">Insert rating script here:</h5>
+                </div>
+
+            <div class="col-lg-1 col-md-1"></div>
+            <!--divider-->
+
+                <div class="card col-lg-5 col-md-4">
+                    <div class="card-body">
+                        <h3 class="card-title" align="center">Biography:</h3>
+                        <p class="card-text">Insert bio script here:</p>
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <h3 class="card-title" align="center">Languages:</h3>
+                        <p class="card-text">Insert languages script here:</p>
+                    </div>
                 </div>
             </div>
-            <div id="ServicesLink" class="col navCol px-2 ml-auto ml-sm-auto hoverGrow"><a href="#">SERVICES</a></div>
-            <div id="WorkLink" class="col navCol px-2 hoverGrow"><a href="#">WORK</a></div>
-            <div id="BlogLink" class="col navCol px-2 hoverGrow"><a href="#">BLOG</a></div>
-            <div id="ContactLink" class="col navCol px-2 mr-auto mr-sm-auto mr-md-0 hoverGrow"><a href="#">CONTACT</a></div>
         </div>
-    </div>
+<br>
 
-    <div class="col-md-4 px-sm-0 mx-sm-auto text-center hoverGrow">
-        <img class="logo" src="../img/filler-hyaluron-wien.jpg">
+    <div class="user-container">
+        <div class="row">
+
+            <div class="col-lg-1 col-md-1"></div>
+
+            <div class="card col-lg-3 col-md-2" align="center">
+                <img class="current-project" src="../img/comp.jpg">
+                <br>
+                <h3>Insert current project script here:</h3>
+            </div>
+
+            <div class="card col-lg-3 col-md-2" align="center">
+                <img class="current-project" src="../img/comp.jpg">
+                <br>
+                <h3>Add project here:</h3>
+            </div>
+
+            <div class="card col-lg-4 col-md-3" align="center">
+                <img class="current-project" src="../img/comp.jpg">
+                <br>
+                <h5>Insert list of projects script:</h5>
+            </div>
+
+        </div>
     </div>
 
 </body>
