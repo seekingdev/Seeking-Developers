@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="paritals/header :: head">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Search</title>
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="card">
         <div class="card-body">
         <h3 th:text="projects.title" class="card-title"></h3>
-        <h4 th:text="projects.creator" th:href="@{/profile.html}" class="card-subtitle mb-2 text-muted card-link"></h4>
+        <a th:text="projects.creator" th:href="@{/profile.html}" class="card-subtitle mb-2 text-muted card-link"></a>
         <h5 th:text="projects.isComplete" class="card-subtitle mb-2 text-muted"></h5>
         <p th:text="projects.description" class="card-text"></p>
         <h5 th:text="projects.dev_type" class="card-subtitle mb-2 text-muted"></h5>
