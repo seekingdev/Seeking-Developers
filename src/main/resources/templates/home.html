@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="partials/header :: header">
     <meta charset="UTF-8"/>
     <title>Seeking</title>
 </head>
@@ -25,6 +25,8 @@
     <div>
         <img src="img/" alt="dashboard" />
     </div>
+
+<footer th:replace="partials/footer :: footer"></footer>
 
 </body>
 </html>
