@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="partials/header :: header">
     <meta charset="UTF-8" />
     <title>Sign up</title>
 </head>
@@ -43,5 +43,8 @@
     </article>
 
 </main>
+
+<footer th:replace="partials/footer :: footer"></footer>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="partials/header :: header">
     <meta charset="UTF-8" />
     <title>Create Project</title>
 </head>
@@ -19,6 +19,8 @@
     <br />
     <input type="submit" />
 </form>
+
+<footer th:replace="partials/footer :: footer"></footer>
 
 </body>
 </html>
