@@ -34,16 +34,14 @@ public class AuthenticationController {
         return "users/signup";
     }
     @PostMapping("/sign-up")
-    public String saveUser(@ModelAttribute User user, Errors validation, Model model){
-//        if(userDao.findByUsername(user.getUsername()) != null ){
-//            validation.rejectValue("username",null, "Username is already in use");
-//        }
-//        if(validation.hasErrors()){
-//            model.addAttribute("errors",validation);
-//            return "users/signUp";
-//        }
-        System.out.println(user.getUsername());
-        System.out.println(user.getPassword());
+    public String saveUser(@Valid User user, Errors validation, Model model){
+        if(userDao.findByUsername(user.getUsername()) != null ){
+            validation.rejectValue("username",null, "Username is already in use");
+        }
+        if(validation.hasErrors()){
+            model.addAttribute("errors",validation);
+            return "users/signUp";
+        }
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userDao.save(user);

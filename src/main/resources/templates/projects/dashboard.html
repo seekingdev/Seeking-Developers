@@ -8,16 +8,17 @@
 
 <nav th:replace="partials :: nav"/>
 
-<!--<div th:replace="partials :: projects"/>-->
 
     <h2>Welcome to your Dahsboard!</h2>
+
     <div>
         <h3 th:text="projects.title"></h3>
-        <h5 th:text="projects.creator"></h5>
+        <h4 th:text="projects.creator"></h4>
         <h5 th:text="projects.isComplete"></h5>
         <p th:text="projects.description"></p>
-        <h4 th:text="projects.dev_type"></h4>
-        <h4 th:text="projects.creating_date"></h4>
+
+        <h5 th:text="projects.dev_type"></h5>
+        <h5 th:text="projects.creating_date"></h5>
     </div>
 
 

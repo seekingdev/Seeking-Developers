@@ -1,27 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="partials/head :: head(#{users.username+'''s Profile'})">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Profile</title>
+    <div th:replace=" /partials/header :: header" ></div>
 </head>
 <body>
-<nav th:replace="partials/navbar :: nav"></nav>
-<main class="container-fluid w-50 pt-3">
-    <div class="card">
-        <div class="col-12" th:text="#{users.username+'''s Profile'}">
-            User's Profile
+<nav th:replace=" /partials/navbar :: nav"></nav>
+
+    <br />
+    <br />
+
+    <div class="user-container" th:each="user : ${user}">
+        <div class="row">
+            <div class="col-lg-1 col-md-1"></div>
+                <div class="card col-lg-4 col-md-3">
+                    <img class="user" src="../img/filler-hyaluron-wien.jpg" />
+                    <br />
+                    <h3 align="center" th:text="${user.username}">Insert username script here:</h3>
+                    <h5 align="center" th:text="${user.email}">Insert email script here:</h5>
+                    <h5 align="center">Insert rating script here:</h5>
+                </div>
+
+            <div class="col-lg-1 col-md-1"></div>
+            <!--divider-->
+
+                <div class="card col-lg-5 col-md-4">
+                    <div class="card-body">
+                        <h3 class="card-title" align="center">Biography:</h3>
+                        <p class="card-text">Insert bio script here: </p>
+                    </div>
+                    <hr />
+                    <div class="card-body">
+                        <h3 class="card-title" align="center">Languages:</h3>
+                        <p class="card-text">Insert languages script here:</p>
+                    </div>
+                </div>
+            </div>
         </div>
+<br />
 
-        <div th:src="@{users.photo}">
+    <div class="user-container">
+        <div class="row">
+
+            <div class="col-lg-1 col-md-1"></div>
+
+            <div class="card col-lg-3 col-md-2" align="center" th:each="project : ${lastProject}">
+                <br />
+                <h3 th:text="${project.title}">Insert current project script here:</h3>
+                <p th:text="*{project.description}"></p>
+            </div>
+
+            <div class="card col-lg-3 col-md-2" align="center">
+                <img class="current-project" src="../img/comp.jpg" />
+                <br />
+                <h3>Add project here:</h3>
+            </div>
+
+            <div class="card col-lg-4 col-md-3" align="center">
+                <img class="current-project" src="../img/comp.jpg" />
+                <br />
+                <h5>Insert list of projects script:</h5>
+            </div>
+
         </div>
-
-        <div th:text="${users.bio}">
-        </div>
-
-        <div>
-
-        </div>
-
     </div>
-</main>
+
 </body>
 </html>
+

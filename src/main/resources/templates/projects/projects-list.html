@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Project List Page</title>
+    <div th:replace=”/partials/header :: header”></div>
+    <link rel="stylesheet" href="../css/projects-list.css" />
+
+</head>
+<body>
+<nav th:replace="partials/navbar :: nav"></nav>
+
+<br />
+<br />
+
+<div class="card-deck">
+    <div class="project-container">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="column-title">
+                        <h1>Project Title:</h1>
+                    </div>
+                    <div class="column-date">
+                        <h5>Date Created:</h5>
+                    </div>
+
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item">Created By:</li>
+                <li class="list-group-item description">Description:</li>
+                <li class="list-group-item">Help Needed:</li>
+                <li class="list-group-item">Tags:</li>
+                <li class="list-group-item">Is Complete?</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="project-container">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="column-title">
+                        <h1>Project Title:</h1>
+                    </div>
+                    <div class="column-date">
+                        <h5>Date Created:</h5>
+                    </div>
+
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item">Created By:</li>
+                <li class="list-group-item description">Description:</li>
+                <li class="list-group-item">Help Needed:</li>
+                <li class="list-group-item">Tags:</li>
+                <li class="list-group-item">Is Complete?</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

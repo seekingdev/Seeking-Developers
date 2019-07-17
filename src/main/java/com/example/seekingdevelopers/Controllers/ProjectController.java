@@ -1,5 +1,6 @@
 package com.example.seekingdevelopers.Controllers;
 
+import com.example.seekingdevelopers.Repositories.ProjectRepository;
 import com.example.seekingdevelopers.Repositories.UserRepository;
 import com.example.seekingdevelopers.models.Project;
 import com.example.seekingdevelopers.models.User;
@@ -12,7 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ProjectController {
+    final private ProjectRepository projectDao;
 
+    public ProjectController(ProjectRepository projectDao){
+        this.projectDao = projectDao;
+    }
 
     @GetMapping("/projects/create")
     public String create(Model model){
@@ -23,6 +28,7 @@ public class ProjectController {
     public String create(@ModelAttribute Project project, Model model){
         User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         project.setCreator(creator);
+        projectDao.save(project);
         return "projects/create";
     }
 

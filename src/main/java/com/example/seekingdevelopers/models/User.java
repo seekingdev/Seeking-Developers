@@ -1,6 +1,8 @@
 package com.example.seekingdevelopers.models;
 
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,12 +15,15 @@ public class User {
     @Column(columnDefinition = "int(11) unsigned")
     private long id;
 
+    @NotBlank(message = "Must have a username.")
     @Column(nullable = false)
     private String username;
 
+    @NotBlank(message = "Must have a password.")
     @Column(nullable = false)
     private String password;
 
+    @NotBlank(message = "Must have an email.")
     @Column(nullable = false)
     private String email;
 
@@ -72,6 +77,8 @@ public class User {
         this.email = email;
     }
     public User(){};
+
+    public long getId(){return this.id;}
 
     public String getUsername() {
         return username;
