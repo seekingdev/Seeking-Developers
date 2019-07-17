@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="paritals/header :: head">
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<nav th:replace="paritals/navbar :: nav"></nav>
+
+    <div>
+        <div>
+            <h3 th:text="projects.title"></h3>
+            <h4 th:text="projects.creator"></h4>
+            <h5 th:text="projects.isComplete"></h5>
+            <p th:text="projects.description"></p>
+            <h5 th:text="projects.dev_type"></h5>
+            <h5 th:text="projects.creating_date"></h5>
+        </div>
+    </div>
+
+<footer th:replace="partials/footer :: footer"></footer>
+</body>
+</html>
