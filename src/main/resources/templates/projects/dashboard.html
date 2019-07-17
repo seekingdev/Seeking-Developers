@@ -11,14 +11,13 @@
 
     <h2>Welcome to your Dahsboard!</h2>
 
-    <div>
-        <h3 th:text="projects.title"></h3>
-        <h4 th:text="projects.creator"></h4>
-        <h5 th:text="projects.isComplete"></h5>
-        <p th:text="projects.description"></p>
+    <div th:each="projects : ${listOfProjects}">
+        <h3 th:text="${projects.title}"></h3>
+        <h4 th:text="${projects.creator.username}"></h4>
+        <p th:text="${projects.description}"></p>
 
-        <h5 th:text="projects.dev_type"></h5>
-        <h5 th:text="projects.creating_date"></h5>
+        <h5 th:text="${projects.dev_type}"></h5>
+        <h5 th:text="${projects.creatingDate}"></h5>
     </div>
 
 <footer th:replace="partials/footer :: footer"></footer>
