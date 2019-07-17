@@ -78,6 +78,8 @@ public class User {
     }
     public User(){};
 
+    public long getId(){return this.id;}
+
     public String getUsername() {
         return username;
     }
