@@ -17,4 +17,6 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
 
      ArrayList<Project> findAllByisCompleteFalseOrderByCreatingDateDesc();
 
+     Project findDistinctById(long id);
+
 }

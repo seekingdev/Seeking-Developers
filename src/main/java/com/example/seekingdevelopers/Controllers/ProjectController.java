@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -30,6 +31,14 @@ public class ProjectController {
         project.setCreator(creator);
         projectDao.save(project);
         return "projects/create";
+    }
+
+    @GetMapping("/projects/{id}/single-project")
+    public String singleProject(@PathVariable long id, Model model){
+        Project singleProject = projectDao.findDistinctById(id);
+
+        model.addAttribute("project", singleProject);
+        return "projects/single-project";
     }
 
 
