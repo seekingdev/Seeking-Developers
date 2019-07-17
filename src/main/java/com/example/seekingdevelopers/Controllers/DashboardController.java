@@ -8,7 +8,8 @@ public class DashboardController {
 
     @GetMapping("/dashboard")
     public String dashboard(){
-        return "dashboard";
+
+        return "projects/dashboard";
     }
 
 }
