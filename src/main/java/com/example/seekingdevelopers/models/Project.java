@@ -1,8 +1,6 @@
 package com.example.seekingdevelopers.models;
 
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -24,7 +22,7 @@ public class Project {
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    private Date creating_date;
+    private Date creatingDate;
 
 
     @Column(columnDefinition = "Boolean default false")
@@ -46,6 +44,7 @@ public class Project {
         this.dev_type = dev_type;
         this.creator = creator;
     }
+
 
 
     public long getId() {
@@ -72,12 +71,12 @@ public class Project {
         this.description = description;
     }
 
-    public Date getCreating_date() {
-        return creating_date;
+    public Date getCreatingDate() {
+        return creatingDate;
     }
 
-    public void setCreating_date(Date creating_date) {
-        this.creating_date = creating_date;
+    public void setCreatingDate(Date creatingDate) {
+        this.creatingDate = creatingDate;
     }
 
     public boolean isComplete() {
