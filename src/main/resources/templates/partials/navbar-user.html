@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="partials/header :: header">
-    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8" />
     <title></title>
 </head>
 <body>
 
-<nav th:fragment="user-nav"></nav>
-
-<nav th:fragment="nav" class="navbar navbar-expand">
+<nav th:fragment="user-nav" class="navbar navbar-expand">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,9 +25,6 @@
                 <a th:href="@{/projects/create}" class="nav-link">Create Project</a>
             </li>
             <li class="nav-item">
-                <a th:href="@{/about}" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
                 <a th:href="@{/logout}" class="nav-link"><form th:action="@{/logout}" th:method="post">
                 </form>Logout</a>
             </li>
@@ -40,8 +35,6 @@
         </form>
     </div>
 </nav>
-
-<footer th:replace="partials/footer :: footer"></footer>
 
 </body>
 </html>
