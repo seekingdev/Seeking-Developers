@@ -7,14 +7,14 @@
 <body>
 <nav th:replace="paritals/navbar :: nav"></nav>
 
-    <div>
-        <div>
-            <h3 th:text="projects.title"></h3>
-            <h4 th:text="projects.creator"></h4>
-            <h5 th:text="projects.isComplete"></h5>
-            <p th:text="projects.description"></p>
-            <h5 th:text="projects.dev_type"></h5>
-            <h5 th:text="projects.creating_date"></h5>
+    <div class="card">
+        <div class="card-body">
+        <h3 th:text="projects.title" class="card-title"></h3>
+        <h4 th:text="projects.creator" th:href="@{/profile.html}" class="card-subtitle mb-2 text-muted card-link"></h4>
+        <h5 th:text="projects.isComplete" class="card-subtitle mb-2 text-muted"></h5>
+        <p th:text="projects.description" class="card-text"></p>
+        <h5 th:text="projects.dev_type" class="card-subtitle mb-2 text-muted"></h5>
+        <h5 th:text="projects.creating_date" class="card-subtitle mb-2 text-muted"></h5>
         </div>
     </div>
 
