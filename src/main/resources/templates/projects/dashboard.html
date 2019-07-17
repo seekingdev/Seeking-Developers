@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:replace="partials/header :: header">
     <meta charset="UTF-8"/>
     <title>dashboard</title>
 </head>
 <body>
 
-<nav th:replace="partials :: nav"/>
+<nav th:replace="partials/navbar :: nav"/>
 
-<!--<div th:replace="partials :: projects"/>-->
 
     <h2>Welcome to your Dahsboard!</h2>
 
-    <div>
-        <h3 th:text="projects.title"></h3>
-        <h5 th:text="projects.creator"></h5>
-        <h5 th:text="projects.isComplete"></h5>
-        <p th:text="projects.description"></p>
-        <h4 th:text="projects.dev_type"></h4>
-        <h4 th:text="projects.creating_date"></h4>
+    <div th:each="projects : ${listOfProjects}">
+        <h3 th:text="${projects.title}"></h3>
+        <h4 th:text="${projects.creator.username}"></h4>
+        <p th:text="${projects.description}"></p>
+        <h5 th:text="${projects.dev_type}"></h5>
+        <h5 th:text="${projects.creatingDate}"></h5>
+        <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
+            <input type="hidden" name="idEdit" th:value="${projects.id}" />
+            <button type="submit" class="btn btn-primary">View this project</button>
+        </form>
     </div>
 
+<footer th:replace="partials/footer :: footer"></footer>
 
 </body>
 </html>
