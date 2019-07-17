@@ -30,7 +30,7 @@ public class ProjectController {
         User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         project.setCreator(creator);
         projectDao.save(project);
-        return "projects/create";
+        return "redirect:/dashboard";
     }
 
     @GetMapping("/projects/{id}/single-project")
