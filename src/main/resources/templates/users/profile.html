@@ -10,14 +10,14 @@
     <br />
     <br />
 
-    <div class="user-container">
+    <div class="user-container" th:each="user : ${user}">
         <div class="row">
             <div class="col-lg-1 col-md-1"></div>
                 <div class="card col-lg-4 col-md-3">
                     <img class="user" src="../img/filler-hyaluron-wien.jpg" />
                     <br />
-                    <h3 align="center">Insert username script here:</h3>
-                    <h5 align="center">Insert email script here:</h5>
+                    <h3 align="center" th:text="${user.username}">Insert username script here:</h3>
+                    <h5 align="center" th:text="${user.email}">Insert email script here:</h5>
                     <h5 align="center">Insert rating script here:</h5>
                 </div>
 
@@ -44,10 +44,10 @@
 
             <div class="col-lg-1 col-md-1"></div>
 
-            <div class="card col-lg-3 col-md-2" align="center">
-                <img class="current-project" src="../img/comp.jpg" />
+            <div class="card col-lg-3 col-md-2" align="center" th:each="project : ${lastProject}">
                 <br />
-                <h3>Insert current project script here:</h3>
+                <h3 th:text="${project.title}">Insert current project script here:</h3>
+                <p th:text="*{project.description}"></p>
             </div>
 
             <div class="card col-lg-3 col-md-2" align="center">
