@@ -53,7 +53,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(
                         "/ads/create", // only authenticated users can create ads
-                        "/projects/{id}/edit" // only authenticated users can edit ads
+                        "/projects/{id}/edit", // only authenticated users can edit ads
+                        "/profile"
                 )
                 .authenticated()
         ;
