@@ -9,7 +9,20 @@
 <nav th:replace="partials/navbar :: nav"></nav>
 
         <form th:action="@{user/projects/edit/{id}(id=${projects.id})}" th:object="${projects}" method="post">
-
+            <table>
+                <tr>
+                    <td><label>Description</label></td>
+                    <td><input type="text" th:field="*{title}" /></td>
+                </tr>
+                <tr>
+                    <td><label>Deadline</label></td>
+                    <td><input type="text" th:field="*{description}" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Update</button></td>
+                </tr>
+            </table>
         </form>
 
 <footer th:replace="partials/footer :: footer"></footer>
