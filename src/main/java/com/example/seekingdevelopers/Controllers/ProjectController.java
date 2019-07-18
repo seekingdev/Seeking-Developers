@@ -47,9 +47,10 @@ public class ProjectController {
     }
 
     @PostMapping("/projects/{id}/single-project")
-    public String contribute(Project project){
-        emailService.prepareAndSend(project, "Post edited", "Your post was edited");
-        return "projects/single-project";
+    public String contribute(@PathVariable long id){
+        Project singleProject = projectDao.findDistinctById(id);
+        emailService.prepareAndSend(singleProject, "Contributor Applying.", "Someone wants to help you.");
+        return "redirect:/dashboard";
     }
 
 
