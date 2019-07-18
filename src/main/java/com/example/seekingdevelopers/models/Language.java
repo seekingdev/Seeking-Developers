@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "language")
-public class language {
+@Table(name = "languages")
+public class Language {
     @Id
     @GeneratedValue
     @Column(columnDefinition = "int(11) unsigned")
@@ -14,16 +14,16 @@ public class language {
     @Column(nullable = false)
     private String language;
 
-    @ManyToMany(mappedBy = "language")
+    @ManyToMany(mappedBy = "languages")
     private List<User> users;
 
-    public language(long id, String language, List<User> users) {
+    public Language(long id, String language, List<User> users) {
         this.id = id;
         this.language = language;
         this.users = users;
     }
 
-    public language(){}
+    public Language(){}
 
     public long getId() {
         return id;
