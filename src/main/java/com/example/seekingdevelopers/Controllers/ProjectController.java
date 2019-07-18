@@ -10,7 +10,12 @@ import com.example.seekingdevelopers.Services.EmailService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import java.text.Normalizer;
 
 @Controller
 public class ProjectController {
@@ -53,5 +58,36 @@ public class ProjectController {
         return "redirect:/dashboard";
     }
 
+//    @GetMapping("/projects/edit/{id}")
+//    public ModelAndView editProjectView(@PathVariable long projectId){
+//
+//        Project project = this.projectDao.findDistinctById(projectId);
+//        ModelAndView modelAndView = new ModelAndView();
+//
+//        modelAndView.setViewName("project.edit");
+//        modelAndView.addObject("project", project);
+//
+//        return modelAndView;
+//    }
+//
+//    @PostMapping("/projects/edit/{projectId}")
+//    public ModelAndView editProject(HttpServletRequest request, @PathVariable Long projectId, Project projectView,  BindingResult bindingResult){
+//
+//        Project project = this.projectDao.findDistinctById(projectId);
+//
+//        ModelAndView modelAndView = new ModelAndView();
+////        modelAndView.setViewName("project.edit");
+////        modelAndView.addObject("project", projectView);
+//
+//
+//       Normalizer.Form.bind(request, projectView);
+//
+//       this.projectDao.findDistinctById(projectId);
+//
+//       modelAndView.setViewName("redirect: user/projects");
+//
+//        return modelAndView;
+//    }
 
 }
+
