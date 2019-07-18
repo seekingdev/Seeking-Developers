@@ -4,8 +4,8 @@ import com.example.seekingdevelopers.Repositories.Dev_typeRepository;
 import com.example.seekingdevelopers.Repositories.LanguageRepository;
 import com.example.seekingdevelopers.Repositories.UserRepository;
 import com.example.seekingdevelopers.models.Dev_type;
+import com.example.seekingdevelopers.models.Language;
 import com.example.seekingdevelopers.models.User;
-import com.example.seekingdevelopers.models.language;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -58,14 +58,14 @@ public class AuthenticationController {
         user.setDev_type(dev_type);
         user.setPassword(hash);
         user = userDao.save(user);
-        List<language> languageList = new ArrayList<>();
+        List<Language> languageList = new ArrayList<>();
         for (long langId: languages) {
             System.out.println(user.getId());
             System.out.println(langId);
-            language language = languageDao.findOne(langId);
+            Language language = languageDao.findOne(langId);
             languageList.add(language);
         }
-        for (language lang: languageList) {
+        for (Language lang: languageList) {
             System.out.println(lang.getLanguage());
         }
         user.setLanguage(languageList);

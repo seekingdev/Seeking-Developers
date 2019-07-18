@@ -30,20 +30,20 @@ insert into dev_type (id, title) values (1, 'front-end');
 insert into dev_type (id, title) values (2, 'back-end');
 insert into dev_type (id, title) values (3, 'full-stack');
 
-insert into language (id, language) values (1, 'HTML');
-insert into language (id, language) values (2, 'jQuery');
-insert into language (id, language) values (3, 'CSS');
-insert into language (id, language) values (4, 'Javascript');
-insert into language (id, language) values (5, 'Java');
-insert into language (id, language) values (6, 'Spring');
-insert into language (id, language) values (7, 'Node JS');
-insert into language (id, language) values (8, 'Bootstrap Framework');
+insert into languages (id, language) values (1, 'HTML');
+insert into languages (id, language) values (2, 'jQuery');
+insert into languages (id, language) values (3, 'CSS');
+insert into languages (id, language) values (4, 'Javascript');
+insert into languages (id, language) values (5, 'Java');
+insert into languages (id, language) values (6, 'Spring');
+insert into languages (id, language) values (7, 'Node JS');
+insert into languages (id, language) values (8, 'Bootstrap Framework');
 
 
 
-insert into user_languages (languages_id, users_id) values (1, 1);
-insert into user_languages (languages_id, users_id) values (2, 2);
-insert into user_languages (languages_id, users_id) values (3, 3);
+insert into user_languagess (languagess_id, users_id) values (1, 1);
+insert into user_languagess (languagess_id, users_id) values (2, 2);
+insert into user_languagess (languagess_id, users_id) values (3, 3);
 
 insert into favorite_users (picked_user_id, picking_user_id) values (2, 1);
 insert into favorite_users (picked_user_id, picking_user_id) values (2, 3);

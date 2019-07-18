@@ -17,6 +17,10 @@
     <label for="password">Password</label>
     <input id="password" type="password" th:field="*{password}" />
     <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+    <br />
+    <label for="bio">Please enter your BIO</label>
+    <textarea id="bio" th:field="*{bio}"></textarea>
+    <br />
     <label for="dev_type">What type of developer are you?</label>
     <select name="dev_type" id="dev_type">
         <option value="1">Front-End</option>

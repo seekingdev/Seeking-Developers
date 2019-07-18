@@ -30,6 +30,8 @@ public class User {
     @Column(columnDefinition = "Boolean default false")
     private boolean isAdmin;
 
+    @Column(columnDefinition = "TEXT")
+    private String bio;
     @Column
     private String photo;
 
@@ -69,21 +71,22 @@ public class User {
             joinColumns={@JoinColumn(name="languages_id")},
             inverseJoinColumns = {@JoinColumn(name="users_id")}
     )
-    private List<language> language;
+    private List<Language> languages;
 
     public User(User copy) {
         id = copy.id; // This line is SUPER important! Many things won't work if it's absent
         email = copy.email;
         username = copy.username;
         password = copy.password;
-        language = copy.language;
+        languages = copy.languages;
     }
 
 
-    public User(String username, String password, String email){
+    public User(String username, String password, String email, String bio){
         this.username = username;
         this.password = password;
         this.email = email;
+        this.bio = bio;
     }
     public User(){};
 
@@ -153,11 +156,19 @@ public class User {
         this.dev_type = dev_type;
     }
 
-    public List<language> getLanguage() {
-        return language;
+    public List<Language> getLanguage() {
+        return languages;
     }
 
-    public void setLanguage(List<language> language) {
-        this.language = language;
+    public void setLanguage(List<Language> language) {
+        this.languages = language;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 }
