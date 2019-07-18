@@ -30,7 +30,13 @@
             <li class="list-group-item">Help Needed:</li>
             <li class="list-group-item">Tags:</li>
             <li class="list-group-item">Is Complete?</li>
+            <li class="list-group-item">Contributors: </li>
         </ul>
+
+        <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="POST">
+            <input type="hidden" name="joinProject" th:value="${projects.id}" />
+            <button type="submit" class="btn btn-primary">Join this project</button>
+        </form>
 
     </div>
 </div>
