@@ -14,7 +14,7 @@
         <h3 th:text="${projects.title}"></h3>
         <h4 th:text="${projects.creator.username}"></h4>
         <p th:text="${projects.description}"></p>
-        <h5 th:text="${projects.dev_type}"></h5>
+        <h5 th:text="${projects.dev_type.title}"></h5>
         <h5 th:text="${projects.creatingDate}"></h5>
         <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
             <input type="hidden" name="idEdit" th:value="${projects.id}" />
