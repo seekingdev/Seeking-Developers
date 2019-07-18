@@ -33,8 +33,8 @@
             <li class="list-group-item">Contributors: </li>
         </ul>
 
-        <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="POST">
-            <input type="hidden" name="joinProject" th:value="${projects.id}" />
+        <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="POST">
+            <input type="hidden" name="joinProject" th:value="${project.id}" />
             <button type="submit" class="btn btn-primary">Join this project</button>
         </form>
 
