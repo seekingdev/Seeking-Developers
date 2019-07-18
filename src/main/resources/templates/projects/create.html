@@ -17,6 +17,11 @@
     <label for="description">Description</label>
     <input type="text" th:field="*{description}" id="description" />
     <br />
+    <label for="helpNeeded">What type of help is needed?</label>
+    <select name="helpNeeded" id="helpNeeded">
+        <option value="1">Front-End</option>
+        <option value="2">Back-End</option>
+    </select>
     <input type="submit" />
 </form>
 

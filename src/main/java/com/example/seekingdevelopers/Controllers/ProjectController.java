@@ -1,23 +1,24 @@
 package com.example.seekingdevelopers.Controllers;
 
+import com.example.seekingdevelopers.Repositories.Dev_typeRepository;
 import com.example.seekingdevelopers.Repositories.ProjectRepository;
 import com.example.seekingdevelopers.Repositories.UserRepository;
+import com.example.seekingdevelopers.models.Dev_type;
 import com.example.seekingdevelopers.models.Project;
 import com.example.seekingdevelopers.models.User;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ProjectController {
     final private ProjectRepository projectDao;
+    final private Dev_typeRepository dev_typeDao;
+    public ProjectController(ProjectRepository projectDao, Dev_typeRepository dev_typeDao){
 
-    public ProjectController(ProjectRepository projectDao){
         this.projectDao = projectDao;
+        this.dev_typeDao = dev_typeDao;
     }
 
     @GetMapping("/projects/create")
@@ -26,8 +27,10 @@ public class ProjectController {
         return "projects/create";
     }
     @PostMapping("/projects/create")
-    public String create(@ModelAttribute Project project, Model model){
+    public String create(@ModelAttribute Project project, Model model, @RequestParam(name = "helpNeeded") Long id){
         User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Dev_type dev_type = dev_typeDao.findOne(id);
+        project.setDev_type(dev_type);
         project.setCreator(creator);
         projectDao.save(project);
         return "redirect:/dashboard";
