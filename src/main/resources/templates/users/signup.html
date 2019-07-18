@@ -17,6 +17,37 @@
     <label for="password">Password</label>
     <input id="password" type="password" th:field="*{password}" />
     <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+    <label for="dev_type">What type of developer are you?</label>
+    <select name="dev_type" id="dev_type">
+        <option value="1">Front-End</option>
+        <option value="2">Back-End</option>
+        <option value="3">Full-Stack</option>
+    </select>
+    <p>What programming language do you know?</p>
+    <input id="HTML" type="checkbox" name="language" value="1" />
+    <label for="HTML">HTML</label>
+    <br />
+    <input id="jQuery" type="checkbox" name="language" value="2" />
+    <label for="jQuery">jQuery</label>
+    <br />
+    <input id="CSS" type="checkbox" name="language" value="3" />
+    <label for="CSS">CSS</label>
+    <br />
+    <input id="JavaScript" type="checkbox" name="language" value="4" />
+    <label for="JavaScript">JavaScript</label>
+    <br />
+    <input id="Java" type="checkbox" name="language" value="5" />
+    <label for="Java">Java</label>
+    <br />
+    <input id="Spring" type="checkbox" name="language" value="6" />
+    <label for="Spring">Spring</label>
+    <br />
+    <input id="NodeJS" type="checkbox" name="language" value="7" />
+    <label for="NodeJS">NodeJS</label>
+    <br />
+    <input id="Bootstrap" type="checkbox" name="language" value="8" />
+    <label for="Bootstrap">Bootstrap</label>
+
     <input value="Sign me up!" type="submit" />
 </form>
 

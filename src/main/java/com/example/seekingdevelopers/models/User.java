@@ -63,11 +63,20 @@ public class User {
     private List<Project> userProjects;
 
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_languages",
+            joinColumns={@JoinColumn(name="languages_id")},
+            inverseJoinColumns = {@JoinColumn(name="users_id")}
+    )
+    private List<language> language;
+
     public User(User copy) {
         id = copy.id; // This line is SUPER important! Many things won't work if it's absent
         email = copy.email;
         username = copy.username;
         password = copy.password;
+        language = copy.language;
     }
 
 
@@ -134,5 +143,21 @@ public class User {
 
     public void setLinkedin(String linkedin) {
         this.linkedin = linkedin;
+    }
+
+    public Dev_type getDev_type() {
+        return dev_type;
+    }
+
+    public void setDev_type(Dev_type dev_type) {
+        this.dev_type = dev_type;
+    }
+
+    public List<language> getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(List<language> language) {
+        this.language = language;
     }
 }
