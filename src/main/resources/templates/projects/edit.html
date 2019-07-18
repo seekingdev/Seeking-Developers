@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials/header :: header">
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<nav th:replace="partials/navbar :: nav"></nav>
+
+        <form th:action="@{user/projects/edit/{id}(id=${projects.id})}" th:object="${projects}" method="post">
+
+        </form>
+
+<footer th:replace="partials/footer :: footer"></footer>
+</body>
+</html>
