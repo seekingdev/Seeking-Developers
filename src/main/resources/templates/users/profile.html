@@ -47,8 +47,8 @@
                 <br />
                 <h3 th:text="${project.title}">Insert current project script here:</h3>
                 <p th:text="*{project.description}"></p>
-                <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
-                    <input type="hidden" name="idEdit" th:value="${projects.id}" />
+                <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="GET">
+                    <input type="hidden" name="idEdit" th:value="${project.id}" />
                     <button type="submit" class="btn btn-primary">View this project</button>
                 </form>
             </div>
