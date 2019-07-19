@@ -2,12 +2,14 @@ package com.example.seekingdevelopers.Controllers;
 
 import com.example.seekingdevelopers.Repositories.ProjectRepository;
 import com.example.seekingdevelopers.Repositories.UserRepository;
+import com.example.seekingdevelopers.models.Language;
 import com.example.seekingdevelopers.models.Project;
 import com.example.seekingdevelopers.models.User;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +27,11 @@ public class ProfileController {
     @GetMapping("/profile")
     public String loggedInProfile(Model model){
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        model.addAttribute("user",loggedinUser);
+        User currentUser = userDao.findOne(loggedinUser.getId());
+        model.addAttribute("user",currentUser);
+        List<Language> langs = new ArrayList<>();
+        langs = currentUser.getLanguage();
+        model.addAttribute("langs",langs);
         Project lastProject = projectDao.findDistinctTopByCreatorOrderByCreatingDateDesc(loggedinUser);
         model.addAttribute("lastProject",lastProject);
        ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(loggedinUser);
