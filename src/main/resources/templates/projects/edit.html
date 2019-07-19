@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<nav th:replace="partials/navbar :: nav"></nav>
+<nav th:replace="partials/navbar-user :: user-nav"></nav>
 
 
 <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
@@ -31,7 +31,10 @@
         <option value="true">Yes, the project is complete!</option>
     </select>
     <br/>
+    <input type=“hidden” name=“updateProject” th:value=“${project.id}” />
+    <button th:type=“submit” class=“btn btn-primary”>UpdateProject</button>
 </form>
+
 
 
 <footer th:replace="partials/footer :: footer"></footer>
