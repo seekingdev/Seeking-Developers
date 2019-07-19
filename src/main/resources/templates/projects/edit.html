@@ -31,6 +31,8 @@
         <option value="true">Yes, the project is complete!</option>
     </select>
     <br/>
+    <input type="hidden" name="updateProject" th:value="${project.id}" />
+    <button th:type="submit" class="btn btn-primary">UpdateProject</button>
 </form>
 
 
