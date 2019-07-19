@@ -58,29 +58,57 @@ public class ProjectController {
         return "redirect:/dashboard";
     }
 
-//    @GetMapping("/projects/edit/{id}")
+    @GetMapping("/projects/{id}/single-project/edit")
+    public String editProject(@PathVariable long id, Model model){
+        Project editProject = projectDao.findDistinctById(id);
+        model.addAttribute("project", editProject);
+        return "projects/edit";
+    }
+
+    @PostMapping("/projects/{id}/single-project/edit")
+    public String editProject(HttpServletRequest request, @PathVariable long id, Project project) {
+//        User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Dev_type dev_type = dev_typeDao.findOne(id);
+
+        this.projectDao.findDistinctById(id);
+        request.getRequestURI();
+        request.getParameter(project.getTitle());
+        request.getParameter(project.getDescription());
+        request.getParameter(project.getDev_type().toString());
+//        project.setComplete(false);
+        projectDao.save(project);
+        return "/edit";
+    }
+//
+//    @GetMapping("/projects/{id}/single-edit/edit")
 //    public ModelAndView editProjectView(@PathVariable long projectId){
 //
 //        Project project = this.projectDao.findDistinctById(projectId);
 //        ModelAndView modelAndView = new ModelAndView();
 //
-//        modelAndView.setViewName("project.edit");
+//        modelAndView.setViewName("edit");
 //        modelAndView.addObject("project", project);
 //
 //        return modelAndView;
 //    }
-//
-//    @PostMapping("/projects/edit/{projectId}")
+
+//    @PostMapping("/projects/single-project/edit/{projectId}")
 //    public ModelAndView editProject(HttpServletRequest request, @PathVariable Long projectId, Project projectView,  BindingResult bindingResult){
 //
 //        Project project = this.projectDao.findDistinctById(projectId);
 //
 //        ModelAndView modelAndView = new ModelAndView();
-////        modelAndView.setViewName("project.edit");
+////        modelAndView.setViewName("edit");
 ////        modelAndView.addObject("project", projectView);
 //
+//        project.getTitle();
+//        project.getDescription();
+//        project.getDev_type();
+//        project.isComplete();
+//        project.getCreator();
+//        projectDao.save(project);
 //
-//       Normalizer.Form.bind(request, projectView);
+////       Normalizer.Form.bind(request, projectView);
 //
 //       this.projectDao.findDistinctById(projectId);
 //
