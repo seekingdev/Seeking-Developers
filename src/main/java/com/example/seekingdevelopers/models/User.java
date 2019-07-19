@@ -171,4 +171,12 @@ public class User {
     public void setBio(String bio) {
         this.bio = bio;
     }
+
+    public List<User> getFavorite_users() {
+        return favorite_users;
+    }
+
+    public void setFavorite_users(List<User> favorite_users) {
+        this.favorite_users = favorite_users;
+    }
 }

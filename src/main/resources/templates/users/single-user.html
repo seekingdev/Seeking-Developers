@@ -35,6 +35,10 @@
             </div>
         </div>
     </div>
+    <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="POST">
+        <input type="hidden" value="${user.id}" name="favorite" />
+        <input type="submit" value="Add this user to my favorites" />
+    </form>
 </div>
 <br />
 
