@@ -15,10 +15,10 @@
         <div class="card-header">
             <div class="row">
                 <div class="column-title">
-                    <h1 th:text="${project.title}">Project Title:</h1>
+                    <h1>Project Title: <span th:text="${project.title}"></span></h1>
                 </div>
                 <div class="column-date">
-                    <h5 th:text="${project.creatingDate}">Date Created:</h5>
+                    <h5>Date Created: <span th:text="${{project.creatingDate}}"></span></h5>
                 </div>
 
             </div>
@@ -26,10 +26,9 @@
 
         <ul class="list-group">
             <li class="list-group-item">Created By: <span th:text="${project.creator.username}"></span></li>
-            <li class="list-group-item" id="description" th:text="${project.description}">Description:</li>
-            <li class="list-group-item">Help Needed:</li>
-            <li class="list-group-item">Tags:</li>
-            <li class="list-group-item">Is Complete?</li>
+            <li class="list-group-item" id="description">Description: <span th:text="${project.description}"></span></li>
+            <li class="list-group-item">Help Needed: <span th:text="${project.dev_type.title}"></span></li>
+            <li class="list-group-item">Is Complete? </li>
             <li class="list-group-item">Contributors: </li>
         </ul>
 
