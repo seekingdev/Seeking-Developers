@@ -1,6 +1,7 @@
 package com.example.seekingdevelopers.models;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class Project {
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern ="MM-dd-yyyy HH:mm")
     private Date creatingDate;
 
 
