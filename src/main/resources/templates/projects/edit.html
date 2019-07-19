@@ -8,44 +8,33 @@
 
 <nav th:replace="partials/navbar :: nav"></nav>
 
-<!--        <form th:action="@{user/projects/edit/{id}(id=${projects.id})}" th:object="${projects}" method="post">-->
-<!--            <table>-->
-<!--                <tr>-->
-<!--                    <td><label>Description</label></td>-->
-<!--                    <td><input type="text" th:field="*{title}" /></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td><label>Deadline</label></td>-->
-<!--                    <td><input type="text" th:field="*{description}" /></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td></td>-->
-<!--                    <td><button type="submit">Update</button></td>-->
-<!--                </tr>-->
-<!--            </table>-->
-<!--        </form>-->
 
-<form th:action="@{'/projects'+${project.id}+'/single-project'}" th:method="POST" th:each="project : ${project}">
+<form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
     <label for="title">Title</label>
-    <input type="text" th:field="${project.title}" id="title" />
+    <input type="text" th:field="*{title}" id="title" />
     <br />
     <label for="description">Description</label>
-    <input type="text" th:field="${project.description}" id="description" />
+    <input type="text" th:field="*{description}" id="description" />
     <br />
     <label for="helpNeeded">What type of help is needed?</label>
     <select name="helpNeeded" id="helpNeeded">
         <option value="1">Front-End</option>
         <option value="2">Back-End</option>
     </select>
+    <input type="hidden" th:field="*{creator}" />
+    <input type="hidden" th:field="*{creatingDate}" />
+    <input type="hidden" th:field="*{dev_type}" />
     <br/>
-    <button th:type="submit" th:value="isComplete">Project Completed!</button>
+    <label for="isComplete">Is the project complete?</label>
+    <select name="isComplete" id="isComplete">
+        <option value="false">No, it is not.</option>
+        <option value="true">Yes, the project is complete!</option>
+    </select>
     <br/>
-<!--    <button th:name="reset" th:type="reset" th:value="Reset">Reset Changes</button>-->
-</form>
-<form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="POST">
     <input type="hidden" name="updateProject" th:value="${project.id}" />
     <button th:type="submit" class="btn btn-primary">UpdateProject</button>
 </form>
+
 
 <footer th:replace="partials/footer :: footer"></footer>
 </body>
