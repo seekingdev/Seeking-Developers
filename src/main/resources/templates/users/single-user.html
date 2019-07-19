@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Profile</title>
+    <div th:replace=" partials/header :: header" ></div>
+</head>
+<body>
+<nav th:replace="partials/navbar-user :: user-nav"></nav>
+<br />
+<br />
+
+<div class="user-container" th:each="user : ${user}">
+    <div class="row">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="card col-lg-4 col-md-3">
+            <img class="user" src="../img/filler-hyaluron-wien.jpg" />
+            <br />
+            <h3 align="center" th:text="${user.username}">Insert username script here:</h3>
+            <h5 align="center" th:text="${user.email}">Insert email script here:</h5>
+            <h5 align="center">Insert rating script here:</h5>
+        </div>
+
+        <div class="col-lg-1 col-md-1"></div>
+        <!--divider-->
+
+        <div class="card col-lg-5 col-md-4">
+            <div class="card-body">
+                <h3 class="card-title" align="center">Biography:</h3>
+                <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
+            </div>
+            <hr />
+            <div class="card-body">
+                <h3 class="card-title" align="center">Languages:</h3>
+                <p class="card-text" th:each="language : ${langs}"><span th:text="${language.language}"></span></p>
+            </div>
+        </div>
+    </div>
+    <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="POST">
+        <input type="hidden" value="${user.id}" name="favorite" />
+        <input type="submit" value="Add this user to my favorites" />
+    </form>
+</div>
+<br />
+
+<div class="user-container">
+    <div class="row">
+
+        <div class="col-lg-1 col-md-1"></div>
+
+        <div class="card col-lg-3 col-md-2" align="center" th:each="project : ${lastProject}">
+            <br />
+            <h3 th:text="${project.title}">Insert current project script here:</h3>
+            <p th:text="*{project.description}"></p>
+            <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
+                <input type="hidden" name="idEdit" th:value="${projects.id}" />
+                <button type="submit" class="btn btn-primary">View this project</button>
+            </form>
+        </div>
+
+        <div class="card col-lg-3 col-md-2" align="center">
+            <img class="current-project" src="../img/comp.jpg" />
+            <br />
+            <h3>Add project here:</h3>
+        </div>
+
+        <div class="card col-lg-4 col-md-3" align="center">
+            <img class="current-project" src="../img/comp.jpg" />
+            <br />
+            <h5>Insert list of projects script:</h5>
+        </div>
+
+    </div>
+</div>
+
+<footer th:replace="partials/footer :: footer"></footer>
+
+</body>
+</html>
+
