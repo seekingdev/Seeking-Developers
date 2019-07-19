@@ -66,56 +66,12 @@ public class ProjectController {
     }
 
     @PostMapping("/projects/{id}/single-project/edit")
-    public String editProject(HttpServletRequest request, @PathVariable long id, Project project) {
+    public String editProject(@ModelAttribute Project project, @RequestParam(name = "isComplete") boolean isComplete ) {
 //        User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Dev_type dev_type = dev_typeDao.findOne(id);
-
-        this.projectDao.findDistinctById(id);
-        request.getRequestURI();
-        request.getParameter(project.getTitle());
-        request.getParameter(project.getDescription());
-        request.getParameter(project.getDev_type().toString());
-//        project.setComplete(false);
+        project.setComplete(isComplete);
         projectDao.save(project);
-        return "/edit";
+        return "redirect:/dashboard";
     }
-//
-//    @GetMapping("/projects/{id}/single-edit/edit")
-//    public ModelAndView editProjectView(@PathVariable long projectId){
-//
-//        Project project = this.projectDao.findDistinctById(projectId);
-//        ModelAndView modelAndView = new ModelAndView();
-//
-//        modelAndView.setViewName("edit");
-//        modelAndView.addObject("project", project);
-//
-//        return modelAndView;
-//    }
-
-//    @PostMapping("/projects/single-project/edit/{projectId}")
-//    public ModelAndView editProject(HttpServletRequest request, @PathVariable Long projectId, Project projectView,  BindingResult bindingResult){
-//
-//        Project project = this.projectDao.findDistinctById(projectId);
-//
-//        ModelAndView modelAndView = new ModelAndView();
-////        modelAndView.setViewName("edit");
-////        modelAndView.addObject("project", projectView);
-//
-//        project.getTitle();
-//        project.getDescription();
-//        project.getDev_type();
-//        project.isComplete();
-//        project.getCreator();
-//        projectDao.save(project);
-//
-////       Normalizer.Form.bind(request, projectView);
-//
-//       this.projectDao.findDistinctById(projectId);
-//
-//       modelAndView.setViewName("redirect: user/projects");
-//
-//        return modelAndView;
-//    }
 
 }
 
