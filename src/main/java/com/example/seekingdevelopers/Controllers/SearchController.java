@@ -50,12 +50,12 @@ public class SearchController {
     public String singleProject(@PathVariable long id){
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User currentUser = userDao.findOne(loggedinUser.getId());
-        List<User> userList = new ArrayList<>();
+        List<User> userList = currentUser.getFavorite_users();
         User user = userDao.findOne(id);
         userList.add(user);
         currentUser.setFavorite_users(userList);
-
-        return "users/single-user";
+        userDao.save(currentUser);
+        return "redirect:/users";
     }
 
 
