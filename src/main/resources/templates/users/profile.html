@@ -31,7 +31,7 @@
                     <hr />
                     <div class="card-body">
                         <h3 class="card-title" align="center">Languages:</h3>
-                        <p class="card-text" th:text="${user.language}">Insert language script here:</p>
+                        <p class="card-text" th:each="language : ${langs}"><span th:text="${language.language}"></span></p>
                     </div>
                 </div>
             </div>
