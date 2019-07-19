@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="paritals/header :: head">
+<head>
     <meta charset="UTF-8"/>
-    <title>Search</title>
+    <title>List of Users</title>
+    <div th:replace=" partials/header :: header" ></div>
 </head>
 <body>
 
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
-    <div class="card">
+    <div class="card" th:each="user : ${users}">
         <div class="card-body">
-        <h3 th:text="projects.title" class="card-title"></h3>
-        <a th:text="projects.creator" th:href="@{/profile.html}" class="card-subtitle mb-2 text-muted card-link"></a>
-        <h5 th:text="projects.isComplete" class="card-subtitle mb-2 text-muted"></h5>
-        <p th:text="projects.description" class="card-text"></p>
-        <h5 th:text="projects.dev_type" class="card-subtitle mb-2 text-muted"></h5>
-        <h5 th:text="projects.creating_date" class="card-subtitle mb-2 text-muted"></h5>
+        <h3 th:text="${user.username}">Username</h3>
         </div>
+        <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="GET">
+            <input type="hidden" name="id" th:value="${user.id}" />
+            <button type="submit" class="btn btn-primary">View this User's Profile</button>
+        </form>
     </div>
 
 <footer th:replace="partials/footer :: footer"></footer>
