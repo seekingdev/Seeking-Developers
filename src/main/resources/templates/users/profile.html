@@ -26,12 +26,12 @@
                 <div class="card col-lg-5 col-md-4">
                     <div class="card-body">
                         <h3 class="card-title" align="center">Biography:</h3>
-                        <p class="card-text">Insert bio script here: </p>
+                        <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
                     </div>
                     <hr />
                     <div class="card-body">
                         <h3 class="card-title" align="center">Languages:</h3>
-                        <p class="card-text">Insert language script here:</p>
+                        <p class="card-text" th:text="${user.language}">Insert language script here:</p>
                     </div>
                 </div>
             </div>
@@ -47,6 +47,10 @@
                 <br />
                 <h3 th:text="${project.title}">Insert current project script here:</h3>
                 <p th:text="*{project.description}"></p>
+                <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
+                    <input type="hidden" name="idEdit" th:value="${projects.id}" />
+                    <button type="submit" class="btn btn-primary">View this project</button>
+                </form>
             </div>
 
             <div class="card col-lg-3 col-md-2" align="center">
