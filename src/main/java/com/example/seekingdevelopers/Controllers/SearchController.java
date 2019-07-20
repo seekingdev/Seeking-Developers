@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,17 @@ public class SearchController {
         model.addAttribute("users", users);
         return "users/users-search-list";
     }
+
+    @PostMapping("/users")
+    public String searchUsersAndPRojects(Model model, @RequestParam(name = "search") String search){
+        List<User> users = userDao.findAllByUsernameContaining(search);
+        model.addAttribute("users", users);
+        List<Project> projects = projectDao.findAllByTitleContaining(search);
+        model.addAttribute("projects", projects);
+        return "users/users-search-list";
+    }
+
+
 
     @GetMapping("/users/{id}/profile")
     public String singleProject(@PathVariable long id, Model model){
