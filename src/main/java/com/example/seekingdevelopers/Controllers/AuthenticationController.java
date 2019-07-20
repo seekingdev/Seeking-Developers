@@ -42,7 +42,7 @@ public class AuthenticationController {
     @GetMapping("/sign-up")
     public String showSignupForm(Model model){
         model.addAttribute("user", new User());
-        return "users/sign-up";
+        return "users/signup";
     }
     @PostMapping("/sign-up")
     public String saveUser(@Valid User user, Errors validation, Model model, @RequestParam(name = "dev_type") Long id, @RequestParam(name = "language")long[] languages){
