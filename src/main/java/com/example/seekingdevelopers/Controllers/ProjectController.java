@@ -66,7 +66,7 @@ public class ProjectController {
     }
 
     @PostMapping("/projects/{id}/single-project/edit")
-    public String editProject(@ModelAttribute Project project, @RequestParam(name = "isComplete") boolean isComplete ) {
+    public String editProject(@ModelAttribute Project project, @RequestParam(name = "isComplete") boolean isComplete, @RequestParam(name = "contributor") String contributor) {
 //        User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         project.setComplete(isComplete);
         projectDao.save(project);
