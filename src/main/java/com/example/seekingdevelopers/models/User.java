@@ -79,6 +79,7 @@ public class User {
         username = copy.username;
         password = copy.password;
         languages = copy.languages;
+        userProjects = copy.userProjects;
     }
 
 
@@ -178,5 +179,13 @@ public class User {
 
     public void setFavorite_users(List<User> favorite_users) {
         this.favorite_users = favorite_users;
+    }
+
+    public List<Project> getUserProjects() {
+        return userProjects;
+    }
+
+    public void setUserProjects(List<Project> userProjects) {
+        this.userProjects = userProjects;
     }
 }

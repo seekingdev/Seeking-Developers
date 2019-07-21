@@ -34,10 +34,10 @@
     <input type="hidden" name="updateProject" th:value="${project.id}" />
     <button th:type="submit" class="btn btn-primary">UpdateProject</button>
 </form>
-<form>
+<form th:action="@{'/projects/'+${project.id}+'/single-project'}" th:method="POST" >
 <label for="contributor">Add Contributor</label>
-    <input type="text" name="contributor" id="contributor">
-    <input type="submit" value="submit">
+    <input type="text" name="contributor" id="contributor" />
+    <input type="submit" value="submit" />
 </form>
 <footer th:replace="partials/footer :: footer"></footer>
 </body>
