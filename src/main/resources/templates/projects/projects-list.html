@@ -2,7 +2,8 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Project List Page</title>
-    <div th:replace=”partials/header :: header”></div>
+    <th:block th:include="partials/header :: header" >
+    </th:block>
     <link rel="stylesheet" href="../../static/css/projects-list.css" />
 
 </head>
