@@ -87,7 +87,7 @@ public class ProjectController {
     }
 
     @PostMapping("/projects/{id}/single-project/edit")
-    public String editProject(@ModelAttribute Project project, @RequestParam(name = "isComplete") boolean isComplete, @RequestParam(name = "contributor") String contributor) {
+    public String editProject(@ModelAttribute Project project, @RequestParam(name = "isComplete") boolean isComplete) {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if(user.getId() != project.getCreator().getId()){
             return "redirect:/dashboard";

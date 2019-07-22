@@ -36,7 +36,9 @@ public class ProfileController {
         model.addAttribute("langs",langs);
         Project lastProject = projectDao.findDistinctTopByCreatorOrderByCreatingDateDesc(loggedinUser);
         model.addAttribute("lastProject",lastProject);
-       ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(loggedinUser);
+        List<Project> completedProjectList = projectDao.findAllByCreatorAndIsCompleteTrue(loggedinUser);
+       model.addAttribute("completedProjects",completedProjectList);
+        ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(loggedinUser);
         model.addAttribute("projects", projects);
 
 
