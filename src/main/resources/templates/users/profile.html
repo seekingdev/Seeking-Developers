@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="/css/profile.css" />
 </head>
 <body>
+<script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+<script>
+    const client = filestack.init('ADhg7cXQTXmfBbbTxghC6z');
+    let options = {
+        "maxFiles": 1,
+        "accept": [
+            "image/*"
+        ],
+        "fromSources": [
+            "local_file_system"
+        ],
+        onUploadDone: file=>{
+            console.log(file);
+            file = file.filesUploaded[0];
+            document.getElementById("imageURL").value=file.url;
+            document.getElementById("imageForm").submit();
+        }
+    };
+</script>
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
     <br />
     <br />
@@ -15,7 +34,7 @@
         <div class="row">
             <div class="col-lg-1 col-md-1"></div>
                 <div class="card col-lg-4 col-md-3">
-                    <img class="user" src="../img/filler-hyaluron-wien.jpg" />
+                    <img class="user" th:src="${user.photo}" />
                     <br />
                     <h3 align="center" th:text="${user.username}">Insert username script here:</h3>
                     <h5 align="center" th:text="${user.email}">Insert email script here:</h5>
@@ -83,6 +102,10 @@
 
         </div>
     </div>
+<form th:action="@{/profile}" id="imageForm" th:method="post">
+    <input name="imageURL" id="imageURL" type="hidden"/>
+    <input type="button" onclick="client.picker(options).open();" value="Upload"/>
+</form>
 
 <footer th:replace="partials/footer :: footer"></footer>
 
