@@ -39,7 +39,7 @@
 
         </div>
 
-        <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="POST" onsubmit="return confirm('Are you sure you want to join this project?')">
+        <form th:action="@{/dashboard}" th:method="POST" onsubmit="return confirm('Are you sure you want to join this project?')">
             <input type="hidden" name="joinProject" th:value="${project.id}" />
             <button type="submit" class="btn btn-primary">Join this project</button>
         </form>

@@ -64,6 +64,11 @@ public class SearchController {
         User currentUser = userDao.findOne(loggedinUser.getId());
         List<User> userList = currentUser.getFavorite_users();
         User user = userDao.findOne(id);
+        for (User userCheck: userList) {
+            if(user.getId() == currentUser.getId() || userCheck.getId() == user.getId()){
+                return "redirect:/profile";
+            }
+        }
         userList.add(user);
         currentUser.setFavorite_users(userList);
         userDao.save(currentUser);
