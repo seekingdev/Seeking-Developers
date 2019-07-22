@@ -28,7 +28,9 @@ public class ProfileController {
     public String loggedInProfile(Model model){
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User currentUser = userDao.findOne(loggedinUser.getId());
+        List<User> favorite_users = currentUser.getFavorite_users();
         model.addAttribute("user",currentUser);
+        model.addAttribute("favorite_users", favorite_users);
         List<Language> langs = new ArrayList<>();
         langs = currentUser.getLanguage();
         model.addAttribute("langs",langs);
@@ -36,6 +38,7 @@ public class ProfileController {
         model.addAttribute("lastProject",lastProject);
        ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(loggedinUser);
         model.addAttribute("projects", projects);
+
 
         return "users/profile";
     }
