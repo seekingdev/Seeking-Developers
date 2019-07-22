@@ -58,6 +58,14 @@ public class Project {
         this.creator = creator;
         this.contributors= contributors;
     }
+    public Project(String title, String description, Dev_type dev_type, User creator, List<User> contributors, boolean isComplete){
+        this.title = title;
+        this.description = description;
+        this.dev_type = dev_type;
+        this.creator = creator;
+        this.contributors= contributors;
+        this.isComplete = isComplete;
+    }
 
 
 

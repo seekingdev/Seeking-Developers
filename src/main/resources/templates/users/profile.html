@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <th:block th:include="partials/header :: header" >
     </th:block>
     <title>Profile</title>
+    <link rel="stylesheet" href="/css/profile.css" />
 </head>
 <body>
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
@@ -61,6 +62,12 @@
                 <h4 th:text="${favorite_user.username}"></h4>
                 </a>
             </div>
+
+            <h3> COMPLETED PROJECTS:</h3>
+                <br />
+                <div th:each="completedProject : ${completedProjects}">
+                    <h4 th:text="${completedProject.title}"></h4>
+                </div>
 
             <div class="card col-lg-3 col-md-2" align="center">
                 <img class="current-project" src="../img/comp.jpg" />
