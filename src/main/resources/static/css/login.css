@@ -1,0 +1,15 @@
+body {
+    background-color: #151e3f;
+    text-align: center;
+    color: #FF8300;
+}
+
+#submit {
+    border-radius: 8px;
+    background-color: #FF8300;
+    color: #151e3f;
+}
+
+#submit:hover {
+    background-color: #ffa95e;
+}
