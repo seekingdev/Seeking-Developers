@@ -1,16 +1,49 @@
-.card-elle {
-    float: left;
+.about {
     text-align: center;
+}
+
+.card-elle {
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    min-height: 550px;
+    max-height: 550px;
+    min-width: 450px;
+    max-width: 450px;
+}
+
+.card-elle:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card-derek {
-    float: left;
+    display: inline-block;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    min-height: 550px;
+    max-height: 550px;
+    min-width: 450px;
+    max-width: 450px;
+}
+
+.card-derek:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card-nic {
-    float: left;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    min-height: 550px;
+    max-height: 550px;
+    min-width: 450px;
+    max-width: 450px;
+}
+
+.card-nic:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 h6.bio {
