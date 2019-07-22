@@ -3,7 +3,24 @@ body{
     text-align: center;
     color: #FF8300;
 }
-/*.home-card{*/
-/*    box-sizing: border-box;*/
-/*    justify-content: center;*/
-/*}*/
+.main-card{
+    box-sizing: border-box;
+    justify-content: end;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFA95E;
+    box-shadow: #000;
+    padding: 1em;
+}
+.project-pic{
+    padding: 20px;
+    marign-top: 1em;
+}
+profile-pic{
+    padding: 20px;
+}
+dashboard-pic{
+    padding: 20px;
+    margin-bottom: 1em;
+}
