@@ -51,6 +51,8 @@ public class ProjectController {
     @GetMapping("/projects/{id}/single-project")
     public String singleProject(@PathVariable long id, Model model){
         Project singleProject = projectDao.findDistinctById(id);
+        List<User> contributors =  singleProject.getContributors();
+        model.addAttribute("contributors", contributors);
         model.addAttribute("project", singleProject);
         return "projects/single-project";
     }
@@ -59,10 +61,10 @@ public class ProjectController {
     public String contribute(@PathVariable long id, @RequestParam(name = "contributor") String contributor){
         User userContributor = userDao.findByUsername(contributor);
         Project singleProject = projectDao.findDistinctById(id);
-        List<User> userList = singleProject.getContributors();
-        userList.add(userContributor);
-        singleProject.setContributors(userList);
-        projectDao.save(singleProject);
+        List<Project> projects = new ArrayList<>();
+        projects.add(singleProject);
+        userContributor.setUserProjects(projects);
+        userDao.save(userContributor);
         emailService.prepareAndSend(singleProject, "Contributor Applying.", "Someone wants to help you.");
         return "redirect:/dashboard";
     }
