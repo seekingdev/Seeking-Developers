@@ -39,19 +39,19 @@ public class AuthenticationController {
         return "users/login";
     }
 
-    @GetMapping("/sign-up")
+    @GetMapping("/signup")
     public String showSignupForm(Model model){
         model.addAttribute("user", new User());
         return "users/signup";
     }
-    @PostMapping("/sign-up")
+    @PostMapping("/signup")
     public String saveUser(@Valid User user, Errors validation, Model model, @RequestParam(name = "dev_type") Long id, @RequestParam(name = "language")long[] languages){
         if(userDao.findByUsername(user.getUsername()) != null ){
             validation.rejectValue("username",null, "Username is already in use");
         }
         if(validation.hasErrors()){
             model.addAttribute("errors",validation);
-            return "users/sign-up";
+            return "users/signup";
         }
         String hash = passwordEncoder.encode(user.getPassword());
         Dev_type dev_type = dev_typeDao.findOne(id);

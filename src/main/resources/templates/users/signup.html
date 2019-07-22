@@ -9,7 +9,7 @@
 <body>
 <nav th:replace="partials/navbar :: nav "></nav>
 
-<form th:action="@{/sign-up}" method="POST" th:object="${user}">
+<form th:action="@{/signup}" method="POST" th:object="${user}">
     <label for="username">Username</label>
     <input id="username" th:field="*{username}" />
     <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
