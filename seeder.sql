@@ -41,9 +41,9 @@ insert into languages (id, language) values (8, 'Bootstrap Framework');
 
 
 
-insert into user_languagess (languagess_id, users_id) values (1, 1);
-insert into user_languagess (languagess_id, users_id) values (2, 2);
-insert into user_languagess (languagess_id, users_id) values (3, 3);
+insert into user_languagess (languages_id, users_id) values (1, 1);
+insert into user_languagess (languages_id, users_id) values (2, 2);
+insert into user_languagess (languages_id, users_id) values (3, 3);
 
 insert into favorite_users (picked_user_id, picking_user_id) values (2, 1);
 insert into favorite_users (picked_user_id, picking_user_id) values (2, 3);

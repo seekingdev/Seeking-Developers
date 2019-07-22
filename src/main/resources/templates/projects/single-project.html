@@ -3,7 +3,7 @@
 <head>
     <title>Single Project Page</title>
     <div th:replace=" partials/header :: header" ></div>
-    <link rel="stylesheet" href="../css/single-project.css" />
+    <link rel="stylesheet" href="../../static/css/single-project.css" />
 </head>
 <body>
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
@@ -31,6 +31,12 @@
             <li class="list-group-item">Is Complete? </li>
             <li class="list-group-item">Contributors: </li>
         </ul>
+
+        <h3>List of Contributors</h3>
+        <div th:each="contributor : ${contributors}">
+            <p th:text="${contributor.username}"></p>
+
+        </div>
 
         <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="POST" onsubmit="return confirm('Are you sure you want to join this project?')">
             <input type="hidden" name="joinProject" th:value="${project.id}" />

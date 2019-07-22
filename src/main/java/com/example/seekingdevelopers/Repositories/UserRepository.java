@@ -12,4 +12,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     List<User> findAll();
 
+    List<User> findAllByUsernameContaining(String serach);
+
 }

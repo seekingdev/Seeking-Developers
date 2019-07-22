@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "projects")
@@ -34,6 +35,9 @@ public class Project {
     @JoinColumn(name="creator_id")
     private User creator;
 
+    @ManyToMany(mappedBy = "userProjects")
+    private List<User> contributors;
+
     @ManyToOne
     @JoinColumn(name="dev_type_id")
     private Dev_type dev_type;
@@ -45,6 +49,14 @@ public class Project {
         this.description = description;
         this.dev_type = dev_type;
         this.creator = creator;
+    }
+
+    public Project(String title, String description, Dev_type dev_type, User creator, List<User> contributors){
+        this.title = title;
+        this.description = description;
+        this.dev_type = dev_type;
+        this.creator = creator;
+        this.contributors= contributors;
     }
 
 
@@ -103,5 +115,13 @@ public class Project {
 
     public void setDev_type(Dev_type dev_type) {
         this.dev_type = dev_type;
+    }
+
+    public List<User> getContributors() {
+        return contributors;
+    }
+
+    public void setContributors(List<User> contributors) {
+        this.contributors = contributors;
     }
 }
