@@ -61,7 +61,13 @@ public class ProjectController {
     public String contribute(@PathVariable long id, @RequestParam(name = "contributor") String contributor){
         User userContributor = userDao.findByUsername(contributor);
         Project singleProject = projectDao.findDistinctById(id);
-        List<Project> projects = new ArrayList<>();
+        List<Project> projects = userContributor.getUserProjects();
+        for (Project project: projects) {
+            if(project.getId() == singleProject.getId()){
+                return "redirect:/dashboard";
+            }
+            
+        }
         projects.add(singleProject);
         userContributor.setUserProjects(projects);
         userDao.save(userContributor);
