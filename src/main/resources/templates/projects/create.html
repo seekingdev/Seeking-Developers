@@ -5,27 +5,29 @@
 </th:block>
     <meta charset="UTF-8" />
     <title>Create Project</title>
+    <link rel="stylesheet" href="/css/create.css"/>
 </head>
 <body>
 
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
 <h1>Create a Project</h1>
-
-<form th:action="@{/projects/create}" th:method="post" th:object="${project}">
-    <label for="title">Title</label>
-    <input type="text" th:field="*{title}" id="title" />
-    <br />
-    <label for="description">Description</label>
-    <input type="text" th:field="*{description}" id="description" />
-    <br />
-    <label for="helpNeeded">What type of help is needed?</label>
-    <select name="helpNeeded" id="helpNeeded">
-        <option value="1">Front-End</option>
-        <option value="2">Back-End</option>
-    </select>
-    <input type="submit" />
-</form>
+    <div class="card main-card">
+        <form th:action="@{/projects/create}" th:method="post" th:object="${project}">
+            <label for="title">Title</label>
+            <input type="text" th:field="*{title}" id="title" />
+            <br />
+            <label for="description">Description</label>
+            <input type="text" th:field="*{description}" id="description" />
+            <br />
+            <label for="helpNeeded">What type of help is needed?</label>
+            <select name="helpNeeded" id="helpNeeded">
+                <option value="1">Front-End</option>
+                <option value="2">Back-End</option>
+            </select>
+            <input type="submit" />
+        </form>
+    </div>
 
 <footer th:replace="partials/footer :: footer"></footer>
 
