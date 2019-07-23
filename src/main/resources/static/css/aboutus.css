@@ -14,10 +14,8 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
     transition: 0.3s;
-    min-height: 550px;
-    max-height: 550px;
-    min-width: 450px;
-    max-width: 450px;
+    height: 80%;
+    width: 45%;
 }
 
 .card-elle:hover {
@@ -31,10 +29,8 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
     transition: 0.3s;
-    min-height: 550px;
-    max-height: 550px;
-    min-width: 450px;
-    max-width: 450px;
+    height: 80%;
+    width: 45%;
 }
 
 .card-derek:hover {
@@ -48,10 +44,8 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
     transition: 0.3s;
-    min-height: 550px;
-    max-height: 550px;
-    min-width: 450px;
-    max-width: 450px;
+    height: 80%;
+    width: 45%;
 }
 
 .card-nic:hover {
@@ -60,4 +54,34 @@ body {
 
 h6.bio {
     font-size: 16px;
+}
+
+@media screen and (max-width:425px) {
+    .card-elle {
+        height: 90%;
+        width: 90%;
+    }
+    .card-derek {
+        height: 90%;
+        width: 90%;
+    }
+    .card-nic {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:612px) {
+    .card-elle {
+        height: 80%;
+        width: 80%;
+    }
+    .card-derek {
+        height: 80%;
+        width: 80%;
+    }
+    .card-nic {
+        height: 80%;
+        width: 80%;
+    }
 }
