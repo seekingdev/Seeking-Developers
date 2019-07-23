@@ -13,19 +13,21 @@
 
 <h1>Create a Project</h1>
     <div class="card main-card">
-        <form th:action="@{/projects/create}" th:method="post" th:object="${project}">
+        <form th:action="@{/projects/create}"  class="card-body" th:method="post" th:object="${project}">
             <label for="title">Title</label>
-            <input type="text" th:field="*{title}" id="title" />
+            <input type="text" th:field="*{title}" class="textbox-style" placeholder="Title" id="title" />
             <br />
             <label for="description">Description</label>
-            <input type="text" th:field="*{description}" id="description" />
+            <input type="text" th:field="*{description}" class="textbox-style" placeholder="Description" id="description" />
             <br />
             <label for="helpNeeded">What type of help is needed?</label>
-            <select name="helpNeeded" id="helpNeeded">
+            <br/>
+            <select class="dropdown-style" name="helpNeeded" id="helpNeeded">
                 <option value="1">Front-End</option>
                 <option value="2">Back-End</option>
             </select>
-            <input type="submit" />
+            <br/>
+            <input class="btn-style" type="submit" />
         </form>
     </div>
 

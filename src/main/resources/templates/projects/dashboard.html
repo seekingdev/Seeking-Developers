@@ -12,19 +12,19 @@
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
     <h2>Welcome to your Dahsboard!</h2>
-
-    <div th:each="projects : ${listOfProjects}">
-        <h3>Project Title: <span th:text="${projects.title}"></span></h3>
-        <h4>Creator: <span th:text="${projects.creator.username}"></span></h4>
-        <p>Description: <span th:text="${projects.description}"></span></p>
-        <h5>Help Needed: <span th:text="${projects.dev_type.title}"></span></h5>
-        <h5>Date/Time Created: <span th:text="${{projects.creatingDate}}"></span></h5>
-        <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
-            <input type="hidden" name="idEdit" th:value="${projects.id}" />
-            <button type="submit" class="btn btn-primary">View this project</button>
-        </form>
+    <div class="card">
+        <div th:each="projects : ${listOfProjects}" class="card-body">
+            <h3 class="card-title">Project Title: <span th:text="${projects.title}"></span></h3>
+            <h4 class="card-subtitle mb-2 text-muted" >Creator: <span th:text="${projects.creator.username}"></span></h4>
+            <p class="card-text">Description: <span th:text="${projects.description}"></span></p>
+            <h5 class="card-subtitle mb-2 text-muted">Help Needed: <span th:text="${projects.dev_type.title}"></span></h5>
+            <h5 class="card-subtitle mb-2 text-muted">Date/Time Created: <span th:text="${{projects.creatingDate}}"></span></h5>
+            <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
+                <input type="hidden" name="idEdit" th:value="${projects.id}" />
+                <button type="submit" class="btn btn-style">View this project</button>
+            </form>
+        </div>
     </div>
-
 <footer th:replace="partials/footer :: footer"></footer>
 
 </body>

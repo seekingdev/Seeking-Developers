@@ -1,5 +1,16 @@
-body{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+body {
+    background-color: #151E3F;
+    color: #FF8300;
+}
+.card-style{
+    background-color: #FFA95E;
+    border-radius: 8px;
+    border-color: #FF8300;
+    width: 18rem;
+    color: #151E3F;
+}
+.btn-style{
+    background-color: #151E3F;
+    color: #FF8300;
+    border-color: #FFF9EE;
 }

@@ -1,14 +1,11 @@
-.nav-style{
+nav.style{
     background-color: #FF8300;
     color: #151E3F;
 }
 a:hover{
     color: #0056C6;
+    text-shadow: #0056C6;
 }
 .nav-list-style{
     color: #151E3F;
-}
-img{
-    width: 8px;
-    height: 8px;
 }
