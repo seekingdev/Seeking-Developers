@@ -1,12 +1,18 @@
+body {
+    background-color: #151e3f;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
     transition: 0.3s;
+    background-color: #ffa95e;
+    color: #0056c6;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 5px 10px 20px 10px rgba(255,131,0,0.5);
 }
 
 /* Add some padding inside the card container */
@@ -18,4 +24,17 @@
     max-height: 200px;
     max-width: 200px;
     text-align: center;
+}
+
+.user {
+    height: 230px;
+    width: 230px;
+    align-content: center;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 8px;
+    background-color: #0056C6;
+    color: #FFA95E;
 }
