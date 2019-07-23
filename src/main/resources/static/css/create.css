@@ -29,10 +29,14 @@ body{
     border-radius: 8px;
 }
 .textbox-title{
-
+    width: 80%;
+    margin: auto;
+    display: block;
 }
 .textbox-description{
-
+    width: 80%;
+    margin: auto;
+    display: block;
 }
 .textbox-style{
     border-radius: 8px;
