@@ -12,8 +12,8 @@
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
     <h2>Welcome to your Dahsboard!</h2>
-    <div class="card">
-        <div th:each="projects : ${listOfProjects}" class="card-body">
+    <div class="card card-style">
+        <div th:each="projects : ${listOfProjects}" class="card-body main-card">
             <h3 class="card-title">Project Title: <span th:text="${projects.title}"></span></h3>
             <h4 class="card-subtitle mb-2 text-muted" >Creator: <span th:text="${projects.creator.username}"></span></h4>
             <p class="card-text">Description: <span th:text="${projects.description}"></span></p>
