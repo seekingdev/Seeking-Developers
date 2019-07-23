@@ -15,10 +15,10 @@
     <div class="card main-card">
         <form th:action="@{/projects/create}"  class="card-body" th:method="post" th:object="${project}">
             <label for="title">Title</label>
-            <input type="text" th:field="*{title}" class="textbox-style" placeholder="Title" id="title" />
+            <input type="text" th:field="*{title}" placeholder="Title" id="title" />
             <br />
-            <label for="description">Description</label>
-            <input type="text" th:field="*{description}" class="textbox-style" placeholder="Description" id="description" />
+            <label for="description" class="align-top">Description</label>
+            <textarea type="text" th:field="*{description}" class="textbox-style" placeholder="Description" id="description" ></textarea>
             <br />
             <label for="helpNeeded">What type of help is needed?</label>
             <br/>
