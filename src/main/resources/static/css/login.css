@@ -2,6 +2,7 @@ body {
     background-color: #151e3f;
     text-align: center;
     color: #FF8300;
+    margin: 0 auto;
 }
 
 #submit {
@@ -12,5 +13,11 @@ body {
 
 #submit:hover {
     background-color: #ffa95e;
+}
+
+@media screen and (max-width:425px) {
+    body {
+        width: 100%;
+    }
 }
 

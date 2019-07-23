@@ -2,6 +2,7 @@ body {
     background-color: #151e3f;
     text-align: center;
     color: #FF8300;
+    margin: 0 auto;
 }
 
 ::-webkit-input-placeholder {
