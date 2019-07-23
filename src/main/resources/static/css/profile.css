@@ -37,4 +37,11 @@ body {
     border-radius: 8px;
     background-color: #0056C6;
     color: #FFA95E;
+    align-content: center;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    align-content: center;
 }

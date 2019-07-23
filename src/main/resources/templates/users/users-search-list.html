@@ -5,20 +5,37 @@
     </th:block>
     <meta charset="UTF-8"/>
     <title>List of Users</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
-    <div class="card" th:each="user : ${users}">
-        <div class="card-body">
-        <h3 th:text="${user.username}">Username</h3>
+    <div class="row" align="center">
+
+        <div class="card col-md-4 col-sm-6 col-xs-12 mx-auto" align="center">
+            <div th:each="user : ${users}">
+                <h3 th:text="${user.username}"> </h3>
+                <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="GET">
+                    <input type="hidden" name="id" th:value="${user.id}" />
+                    <button type="submit" class="btn btn-primary">View this User's Profile</button>
+                </form>
+            </div>
         </div>
-        <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="GET">
-            <input type="hidden" name="id" th:value="${user.id}" />
-            <button type="submit" class="btn btn-primary">View this User's Profile</button>
-        </form>
+
+        <div class="card col-md-4 col-sm-6 col-xs-12 mx-auto" align="center">
+            <div th:each="project : ${projects}">
+                <h3 th:text="${project.title}"> </h3>
+                <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="GET">
+                    <input type="hidden" name="id" th:value="${project.id}" />
+                    <button type="submit" class="btn btn-primary">View this Project</button>
+                </form>
+            </div>
+        </div>
+
     </div>
+
 
 <footer th:replace="partials/footer :: footer"></footer>
 </body>
