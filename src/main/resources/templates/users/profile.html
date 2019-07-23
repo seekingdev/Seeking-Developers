@@ -5,6 +5,7 @@
     </th:block>
     <title>Profile</title>
     <link rel="stylesheet" href="/css/profile.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
@@ -30,82 +31,67 @@
     <br />
     <br />
 
-    <div class="user-container" th:each="user : ${user}">
+    <div class="container-fluid" th:each="user : ${user}">
         <div class="row">
-            <div class="col-lg-1 col-md-1"></div>
-                <div class="card col-lg-4 col-md-3">
-                    <img class="user" th:src="${user.photo}" />
-                    <br />
-                    <h3 align="center" th:text="${user.username}">Insert username script here:</h3>
-                    <h5 align="center" th:text="${user.email}">Insert email script here:</h5>
-                    <h5 align="center">Insert rating script here:</h5>
+            <div class="card user-box col-md-4 col-sm-12 mx-auto">
+                <img class="user mx-auto" th:src="${user.photo}" />
+                <h3 align="center" th:text="${user.username}"></h3>
+                <h5 align="center" th:text="${user.email}"></h5>
+                <form th:action="@{/profile}" class="mx-auto" id="imageForm" th:method="post">
+                    <input name="imageURL" id="imageURL" type="hidden"/>
+                    <input type="button" class="btn btn-primary mx-auto" onclick="client.picker(options).open();" value="Upload Picture"/>
+                </form>
+            </div>
+
+            <div class="card col-md-5 col-sm-12 mx-auto">
+                <div class="card-body">
+                    <h3 class="card-title" align="center">Biography:</h3>
+                    <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
                 </div>
-
-            <div class="col-lg-1 col-md-1"></div>
-            <!--divider-->
-
-                <div class="card col-lg-5 col-md-4">
-                    <div class="card-body">
-                        <h3 class="card-title" align="center">Biography:</h3>
-                        <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
-                    </div>
-                    <hr />
-                    <div class="card-body">
-                        <h3 class="card-title" align="center">Languages:</h3>
-                        <p class="card-text" th:each="language : ${langs}"><span th:text="${language.language}"></span></p>
+                <hr />
+                <div class="card-body">
+                    <h3 class="card-title" align="center">Favorite Users:</h3>
+                    <div th:each="favorite_user : ${favorite_users}">
+                        <br />
+                        <a th:href="'/users/' + ${favorite_user.id} + '/profile'">
+                            <h4 th:text="${favorite_user.username}"></h4>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-<br />
 
-    <div class="user-container">
+        <br/>
+
         <div class="row">
-
-            <div class="col-lg-1 col-md-1"></div>
-
-            <div class="card col-lg-3 col-md-2" align="center" th:each="project : ${lastProject}">
-                <br />
-                <h3 th:text="${project.title}">Insert current project script here:</h3>
-                <p th:text="*{project.description}"></p>
-                <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="GET">
-                    <input type="hidden" name="idEdit" th:value="${project.id}" />
-                    <button type="submit" class="btn btn-primary">View this project</button>
-                </form>
+            <div class="card col-md-3 col-sm-12 mx-auto" align="center">
+                <h3>Current Project: </h3>
+                <div th:each="project : ${lastProject}">
+                    <br />
+                    <h3 th:text="${project.title}">Insert current project script here:</h3>
+                    <p th:text="*{project.description}"></p>
+                    <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="GET">
+                        <input type="hidden" name="idEdit" th:value="${project.id}" />
+                        <button type="submit" class="btn btn-primary">View this project</button>
+                    </form>
+                </div>
             </div>
 
-            <h3>Favorite Users:</h3>
-            <div th:each="favorite_user : ${favorite_users}">
-                <br />
-                <a th:href="'/users/' + ${favorite_user.id} + '/profile'">
-                <h4 th:text="${favorite_user.username}"></h4>
-                </a>
+            <div class="card col-md-2 col-sm-12 mx-auto" align="center">
+                <h3>Languages: </h3>
+                <p class="card-text" th:each="language : ${langs}" th:text="${language.language}">
+                </p>
             </div>
 
-            <h3> COMPLETED PROJECTS:</h3>
+            <div class="card col-md-3 col-sm-12 mx-auto" align="center">
+                <h3> Completed Projects:</h3>
                 <br />
                 <div th:each="completedProject : ${completedProjects}">
                     <h4 th:text="${completedProject.title}"></h4>
                 </div>
-
-            <div class="card col-lg-3 col-md-2" align="center">
-                <img class="current-project" src="../img/comp.jpg" />
-                <br />
-                <h3>Add project here:</h3>
             </div>
-
-            <div class="card col-lg-4 col-md-3" align="center">
-                <img class="current-project" src="../img/comp.jpg" />
-                <br />
-                <h5>Insert list of projects script:</h5>
-            </div>
-
         </div>
     </div>
-<form th:action="@{/profile}" id="imageForm" th:method="post">
-    <input name="imageURL" id="imageURL" type="hidden"/>
-    <input type="button" onclick="client.picker(options).open();" value="Upload"/>
-</form>
 
 <footer th:replace="partials/footer :: footer"></footer>
 
