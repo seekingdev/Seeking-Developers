@@ -21,6 +21,8 @@ nav a:hover{
 .img-link{
     margin-right: 0;
     padding-right: 0;
+    width: 3em;
+    height: auto;
 }
 .nav-img-pos{
     padding-left: 0;
