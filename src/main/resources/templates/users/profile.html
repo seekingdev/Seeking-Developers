@@ -41,6 +41,9 @@
                     <input name="imageURL" id="imageURL" type="hidden"/>
                     <input type="button" class="btn btn-primary mx-auto" onclick="client.picker(options).open();" value="Upload Picture"/>
                 </form>
+                <form th:action="@{/profile/edit}" th:method="GET">
+                    <input type="submit" class="btn btn-primary mx-auto" value="Edit Profile" />
+                </form>
             </div>
 
             <div class="card col-md-5 col-sm-12 mx-auto">

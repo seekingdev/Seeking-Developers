@@ -89,9 +89,24 @@ public class User {
         this.email = email;
         this.bio = bio;
     }
+
     public User(){};
 
+    public User(String username, String password, String email, String bio, List<Language> languages, Long id){
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.bio = bio;
+        this.languages = languages;
+        this.id = id;
+    }
+
+
     public long getId(){return this.id;}
+
+    public void setId(Long id){
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
