@@ -8,16 +8,16 @@
 </head>
 <body>
 
-    <nav th:fragment="nav" class="navbar navbar-expand-lg nav-style">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <nav th:fragment="nav" class="navbar navbar-expand-lg nav-style form-inline">
+        <button  class="navbar-toggler form-inline" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon form-inline"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse form-inline" id="navbarNav">
+            <ul class="navbar-nav ul-style form-inline">
                 <li class="nav-item nav-link-style navbar-brand">
-                    <a th:href="@{/}" class="nav-link"><img src="/img/seeking-devs-logo.png" width="90" height="90" alt="logo"/></a>
+                    <a th:href="@{/}" class="nav-link"><img src="/img/seek-devs(cropped).png" width="64" height="64" class="img-link" alt="logo"/></a>
                 </li>
-                <li class="nav-item nav-link-style">
+                <li class="nav-item nav-img-pos nav-link-style">
                     <a th:href="@{/login}" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item nav-link-style">

@@ -7,14 +7,14 @@
 </head>
 <body>
 
-<nav th:fragment="user-nav" class="navbar navbar-expand">
+<nav th:fragment="user-nav" class="navbar navbar-expand form-inline">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon form-inline"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav form-inline">
             <li class="nav-item">
-                <a th:href="@{/dashboard}" class="nav-link"><img src="/img/seeking-devs-logo.png" width="90" height="90" alt="logo"/></a>
+                <a th:href="@{/dashboard}" class="nav-link"><img src="/img/seek-devs(cropped).png" width="64" height="64" alt="logo"/></a>
             </li>
             <li class="nav-item">
                 <a th:href="@{/profile}" class="nav-link">Profile</a>
@@ -31,7 +31,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" th:action="@{/users}" th:method="post">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" />
+            <input class="form-control mr-sm-2 justify-content-end" type="search" placeholder="Search" aria-label="Search" name="search" />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
