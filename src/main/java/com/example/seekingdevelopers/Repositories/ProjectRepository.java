@@ -23,6 +23,8 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
 
      Project findDistinctById(long id);
 
+     ArrayList<Project> findAll();
+
 
 
 }
