@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
+
+body{
+    background-color: #151E3F;
+    color: #FF8300;
+}
 .card-deck {
     padding: 25px;
+    /*box-sizing: border-box;*/
+    /*justify-content: end;*/
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FF8300;
+    box-shadow: #FF8300;
+    /*padding: 1em;*/
 }
 
 .project-container {
@@ -11,16 +24,16 @@
     flex-direction: row;
 
 }
-.main-card{
-    box-sizing: border-box;
-    justify-content: end;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #FF8300;
-    box-shadow: #FF8300;
-    padding: 1em;
-}
+/*.main-card{*/
+/*    box-sizing: border-box;*/
+/*    justify-content: end;*/
+/*    width: 75%;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    background-color: #FF8300;*/
+/*    box-shadow: #FF8300;*/
+/*    padding: 1em;*/
+/*}*/
 
 .card {
     width: 35%;
