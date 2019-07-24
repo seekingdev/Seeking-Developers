@@ -97,5 +97,21 @@ public class ProjectController {
         return "redirect:/dashboard";
     }
 
+    @GetMapping("projects/delete")
+    public String deleteProject(Model model){
+        return "projects/delete";
+    }
+    @PostMapping("projects/delete")
+    public String deleteProject(@RequestParam(name = "projectId") Long projectId){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Project project = projectDao.findDistinctById(projectId);
+        if(user.getId() != project.getCreator().getId()){
+            return "redirect:/dashboard";
+        }
+        projectDao.delete(projectId);
+        return "projects/delete";
+    }
+
+
 }
 

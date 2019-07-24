@@ -43,6 +43,10 @@
             <input type="text" class="textbox-style" name="contributor" id="contributor" />
             <input class="btn-style" type="submit" value="submit" />
         </form>
+        <form th:action="@{'/projects/delete'}" th:method="POST" >
+            <input type="hidden" name="projectId" th:value="${project.id}" />
+            <button th:type="submit" class="btn btn-style">Delete Project</button>
+        </form>
     </div>
 <footer th:replace="partials/footer :: footer"></footer>
 </body>
