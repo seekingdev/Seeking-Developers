@@ -3,12 +3,15 @@ body {
     background-color: #151E3F;
     color: #FF8300;
     font-family: 'Special Elite', cursive;
+    text-align: center;
 }
 .card-style{
     background-color: #FFA95E;
     border-radius: 8px;
+    width: 75%;
     border-color: #FF8300;
     color: #151E3F;
+    margin: 2em;
 }
 .btn-style{
     background-color: #151E3F;
