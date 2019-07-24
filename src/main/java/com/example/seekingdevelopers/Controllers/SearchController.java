@@ -31,6 +31,8 @@ public class SearchController {
     public String searchUsers(Model model){
         List<User> users = userDao.findAll();
         model.addAttribute("users", users);
+        List<Project> projects = projectDao.findAll();
+        model.addAttribute("projects", projects);
         return "users/users-search-list";
     }
 
