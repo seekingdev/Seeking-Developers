@@ -1,11 +1,11 @@
-nav.style{
+.navbar {
     background-color: #FF8300;
     color: #151E3F;
 }
-a:hover{
+nav a:hover{
     color: #0056C6;
     text-shadow: #0056C6;
 }
-.nav-list-style{
+.nav-link {
     color: #151E3F;
 }
