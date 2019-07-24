@@ -14,8 +14,9 @@
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
     <h2>Welcome to your Dahsboard!</h2>
-        <div th:each="projects : ${listOfProjects}" class="card card-style d-flex justify-content-center">
-            <div class="card-body d-flex justify-content-center">
+<div class="row">
+        <div th:each="projects : ${listOfProjects}" class="col card card-style d-flex justify-content-center">
+            <div class="card-body">
                 <h3 class="card-title">Project Title: <span th:text="${projects.title}"></span></h3>
                 <h4 class="card-subtitle mb-2 text-muted" >Creator: <span th:text="${projects.creator.username}"></span></h4>
                 <p class="card-text">Description: <span th:text="${projects.description}"></span></p>
@@ -27,6 +28,7 @@
                 </form>
             </div>
         </div>
+</div>
 <footer th:replace="partials/footer :: footer"></footer>
 
 </body>
