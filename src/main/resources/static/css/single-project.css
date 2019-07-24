@@ -2,8 +2,11 @@
 body{
     background-color: #151E3F;
     color: #FF8300;
+    font-family: 'Special Elite', cursive;
 }
-
+li{
+    list-style-type: none;
+}
 .project-container {
     align-content: center;
     text-align: center;
@@ -12,31 +15,31 @@ body{
     flex-direction: row;
 }
 
-.card {
+.card-style {
     width: 35%;
     margin-left: auto;
     margin-right: auto;
     background-color: #FF8300;
     box-shadow: #FF8300;
+    border-radius: 8px;
     color: #151E3F;
 }
-
 .column-title {
     width: 75%;
-    vertical-align: middle;
     text-align: center;
 }
 
 .column-date {
     width: 25%;
-    vertical-align: middle;
     text-align: center;
 }
 
 #description {
-    height: 300px;
+    height: 15em;
+}
+.btn-style{
+    background-color: #151E3F;
+    color: #FF8300;
+    border-color: #FFF9EE;
 }
 
-.list-group {
-    list-style-type: none;
-}

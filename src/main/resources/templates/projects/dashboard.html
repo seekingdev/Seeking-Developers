@@ -5,7 +5,7 @@
 </th:block>
     <meta charset="UTF-8"/>
     <title>dashboard</title>
-    <link href="/css/dashboard.css" rel="stylsheet"/>
+    <link rel="stylsheet" href="/css/dashboard.css"/>
     <link rel="stylesheet" href="/css/navbar-user.css"/>
 
 </head>
@@ -23,7 +23,7 @@
                 <h5 class="card-subtitle mb-2 text-muted">Date/Time Created: <span th:text="${{projects.creatingDate}}"></span></h5>
                 <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
                     <input type="hidden" name="idEdit" th:value="${projects.id}" />
-                    <button type="submit" class="btn btn-style">View this project</button>
+                    <button type="submit" class="btn-style">View this project</button>
                 </form>
             </div>
         </div>
