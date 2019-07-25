@@ -31,7 +31,12 @@ nav a:hover{
     padding-left: 0;
 }
 .btn-style{
-    background-color: #151E3F;
-    color: #FF8300;
-    border-color: #FFF9EE;
+    background-color: #f2c078;
+    color: #151E3F;
+    border-radius: 8px;
+}
+.btn-style:hover{
+    background-color: #ffa95e;
+    color: #151E3F;
+    border-radius: 8px;
 }
