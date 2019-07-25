@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto+Slab&display=swap');
 .navbar {
     background-color: #f2c078;
     color: #151E3F;
     padding: 0;
     margin: 0 auto 1em auto;
-    font-family: 'Special Elite', cursive;
+    font-size: 1.5em;
+    font-family: 'Roboto Slab', serif;
     box-shadow: black;
 }
 nav a:hover{

@@ -12,7 +12,8 @@
 
 <nav th:replace="partials/navbar :: nav"></nav>
 
-<div class="login mx-auto">
+<div class="login mx-auto" id="login-form" align="center">
+
     <form th:action="@{/login}" method="post">
         <input id="username" name="username" placeholder="Username" type="text" />
         <br/>
@@ -20,7 +21,7 @@
         <input id="password" name="password" placeholder="Password" type="password" />
         <br/>
         <br/>
-        <input type="submit" id="submit" value="Log In" />
+        <input type="submit" id="submit" value="Login" />
     </form>
 </div>
 
