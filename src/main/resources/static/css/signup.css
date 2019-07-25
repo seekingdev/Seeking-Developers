@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
 body {
-    background-color: #151e3f;
+    background-color: #696D87;
     text-align: center;
     color: #FF8300;
     margin: 0 auto;
@@ -33,7 +33,7 @@ input[type=checkbox] {
     padding: 30px 0;
 }
 .signup-form h2{
-    color: #636363;
+    color: #efe9f4;
     margin: 0 0 15px;
     position: relative;
     text-align: center;
@@ -42,7 +42,7 @@ input[type=checkbox] {
     content: "";
     height: 2px;
     width: 30%;
-    background: #d4d4d4;
+    background: #efe9f4;
     position: absolute;
     top: 50%;
     z-index: 2;
@@ -77,7 +77,7 @@ input[type=checkbox] {
     font-weight: bold;
     min-width: 140px;
     outline: none !important;
-    background-color: #FF8300;
+    background-color: #f2c078;
     color: #151e3f;
 }
 .signup-form .row div:first-child{
