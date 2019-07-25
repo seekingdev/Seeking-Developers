@@ -5,18 +5,16 @@ body{
     font-family: 'Special Elite', cursive;
 }
 li{
-    list-style-type: none;
-    background-color: #ffa95e;
-    color: #151E3F;
+    list-style: none;
 }
 .project-container {
-    align-content: center;
+    /*align-content: center;*/
     text-align: center;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
-    flex-direction: row;
+    /*flex-direction: row;*/
     background-color: #ffa95e;
-    color: #151E3F;
+    color: #FFF9EE;
 }
 
 .card-style {
@@ -26,26 +24,26 @@ li{
     background-color: #ffa95e;
     box-shadow: #ffa95e;
     border-radius: 8px;
-    color: #151E3F;
+    color: #FFF9EE;
 }
 .column-title {
     width: 75%;
     text-align: center;
     background-color: #ffa95e;
-    color: #151E3F;
+    color: #FFF9EE;
 }
 
 .column-date {
     width: 25%;
     text-align: center;
     background-color: #ffa95e;
-    color: #151E3F;
+    color: #FFF9EE;
 }
 
 #description {
-    height: 7em;
+    height: 3em;
     background-color: #ffa95e;
-    color: #151E3F;
+    color: #FFF9EE;
 }
 .btn-style{
     background-color: #151E3F;

@@ -25,15 +25,14 @@
             </div>
         </div>
 
-        <ul class="list-group">
-            <li class="list-group-item">Created By: <span th:text="${project.creator.username}"></span></li>
-            <li class="list-group-item" id="description">Description: <span th:text="${project.description}"></span></li>
-            <li class="list-group-item">Help Needed: <span th:text="${project.dev_type.title}"></span></li>
-            <li class="list-group-item">Completed? </li>
-            <li class="list-group-item">Contributors: <span th:each="contributor : ${contributors}">
-                <li th:text="${contributor.username}"></li></span></li>
-        </ul>
-
+        <div class="list-group">
+            <h4 class="list-group-item">Created By: <span th:text="${project.creator.username}"></span></h4>
+            <h4 class="list-group-item" id="description">Description: <span th:text="${project.description}"></span></h4>
+            <h4 class="list-group-item">Help Needed: <span th:text="${project.dev_type.title}"></span></h4>
+            <h4 class="list-group-item">Completed? </h4>
+            <h4 class="list-group-item">Contributors: <span th:each="contributor : ${contributors}">
+                <li th:text="${contributor.username}"></li></span></h4>
+        </div>
     <form th:action="@{/dashboard}" th:method="POST" onsubmit="return confirm('Are you sure you want to join this project?')">
         <input type="hidden" name="joinProject" th:value="${project.id}" />
         <button type="submit" class="btn btn-style">Join this project</button>
