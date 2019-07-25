@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
 body {
     background-color: #151e3f;
+    font-family: 'Special Elite', cursive;
+    text-align: center;
 }
 
 .card {
@@ -9,6 +11,7 @@ body {
     /*transition: 0.3s;*/
     background-color: #ffa95e;
     color: #0056c6;
+    border-radius: 8px;
 }
 
 /* On mouse-over, add a deeper shadow */

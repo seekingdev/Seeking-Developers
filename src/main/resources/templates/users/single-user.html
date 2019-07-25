@@ -29,12 +29,10 @@
     };
 </script>
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
-<br />
-<br />
 
 <div class="container-fluid" th:each="user : ${user}">
     <div class="row">
-        <div class="card user-box col-md-4 col-sm-12 mx-auto">
+        <div class="card user-box col-md-4 col-sm-12 mx-auto pro">
             <img class="user mx-auto" th:src="${user.photo}" />
             <h3 align="center" th:text="${user.username}"></h3>
             <h5 align="center" th:text="${user.email}"></h5>
@@ -44,7 +42,7 @@
             </form>
         </div>
 
-        <div class="card col-md-5 col-sm-12 mx-auto">
+        <div class="card col-md-5 col-sm-12 mx-auto pro">
             <div class="card-body">
                 <h3 class="card-title" align="center">Biography:</h3>
                 <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
@@ -62,10 +60,8 @@
         </div>
     </div>
 
-    <br/>
-
     <div class="row">
-        <div class="card col-md-3 col-sm-12 mx-auto" align="center">
+        <div class="card col-md-3 col-sm-12 mx-auto pro" align="center">
             <h3>Current Project: </h3>
             <div th:each="project : ${lastProject}">
                 <br />
@@ -78,13 +74,13 @@
             </div>
         </div>
 
-        <div class="card col-md-2 col-sm-12 mx-auto" align="center">
+        <div class="card col-md-2 col-sm-12 mx-auto pro" align="center">
             <h3>Languages: </h3>
             <p class="card-text" th:each="language : ${langs}" th:text="${language.language}">
             </p>
         </div>
 
-        <div class="card col-md-3 col-sm-12 mx-auto" align="center">
+        <div class="card col-md-3 col-sm-12 mx-auto pro" align="center">
             <h3> Completed Projects:</h3>
             <br />
             <div th:each="completedProject : ${completedProjects}">
