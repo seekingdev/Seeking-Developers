@@ -7,6 +7,10 @@ body {
     font-size: 1.2em;
 }
 
+#userbutton:hover {
+    color: #ffa95e; !important;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     /*box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);*/
@@ -50,6 +54,10 @@ body {
     text-align: center;
 }
 
+.btn:hover {
+    background-color: #FFA95E;
+}
+
 form {
     text-align: center;
     align-content: center;
@@ -81,3 +89,6 @@ form {
     margin-bottom: 3%;
 }
 
+#userlist {
+    margin-top: 3%;
+}
