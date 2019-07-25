@@ -3,6 +3,7 @@ body {
     background-color: #696D87;
     text-align: center;
     color: #FF8300;
+    font-family: 'Roboto Slab', serif;    font-size: 1.2em;
     margin: 0 auto;
 }
 
@@ -28,7 +29,7 @@ input[type=checkbox] {
     border-radius: 3px;
 }
 .signup-form{
-    width: 400px;
+    width: 40%;
     margin: 0 auto;
     padding: 30px 0;
 }
@@ -54,13 +55,13 @@ input[type=checkbox] {
     right: 0;
 }
 .signup-form .hint-text{
-    color: #999;
+    color: black;
     margin-bottom: 30px;
     text-align: center;
 }
 .signup-form form{
     color: #999;
-    border-radius: 3px;
+    border-radius: 8px;
     margin-bottom: 15px;
     background: #f2f3f7;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -73,12 +74,13 @@ input[type=checkbox] {
     margin-top: 3px;
 }
 .signup-form .btn{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: bold;
     min-width: 140px;
     outline: none !important;
     background-color: #f2c078;
     color: #151e3f;
+    border-radius: 8px;
 }
 .signup-form .row div:first-child{
     padding-right: 10px;
@@ -100,9 +102,17 @@ input[type=checkbox] {
 .signup-form form a:hover{
     text-decoration: underline;
 }
+#submit:hover {
+    background-color: #ffa95e;
+}
 
 @media screen and (max-width:425px) {
     .signup-form {
         width: 90%;
     }
+}
+@media screen and (max-width: 1600px) and (min-width: 992px) {
+
+
+
 }
