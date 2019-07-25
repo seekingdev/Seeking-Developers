@@ -14,17 +14,19 @@
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
     <div class="row" align="center">
-
         <div class="card col-md-4 col-sm-6 col-xs-12 mx-auto" align="center">
+            <h3 id="userlist"><u>Users:</u></h3>
+            <br/>
             <div th:each="user : ${users}">
                 <h3 th:text="${user.username}"> </h3>
                 <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="GET">
                     <input type="hidden" name="id" th:value="${user.id}" />
-                    <button type="submit" class="btn btn-primary">View this User's Profile</button>
+                    <button type="submit" class="btn btn-primary probutton" style="color: #000000">View this User's Profile</button>
                 </form>
+                <br/>
             </div>
+
         </div>
-        
     </div>
 
 
