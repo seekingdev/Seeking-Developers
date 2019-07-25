@@ -14,14 +14,14 @@
     <div class="card main-card">
         <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" class="card-body" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
             <label type="text" class="card-body" th:field="*{title}">Title</label>
-            <input type="text" th:field="*{title}" id="title" class=" textbox-style textbox-title"/>
+            <input type="text" th:field="*{title}" id="title" class="form-control textbox-style textbox-title"/>
             <br />
             <label for="description">Description</label>
-            <textarea class="textbox-style textbox-description" type="text" th:field="*{description}" id="description"></textarea>
+            <textarea class="textbox-style form-control textbox-description" type="text" th:field="*{description}" id="description"></textarea>
             <br />
             <label for="helpNeeded">What type of help is needed?</label>
             <br/>
-            <select class="dropdown-style" name="helpNeeded" id="helpNeeded">
+            <select class="dropdown-style form-control" name="helpNeeded" id="helpNeeded">
                 <option value="1">Front-End</option>
                 <option value="2">Back-End</option>
             </select>

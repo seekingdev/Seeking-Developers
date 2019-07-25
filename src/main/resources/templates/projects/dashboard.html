@@ -17,7 +17,7 @@
 <div class="row justify-content-md-center">
         <div th:each="projects : ${listOfProjects}" class="col-4 card card-style d-flex justify-content-center">
             <div class="card-body">
-                <h3 class="card-title">Project Title: <span th:text="${projects.title}"></span></h3>
+                <h3 class="card-title"><span th:text="${projects.title}"></span></h3>
                 <h4 class="card-subtitle mb-2 text-muted" >Creator: <span th:text="${projects.creator.username}"></span></h4>
                 <p class="card-text">Description: <span th:text="${projects.description}"></span></p>
                 <h5 class="card-subtitle mb-2 text-muted">Help Needed: <span th:text="${projects.dev_type.title}"></span></h5>

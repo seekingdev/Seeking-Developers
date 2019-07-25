@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
-/*body{*/
-/*    background-color: #151E3F;*/
-/*    text-align: center;*/
-/*    color: #FF8300;*/
-/*}*/
-/*.main-card{*/
-/*    box-sizing: border-box;*/
-/*    justify-content: end;*/
-/*    width: 30%;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    background-color: #FFA95E;*/
-/*    box-shadow: #000;*/
-/*    padding: 1em;*/
-/*    color: #151E3F;*/
-/*}*/
-/*.btn-style{*/
-/*    background-color: #151E3F;*/
-/*    color: #FF8300;*/
-/*    border-color: #151E3F;*/
-/*    border-radius: 8px;*/
-/*    margin-top: .2em*/
+body{
+    background-color: #151E3F;
+    text-align: center;
+    color: #FF8300;
+}
+.main-card{
+    box-sizing: border-box;
+    justify-content: end;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFA95E;
+    box-shadow: #000;
+    padding: 1em;
+    color: #151E3F;
+}
+.btn-style{
+    background-color: #151E3F;
+    color: #FF8300;
+    border-color: #151E3F;
+    border-radius: 8px;
+    margin-top: .2em;
 
-/*}*/
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 140px;
+    outline: none !important;
+
+}
 /*.btn-style:hover{*/
 /*    background-color: #FF8300;*/
 /*    border-color: #FFF9EE;*/
@@ -82,18 +87,18 @@ input[type=checkbox] {
 .form-control, .btn{
     border-radius: 3px;
 }
-.signup-form{
+.edit-form{
     width: 400px;
     margin: 0 auto;
     padding: 30px 0;
 }
-.signup-form h2{
+.edit-form h2{
     color: #636363;
     margin: 0 0 15px;
     position: relative;
     text-align: center;
 }
-.signup-form h2:before, .signup-form h2:after{
+.edit-form h2:before, .signup-form h2:after{
     content: "";
     height: 2px;
     width: 30%;
@@ -102,18 +107,18 @@ input[type=checkbox] {
     top: 50%;
     z-index: 2;
 }
-.signup-form h2:before{
+.edit-form h2:before{
     left: 0;
 }
-.signup-form h2:after{
+.edit-form h2:after{
     right: 0;
 }
-.signup-form .hint-text{
+.edit-form .hint-text{
     color: #999;
     margin-bottom: 30px;
     text-align: center;
 }
-.signup-form form{
+.edit-form form{
     color: #999;
     border-radius: 3px;
     margin-bottom: 15px;
@@ -121,13 +126,13 @@ input[type=checkbox] {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
-.signup-form .form-group{
+.edit-form .form-group{
     margin-bottom: 20px;
 }
-.signup-form input[type="checkbox"]{
+.edit-form input[type="checkbox"]{
     margin-top: 3px;
 }
-.signup-form .btn{
+.edit-form .btn{
     font-size: 16px;
     font-weight: bold;
     min-width: 140px;
@@ -135,29 +140,29 @@ input[type=checkbox] {
     background-color: #FF8300;
     color: #151e3f;
 }
-.signup-form .row div:first-child{
+.edit-form .row div:first-child{
     padding-right: 10px;
 }
-.signup-form .row div:last-child{
+.edit-form .row div:last-child{
     padding-left: 10px;
 }
-.signup-form a{
+.edit-form a{
     color: #fff;
     text-decoration: underline;
 }
-.signup-form a:hover{
+.edit-form a:hover{
     text-decoration: none;
 }
-.signup-form form a{
+.edit-form form a{
     color: #5cb85c;
     text-decoration: none;
 }
-.signup-form form a:hover{
+.edit-form form a:hover{
     text-decoration: underline;
 }
 
 @media screen and (max-width:425px) {
-    .signup-form {
+    .edit-form {
         width: 90%;
     }
 }
