@@ -6,6 +6,8 @@ body{
 }
 li{
     list-style-type: none;
+    background-color: #ffa95e;
+    color: #151E3F;
 }
 .project-container {
     align-content: center;
@@ -13,6 +15,8 @@ li{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    background-color: #ffa95e;
+    color: #151E3F;
 }
 
 .card-style {
@@ -27,15 +31,21 @@ li{
 .column-title {
     width: 75%;
     text-align: center;
+    background-color: #ffa95e;
+    color: #151E3F;
 }
 
 .column-date {
     width: 25%;
     text-align: center;
+    background-color: #ffa95e;
+    color: #151E3F;
 }
 
 #description {
     height: 7em;
+    background-color: #ffa95e;
+    color: #151E3F;
 }
 .btn-style{
     background-color: #151E3F;

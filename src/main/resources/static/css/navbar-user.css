@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
-.navbar-style {
+.navbar {
     background-color: #FF8300;
     color: #151E3F;
     padding: 0;
@@ -22,7 +22,7 @@ nav a:hover{
 }
 .img-link{
     margin-right: 0;
-    padding-right: 0;
+    padding: 0;
     width: 3em;
     height: auto;
 }
