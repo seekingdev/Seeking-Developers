@@ -3,6 +3,8 @@
 body{
     background-color: #151E3F;
     color: #FF8300;
+    font-family: 'Special Elite', cursive;
+;
 }
 .card-deck {
     padding: 25px;
@@ -57,4 +59,6 @@ body{
 
 .list-group {
     list-style-type: none;
+    background-color: #FF8300;
+    color: #151E3F;
 }

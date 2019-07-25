@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
 body{
     background-color: #151E3F;
-    color: #FF8300;
+    color: #FFA95E;
     font-family: 'Special Elite', cursive;
 }
 li{
@@ -19,8 +19,8 @@ li{
     width: 35%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #FF8300;
-    box-shadow: #FF8300;
+    background-color: #ffa95e;
+    box-shadow: #ffa95e;
     border-radius: 8px;
     color: #151E3F;
 }
@@ -35,7 +35,7 @@ li{
 }
 
 #description {
-    height: 15em;
+    height: 7em;
 }
 .btn-style{
     background-color: #151E3F;
