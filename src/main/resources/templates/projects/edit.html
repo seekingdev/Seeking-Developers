@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <title>Title</title>
     <link rel="stylesheet" href="/css/edit.css"/>
+    <link rel="stylesheet" href="/css/navbar-user.css"/>
 </head>
 <body>
 
@@ -36,7 +37,7 @@
             </select>
             <br/>
             <input type="hidden" name="updateProject" th:value="${project.id}" />
-            <button th:type="submit" class="btn btn-style">UpdateProject</button>
+            <button th:type="submit" class="btn-style">UpdateProject</button>
         </form>
         <form th:action="@{'/projects/'+${project.id}+'/single-project'}" th:method="POST" >
         <label for="contributor">Add Contributor</label>
@@ -45,7 +46,7 @@
         </form>
         <form th:action="@{'/projects/delete'}" th:method="POST" >
             <input type="hidden" name="projectId" th:value="${project.id}" />
-            <button th:type="submit" class="btn btn-style">Delete Project</button>
+            <button th:type="submit" class="btn-style">Delete Project</button>
         </form>
     </div>
 <footer th:replace="partials/footer :: footer"></footer>
