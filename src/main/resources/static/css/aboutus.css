@@ -1,87 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
 body {
-    background-color: #151e3f;
+    background-color: #696D87;
 }
 
 .about {
     text-align: center;
 }
 
-.card-elle {
-    color: #0056c6;
-    border-radius: 25px;
-    background-color: #ffa95e;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
-    transition: 0.3s;
-    height: 80%;
-    width: 45%;
+.card {
+    display: table;
 }
 
-.card-elle:hover {
-    box-shadow: 5px 10px 20px 10px rgba(255,131,0,0.5);
+.card-elle {
+    color: #000000;
+    border-radius: 8px;
+    background-color: lightgrey;
+    text-align: center;
+
 }
 
 .card-derek {
-    color: #0056c6;
-    border-radius: 25px;
-    background-color: #ffa95e;
+    color: #000000;
+    border-radius: 8px;
+    background-color: lightgrey;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
-    transition: 0.3s;
-    height: 80%;
-    width: 45%;
-}
-
-.card-derek:hover {
-    box-shadow: 5px 10px 20px 10px rgba(255,131,0,0.5);
 }
 
 .card-nic {
-    color: #0056c6;
-    border-radius: 25px;
-    background-color: #ffa95e;
+    color: #000000;
+    border-radius: 8px;
+    background-color: lightgrey;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);
-    transition: 0.3s;
-    height: 80%;
-    width: 45%;
-}
-
-.card-nic:hover {
-    box-shadow: 5px 10px 20px 10px rgba(255,131,0,0.5);
 }
 
 h6.bio {
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
-@media screen and (max-width:425px) {
-    .card-elle {
-        height: 90%;
-        width: 90%;
-    }
-    .card-derek {
-        height: 90%;
-        width: 90%;
-    }
-    .card-nic {
-        height: 90%;
-        width: 90%;
-    }
-}
-
-@media screen and (min-width:425px) and (max-width:612px) {
-    .card-elle {
-        height: 80%;
-        width: 80%;
-    }
-    .card-derek {
-        height: 80%;
-        width: 80%;
-    }
-    .card-nic {
-        height: 80%;
-        width: 80%;
-    }
+.social-icon {
+    max-height: 30px;
+    max-width: 30px;
+    margin: 10px;
 }
