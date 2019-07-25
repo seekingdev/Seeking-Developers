@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto+Slab&display=swap');
 body {
-    background-color: #151e3f;
-    font-family: 'Special Elite', cursive;
+
+    background-color: #696D87;
+    font-family: 'Roboto Slab', serif;
     text-align: center;
+    font-size: 1.2em;
 }
 
 .card {
     /* Add shadows to create the "card" effect */
     /*box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);*/
     /*transition: 0.3s;*/
-    background-color: #ffa95e;
-    color: #0056c6;
+    background-color: lightgrey;
+    color: #000000;
     border-radius: 8px;
 }
 
@@ -35,12 +37,15 @@ body {
     width: 230px;
     align-content: center;
     text-align: center;
+    margin: 4%;
 }
 
 .btn {
     border-radius: 8px;
-    background-color: #0056C6;
-    color: #FFA95E;
+    height: 50px;
+    width: 200px;
+    background-color: #f2c078;
+    color: #000000;
     align-content: center;
     text-align: center;
 }
@@ -51,5 +56,28 @@ form {
 }
 
 .pro {
-    margin-bottom: 20px;
+    margin: 4%;
 }
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.pro2 {
+    margin: 3%;
+    text-align: center;
+    align-content: center;
+}
+
+.biography {
+    height: 40%;
+    margin: 3%;
+
+    overflow: scroll;
+}
+
+.upload {
+    margin-bottom: 3%;
+}
+
