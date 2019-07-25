@@ -5,22 +5,22 @@
 </th:block>
     <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="/css/edit.css"/>
+    <link rel="stylesheet" href="/css/create.css"/>
     <link rel="stylesheet" href="/css/navbar-user.css"/>
 </head>
 <body>
 
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
-    <div class="card main-card">
+    <div class="card main-card" id="creatform">
         <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" class="card-body" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
-            <label type="text" class="card-body" th:field="*{title}">Title</label>
+            <h3>Title</h3>
             <input type="text" th:field="*{title}" id="title" class="form-control textbox-style textbox-title"/>
             <br />
-            <label for="description">Description</label>
+            <h3>Description</h3>
             <textarea class="textbox-style form-control textbox-description" type="text" th:field="*{description}" id="description"></textarea>
             <br />
-            <label for="helpNeeded">What type of help is needed?</label>
+            <h3>What type of help is needed?</h3>
             <br/>
             <select class="dropdown-style form-control" name="helpNeeded" id="helpNeeded">
                 <option value="1">Front-End</option>
@@ -30,23 +30,23 @@
             <input type="hidden" th:field="*{creatingDate}" />
             <input type="hidden" th:field="*{dev_type}" />
             <br/>
-            <label for="isComplete">Is the project complete?</label>
+            <h3>Is the Project Complete?</h3>
             <select class="dropdown-style" name="isComplete" id="isComplete">
                 <option value="false">No, it is not.</option>
                 <option value="true">Yes, the project is complete!</option>
             </select>
             <br/>
             <input type="hidden" name="updateProject" th:value="${project.id}" />
-            <button th:type="submit" class="btn-style">UpdateProject</button>
+            <button th:type="submit" class="btn-style" id="submitbutton">Update Project</button>
         </form>
         <form th:action="@{'/projects/'+${project.id}+'/single-project'}" th:method="POST" >
-        <label for="contributor">Add Contributor</label>
-            <input type="text" class="textbox-style" name="contributor" id="contributor" />
-            <input class="btn-style" type="submit" value="submit" />
+            <h3>Add Contributor</h3>
+            <input type="text" class="textbox-style" placeholder="Enter Username" name="contributor" id="contributor" />
+            <input class="btn-style" type="submit" value="Add Contributor" id="submitbutton" />
         </form>
         <form th:action="@{'/projects/delete'}" th:method="POST" >
             <input type="hidden" name="projectId" th:value="${project.id}" />
-            <button th:type="submit" class="btn-style">Delete Project</button>
+            <button th:type="submit" class="btn-style" id="submitbutton">Delete Project</button>
         </form>
     </div>
 <footer th:replace="partials/footer :: footer"></footer>
