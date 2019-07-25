@@ -24,7 +24,7 @@ public class Project {
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(pattern ="MM-dd-yyyy HH:mm")
+    @DateTimeFormat(pattern ="MM-dd-yyyy")
     private Date creatingDate;
 
 
