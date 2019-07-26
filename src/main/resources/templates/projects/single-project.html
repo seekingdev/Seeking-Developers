@@ -16,10 +16,10 @@
      <div th:each="project : ${project}">
         <div class="card-header">
             <div class="row">
-                <div class="col-6 column-title">
+                <div class="col-8 column-title">
                     <h1><span th:text="${project.title}"></span></h1>
                 </div>
-                <div class="col-6 column-date">
+                <div class="col-4 column-date my-auto">
                     <h5>Date Created: <span th:text="${{project.creatingDate}}"></span></h5>
                 </div>
             </div>

@@ -11,7 +11,7 @@ li{
 }
 h4{
     padding: .5em;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 .card-style {
     background-color: #f2f3f7;
@@ -19,7 +19,7 @@ h4{
     width: 75%;
     border-color: #f2f3f7;
     color: #000;
-    position: absolute;
+    /*position: absolute;*/
     margin-right: auto;
     margin-left: auto;
     padding: 2em;
@@ -28,18 +28,26 @@ h4{
    text-decoration: underline;
 }
 
+.column-date {
+
+}
+
 .btn-style{
     background-color: #F2C078;
-    color: #151E3F;
+    color: #000000;
     border-color: #F2C078;
     border-radius: 8px;
     margin: .5em;
     padding: .2em;
+    height: 50px;
+    width: 200px;
+    font-size: 1.2em;
 }
 .btn-style:hover{
     background-color: #ffa95e;
-    color: #151E3F;
+    color: #000000;
     border-color: #ffa95e;
     border-radius: 8px;
+    font-size: 1.2em;
 }
 
