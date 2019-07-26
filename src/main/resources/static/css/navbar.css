@@ -3,10 +3,13 @@
     background-color: #f2c078;
     color: #151E3F;
     padding: .5em;
-    margin: 0 auto 1em auto;
     font-size: 1em;
+    width: 100%;
     font-family: 'Roboto Slab', serif;
     box-shadow: black;
+}
+.navbar{
+    padding: 0;!important;
 }
 nav a:hover{
     color: #FFF9EE;
