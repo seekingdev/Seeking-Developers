@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto+Slab&display=swap');
-.navbar {
+.navbar-style {
     background-color: #f2c078;
     color: #151E3F;
     padding: 0;
     margin: 0 auto 1em auto;
     font-family: 'Roboto Slab', serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-shadow: black;
 }
 nav a:hover{
@@ -13,7 +13,7 @@ nav a:hover{
     text-shadow: #FFF9EE;
 }
 .ul-style{
-    padding-bottom: 0;
+    padding-bottom: .5em;
     padding-top: 0;
 }
 .nav-link {
@@ -30,13 +30,14 @@ nav a:hover{
 .nav-img-pos{
     padding-left: 0;
 }
-.btn-style{
-    background-color: #f2c078;
-    color: #151E3F;
+.nav-btn-style{
+    background-color: #151E3F;
+    color: #f2c078;
     border-radius: 8px;
+    size: 1.2em;
 }
-.btn-style:hover{
-    background-color: #ffa95e;
-    color: #151E3F;
+.nav-btn-style:hover{
+    background-color: #151E3F;
+    color: #ffa95e;
     border-radius: 8px;
 }

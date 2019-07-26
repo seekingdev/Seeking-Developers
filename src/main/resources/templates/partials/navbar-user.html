@@ -7,32 +7,32 @@
 </head>
 <body>
 
-<nav th:fragment="user-nav" class="navbar navbar-expand form-inline">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon form-inline"></span>
+<nav th:fragment="user-nav" class="navbar navbar-expand-lg form-inline">
+    <button class="navbar-toggler form-inline" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse navbar" id="navbarText">
-        <ul class="navbar-nav form-inline">
-            <li class="nav-item">
-                <a th:href="@{/dashboard}" class="nav-link"><img src="/img/seek-devs(cropped).png" width="64" height="64" alt="logo"/></a>
+    <div class="collapse navbar-collapse navbar-style navbar" id="navbarNav">
+        <ul class="navbar-nav ul-style form-inline">
+            <li class="nav-item nav-link-style navbar-brand">
+                <a th:href="@{/dashboard}" class="nav-link"><img src="/img/seek-devs(cropped).png" width="64" height="64" class="img-link" alt="logo"/></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-img-pos nav-link-style">
                 <a th:href="@{/profile}" class="nav-link">Profile</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-link-style">
                 <a th:href="@{/projects/create}" class="nav-link">Create Project</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-link-style">
                 <a th:href="@{/users}" class="nav-link">Users</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-link-style">
                 <a th:href="@{/login}" class="nav-link" tabindex="-1" ><form th:action="@{/logout}" th:method="post">
                 </form>Logout</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" th:action="@{/users}" th:method="post">
+        <form class="form-inline my-2" th:action="@{/users}" th:method="post">
             <input class="form-control mr-sm-2 d-flex justify-content-between" type="search" placeholder="Search" aria-label="Search" name="search" />
-            <button class="btn-style my-2 my-sm-0" type="submit">Search</button>
+            <button class="nav-btn-style my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
 </nav>

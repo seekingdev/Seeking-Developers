@@ -1,50 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
 body{
-    background-color: #151E3F;
-    color: #FFA95E;
-    font-family: 'Special Elite', cursive;
-}
-.project-container {
-    /*align-content: center;*/
+    background-color: #696D87;
     text-align: center;
-    /*display: flex;*/
-    justify-content: center;
-    /*flex-direction: row;*/
-    background-color: #ffa95e;
-    color: #FFF9EE;
+    color: #F2C078;
+    font-family: ‘Roboto Slab’, serif;
 }
-
+li{
+    list-style: none;
+    padding: .5em;
+}
+h4{
+    padding: .5em;
+    text-decoration: underline;
+}
 .card-style {
-    width: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffa95e;
-    box-shadow: #ffa95e;
+    background-color: #f2f3f7;
     border-radius: 8px;
-    color: #FFF9EE;
+    width: 75%;
+    border-color: #f2f3f7;
+    color: #000;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2em;
 }
 .column-title {
-    width: 75%;
-    text-align: center;
-    background-color: #ffa95e;
-    color: #FFF9EE;
+   text-decoration: underline;
 }
 
-.column-date {
-    width: 25%;
-    text-align: center;
-    background-color: #ffa95e;
-    color: #FFF9EE;
-}
-
-#description {
-    height: 3em;
-    background-color: #ffa95e;
-    color: #FFF9EE;
-}
 .btn-style{
-    background-color: #151E3F;
-    color: #FF8300;
-    border-color: #FFF9EE;
+    background-color: #F2C078;
+    color: #151E3F;
+    border-color: #F2C078;
+    border-radius: 8px;
+    margin: .5em;
+    padding: .2em;
+}
+.btn-style:hover{
+    background-color: #ffa95e;
+    color: #151E3F;
+    border-color: #ffa95e;
+    border-radius: 8px;
 }
 
