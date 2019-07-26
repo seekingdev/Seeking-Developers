@@ -2,7 +2,7 @@
 .navbar-style {
     background-color: #f2c078;
     color: #151E3F;
-    padding: 0;
+    padding: .5em;
     margin: 0 auto 1em auto;
     font-size: 1em;
     font-family: 'Roboto Slab', serif;
