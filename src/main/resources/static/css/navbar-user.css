@@ -8,6 +8,9 @@
     font-size: 1.2em;
     box-shadow: black;
 }
+.navbar{
+    padding: 0;!important;
+}
 nav a:hover{
     color: #FFF9EE;
     text-shadow: #FFF9EE;

@@ -93,3 +93,10 @@ form {
 #userlist {
     margin-top: 3%;
 }
+
+#user2 {
+    max-height: 100px; !important;
+    max-width: 100px; !important;
+    margin: 4%;
+    object-fit: contain;
+}

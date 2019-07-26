@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow|Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto+Slab&display=swap');
 body {
     background-color: #696D87;
+    font-family: 'Roboto Slab', serif;
 }
 
 .about {
@@ -41,4 +42,27 @@ h6.bio {
     max-height: 30px;
     max-width: 30px;
     margin: 10px;
+}
+
+.ellepic {
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.derekpic {
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.nicpic {
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card-title {
+    margin: 10px;
+}
+
+.links {
+
 }
