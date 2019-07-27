@@ -8,15 +8,13 @@
 </head>
 <body>
 
-    <nav th:fragment="nav" class="navbar navbar-expand-lg">
-        <button  class="navbar-toggler form-inline" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav th:fragment="nav" class="navbar navbar-expand-sm navbar-light">
         <div class="collapse navbar-collapse navbar-style form-inline" id="navbarNav">
+            <a th:href="@{/}" class=" nav-item nav-link navbar-brand"><img src="/img/seek-devs(cropped).png" width="90" height="90" class="img-link" alt="logo"/></a>
             <ul class="navbar-nav ul-style form-inline">
-                <li class="nav-item nav-link-style navbar-brand">
-                    <a th:href="@{/}" class="nav-link"><img src="/img/seek-devs(cropped).png" width="90" height="90" class="img-link" alt="logo"/></a>
-                </li>
+<!--                <li class="nav-item nav-link-style navbar-brand">-->
+<!--                    <a th:href="@{/}" class="nav-link"><img src="/img/seek-devs(cropped).png" width="90" height="90" class="img-link" alt="logo"/></a>-->
+<!--                </li>-->
                 <li class="nav-item nav-img-pos nav-link-style">
                     <a th:href="@{/login}" class="nav-link">Login</a>
                 </li>
@@ -28,6 +26,9 @@
                 </li>
             </ul>
         </div>
+        <button  class="navbar-toggler align-items-end icon-style" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
 
 </body>

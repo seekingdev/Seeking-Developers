@@ -30,6 +30,9 @@ nav a:hover{
     width: 4em;
     height: auto;
 }
-.nav-img-pos{
+.nav-img-pos {
     padding-left: 0;
+}
+.icon-style{
+    border-color: #FFA95E; !important
 }
