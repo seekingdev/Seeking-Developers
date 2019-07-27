@@ -48,10 +48,12 @@ public class SearchController {
 
 
     @GetMapping("/users/{id}/profile")
-    public String singleProject(@PathVariable long id, Model model){
+    public String singleUser(@PathVariable long id, Model model){
         User user = userDao.findOne(id);
         model.addAttribute("user", user);
         List<Language> langs = new ArrayList<>();
+        List<User> favorite_users = user.getFavorite_users();
+        model.addAttribute("favorite_users", favorite_users);
         langs = user.getLanguage();
         model.addAttribute("langs",langs);
         Project lastProject = projectDao.findDistinctTopByCreatorOrderByCreatingDateDesc(user);
@@ -61,7 +63,7 @@ public class SearchController {
         return "users/single-user";
     }
     @PostMapping("/users/{id}/profile")
-    public String singleProject(@PathVariable long id){
+    public String singleUser(@PathVariable long id){
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User currentUser = userDao.findOne(loggedinUser.getId());
         List<User> userList = currentUser.getFavorite_users();
