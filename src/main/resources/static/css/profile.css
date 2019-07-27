@@ -44,7 +44,23 @@ body {
     margin: 4%;
 }
 
-.btn {
+.probutton {
+    border-radius: 8px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    background-color: #5cb85c;
+    color: #000000;
+    align-content: center;
+    text-align: center;
+}
+
+.probutton:hover {
+    background-color: #468a46;
+    color: black;
+}
+
+.editbutton {
     border-radius: 8px;
     border: none;
     height: 50px;
@@ -55,7 +71,7 @@ body {
     text-align: center;
 }
 
-.btn:hover {
+.editbutton:hover {
     background-color: #FFA95E;
 }
 

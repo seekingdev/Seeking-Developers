@@ -28,11 +28,26 @@ h4{
    text-decoration: underline;
 }
 
-.column-date {
-
+.joinbutton{
+    background-color: #5cb85c;
+    color: #000000;
+    border-color: #5cb85c;
+    border-radius: 8px;
+    margin: .5em;
+    padding: .2em;
+    height: 50px;
+    width: 200px;
+    font-size: 1.2em;
+}
+.joinbutton:hover{
+    background-color: #468a46;
+    color: #000000;
+    border-color: #468a46;
+    border-radius: 8px;
+    font-size: 1.2em;
 }
 
-.btn-style{
+.editbutton{
     background-color: #F2C078;
     color: #000000;
     border-color: #F2C078;
@@ -43,7 +58,7 @@ h4{
     width: 200px;
     font-size: 1.2em;
 }
-.btn-style:hover{
+.editbutton:hover{
     background-color: #ffa95e;
     color: #000000;
     border-color: #ffa95e;
