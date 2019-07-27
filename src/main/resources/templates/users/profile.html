@@ -42,7 +42,7 @@
                     <input type="button" class="btn btn-primary mx-auto upload probutton" style="color: #000000" id="userbutton" onclick="client.picker(options).open();" value="Upload Picture"/>
                 </form>
                 <form th:action="@{/profile/edit}" th:method="GET">
-                    <input type="submit" class="btn btn-primary mx-auto probutton" style="color: #000000" value="Edit Profile" />
+                    <input type="submit" class="btn btn-primary mx-auto editbutton" style="color: #000000" value="Edit Profile" />
                 </form>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     <p th:text="*{project.description}"></p>
                     <form th:action="@{'/projects/' + ${project.id} + '/single-project'}" th:method="GET">
                         <input type="hidden" name="idEdit" th:value="${project.id}" />
-                        <button type="submit" class="btn btn-primary">View this project</button>
+                        <button type="submit" class="btn btn-primary probutton">View this project</button>
                     </form>
                 </div>
                 </div>
