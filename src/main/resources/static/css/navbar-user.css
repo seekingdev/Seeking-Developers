@@ -16,8 +16,9 @@ nav a:hover{
     text-shadow: #FFF9EE;
 }
 .ul-style{
-    padding-bottom: .5em;
-    padding-top: 0;
+    padding: .5em 0 .5em .5em;
+    /*padding-top: 0;*/
+    /*padding-right: .5em;*/
 }
 .nav-link {
     color: #151E3F;
@@ -38,6 +39,7 @@ nav a:hover{
     color: #f2c078;
     border-radius: 8px;
     size: 1.2em;
+    margin-right: 1em;
 }
 .nav-btn-style:hover{
     background-color: #151E3F;
