@@ -5,7 +5,7 @@
 </th:block>
     <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="/css/create.css"/>
+    <link rel="stylesheet" href="/css/edit.css"/>
     <link rel="stylesheet" href="/css/navbar-user.css"/>
 </head>
 <body>
@@ -16,10 +16,10 @@
         <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" class="card-body" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
             <label for="title"><b>Title</b></label>
             <br/>
-            <input type="text" th:field="*{title}" id="title" class="form-control textbox-style textbox-title"/>
+            <input type="text" th:field="*{title}" id="title" class="form-control textbox-style textbox-title" style="margin: auto;"/>
             <br />
             <label for="description"><b>Description</b></label>
-            <textarea class="textbox-style form-control textbox-description" type="text" th:field="*{description}" id="description"></textarea>
+            <textarea class="textbox-style form-control textbox-description" style="margin: auto;" type="text" th:field="*{description}" id="description"></textarea>
             <br />
             <label for="helpNeeded"><b>What type of help is needed?</b></label>
             <br/>
@@ -38,16 +38,17 @@
             </select>
             <br/>
             <input type="hidden" name="updateProject" th:value="${project.id}" />
-            <button th:type="submit" class="btn-style" id="submitbutton">Update Project</button>
+            <button th:type="submit" class="btn-style update" id="submitbutton">Update Project</button>
         </form>
         <form th:action="@{'/projects/'+${project.id}+'/single-project'}" th:method="POST" >
             <label for="contributor"><b>Add Contributor</b></label>
             <input type="text" class="textbox-style" placeholder="Enter Username" name="contributor" id="contributor" />
-            <input class="btn-style" type="submit" value="Add Contributor" id="submitbutton" />
+            <input class="btn-style edit" type="submit" value="Add Contributor" id="submitbutton" />
         </form>
+        <br/>
         <form th:action="@{'/projects/delete'}" th:method="POST" >
             <input type="hidden" name="projectId" th:value="${project.id}" />
-            <button th:type="submit" class="btn-style" id="submitbutton">Delete Project</button>
+            <button th:type="submit" class="btn-style delete" id="submitbutton">Delete Project</button>
         </form>
     </div>
 <footer th:replace="partials/footer :: footer"></footer>
