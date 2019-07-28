@@ -3,6 +3,7 @@ body{
     background-color: #696D87;
     text-align: center;
     color: #F2C078;
+    font-size: 1.2em;
     font-family: ‘Roboto Slab’, serif;
 }
 h3{
@@ -11,10 +12,16 @@ h3{
 .card-style{
     background-color: #f2f3f7;
     border-radius: 8px;
-    width: 75%;
+    max-width: 75%;
+    max-height: 50%;
     border-color: #f2f3f7;
     color: #000;
     margin: 2em;
+    /*max-height: 100px; !important;*/
+    /*max-width: 100px; !important;*/
+    object-fit: contain;
+    overflow: scroll;
+
 }
 
 .btn-style{

@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0 auto 1em auto;
     font-family: 'Roboto Slab', serif;
-    font-size: 1.2em;
+    font-size: 1.2em; !important;
     box-shadow: black;
 }
 .navbar{

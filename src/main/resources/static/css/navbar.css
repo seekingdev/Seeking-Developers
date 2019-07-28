@@ -2,8 +2,8 @@
 .navbar-style {
     background-color: #f2c078;
     color: #151E3F;
-    padding: .5em;
-    font-size: 1em;
+    /*padding: .5em;*/
+    font-size: 1.2em; !important;
     width: 100%;
     font-family: 'Roboto Slab', serif;
     box-shadow: black;
@@ -35,4 +35,10 @@ nav a:hover{
 }
 .icon-style{
     border-color: #FFA95E; !important
+}
+.a-style{
+    color: #FFA95E;
+}
+.a-style:hover{
+    color: #FFF9EE;
 }
