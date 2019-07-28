@@ -14,13 +14,14 @@
 
     <div class="card main-card" id="creatform">
         <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" class="card-body" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
-            <h3>Title</h3>
+            <label for="title"><b>Title</b></label>
+            <br/>
             <input type="text" th:field="*{title}" id="title" class="form-control textbox-style textbox-title"/>
             <br />
-            <h3>Description</h3>
+            <label for="description"><b>Description</b></label>
             <textarea class="textbox-style form-control textbox-description" type="text" th:field="*{description}" id="description"></textarea>
             <br />
-            <h3>What type of help is needed?</h3>
+            <label for="helpNeeded"><b>What type of help is needed?</b></label>
             <br/>
             <select class="dropdown-style form-control" name="helpNeeded" id="helpNeeded">
                 <option value="1">Front-End</option>
@@ -30,7 +31,7 @@
             <input type="hidden" th:field="*{creatingDate}" />
             <input type="hidden" th:field="*{dev_type}" />
             <br/>
-            <h3>Is the Project Complete?</h3>
+            <label for="isComplete"><b>Is the project complete?</b></label>
             <select class="dropdown-style" name="isComplete" id="isComplete">
                 <option value="false">No, it is not.</option>
                 <option value="true">Yes, the project is complete!</option>
@@ -40,7 +41,7 @@
             <button th:type="submit" class="btn-style" id="submitbutton">Update Project</button>
         </form>
         <form th:action="@{'/projects/'+${project.id}+'/single-project'}" th:method="POST" >
-            <h3>Add Contributor</h3>
+            <label for="contributor"><b>Add Contributor</b></label>
             <input type="text" class="textbox-style" placeholder="Enter Username" name="contributor" id="contributor" />
             <input class="btn-style" type="submit" value="Add Contributor" id="submitbutton" />
         </form>
