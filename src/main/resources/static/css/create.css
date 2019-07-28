@@ -32,6 +32,15 @@ body{
     width: 40%;
     align-content: center;
 }
+#title{
+    width: 80%;
+}
+#helpNeeded{
+    width: 80%;
+}
+#isComplete{
+    width: 80%;!important;
+}
 .textbox-title{
     width: 80%;
     margin: auto;
