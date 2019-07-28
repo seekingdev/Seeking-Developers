@@ -7,8 +7,8 @@ body{
 }
 li{
     list-style: none;
-    padding: .5em;
 }
+
 h4{
     padding: .5em;
     /*text-decoration: underline;*/
