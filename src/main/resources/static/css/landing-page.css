@@ -8,45 +8,21 @@ body{
 h1{
     margin: .5em 1.5em 1.5em 1.5em;
 }
-
-/*.main-card{*/
-/*    box-sizing: border-box;*/
-/*    justify-content: end;*/
-/*    width: 75%;*/
-/*    height: max-content;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    background-color: #f2f3f7;*/
-/*    color: #000;*/
-/*    padding: 1em;*/
-/*}*/
-/*.project-pic{*/
-/*    !*padding: 20px;*!*/
-/*    margin: 1em;*/
-/*}*/
-/*.profile-pic{*/
-/*    !*padding: 20px;*!*/
-/*    margin: 1em;*/
-/*}*/
-/*.dashboard-pic{*/
-/*    !*padding: 20px;*!*/
-/*    margin: 1em;*/
-/*}*/
-/*.project-div{*/
-/*    margin: 1em;*/
-/*}*/
+.card-style{
+    background-color: rgba(105, 109, 135, 0.51);
+}
 .carousel-style{
     margin-top: 3em;
     margin-bottom: 3em;
     font-family: ‘Roboto Slab’, serif;
     color: #F2C078;
     width: 100%;
-    height: 25%;
+    height: 20%;
 }
 .caption-style{
     font-family: ‘Roboto Slab’, serif;
-    color: #F2C078;
-    size: 1em;
+    color: #f2c078;
+    size: 5em;
 }
 .landing-title{
     position: marker;
