@@ -9,7 +9,9 @@ h1{
     margin: .5em 1.5em 1.5em 1.5em;
 }
 .card-style{
-    background-color: rgba(105, 109, 135, 0.51);
+    background-color: rgba(105, 109, 135, 0.72);
+    margin-left: 0;
+    margin-right: 0;
     /*position: absolute;*/
 }
 .carousel-style{
@@ -23,7 +25,7 @@ h1{
 .caption-style{
     font-family: ‘Roboto Slab’, serif;
     color: #f2c078;
-    size: 5em; !important
+    /*size: 5em; !important*/
 }
 .landing-title{
     position: marker;
