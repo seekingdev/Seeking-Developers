@@ -24,6 +24,12 @@ body {
 .images {
     width: 80%;
 }
+#username{
+    width: 80%;
+}
+#password{
+    width: 80%;
+}
 
 #login-form form{
     color: #000000;
