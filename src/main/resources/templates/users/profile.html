@@ -30,48 +30,47 @@
 </script>
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
-    <div class="container-fluid" th:each="user : ${user}">
-        <div class="row">
-            <div class="card user-box col-lg-4 col-md-7 col-sm-12  pro">
-                <div class="pro2">
-                    <h3 align="center" th:text="${user.username}"></h3>
-                    <img class="user mx-auto" th:src="${user.photo}" />
-                    <a th:href="'mailto:' + ${user.email}"><h5 align="center" th:text="${user.email}"></h5>
-                    </a>
+<div class="container-fluid" th:each="user : ${user}">
+    <div class="row">
+        <div class="card user-box col-lg-4 col-md-7 col-sm-12  pro">
+            <div class="pro2">
+                <img class="user mx-auto" th:src="${user.photo}" />
+                <h3 align="center" th:text="${user.username}"></h3>
+                <h5 align="center" th:text="${user.email}"></h5>
                 <form th:action="@{/profile}" class="mx-auto" id="imageForm" th:method="post">
                     <input name="imageURL" id="imageURL" type="hidden"/>
-                    <input type="button" class="btn btn-primary mx-auto upload probutton" style="color: #000000" id="userbutton" onclick="client.picker(options).open();" value="Upload Picture"/>
+                    <input type="button" class="btn btn-primary mx-auto upload probutton" id="userbutton" onclick="client.picker(options).open();" value="Upload Picture"/>
                 </form>
                 <form th:action="@{/profile/edit}" th:method="GET">
                     <input type="submit" class="btn btn-primary mx-auto editbutton" style="color: #000000" value="Edit Profile" />
                 </form>
-                </div>
-            </div>
-
-            <div class="card col-lg-5 col-md-7 col-sm-12  pro">
-
-                <div class="biography">
-                    <h3 class="" align="center"><u>Biography:</u></h3>
-                    <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
-                </div>
-                <hr />
-                <div class="favorites">
-                    <h3 align="center"><u>Favorite Users:</u></h3>
-                    <div th:each="favorite_user : ${favorite_users}">
-                        <br />
-                        <a th:href="'/users/' + ${favorite_user.id} + '/profile'">
-                            <h4 th:text="${favorite_user.username}"></h4>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
 
-        <div class="row">
-            <div class="card col-lg-3 col-md-5 col-sm-12  pro" align="center">
-                <div class="pro2">
-                    <h3><u>Current Project:</u></h3>
+        <div class="card col-lg-5 col-md-7 col-sm-12  pro">
+
+            <div class="biography">
+                <h3 class="" align="center"><u>Biography:</u></h3>
+                <p class="card-text" th:text="${user.bio}">Insert bio script here: </p>
+            </div>
+            <hr />
+            <div class="favorites">
+                <h3 align="center"><u>Favorite Users:</u></h3>
+                <div th:each="favorite_user : ${favorite_users}">
+                    <br />
+                    <a th:href="'/users/' + ${favorite_user.id} + '/profile'">
+                        <h4 th:text="${favorite_user.username}"></h4>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card col-lg-3 col-md-5 col-sm-12  pro" align="center">
+            <div class="pro2">
+                <h3><u>Current Project:</u></h3>
                 <div th:each="project : ${lastProject}">
                     <br />
                     <h3 th:text="${project.title}">Insert current project script here:</h3>
@@ -81,32 +80,33 @@
                         <button type="submit" class="btn btn-primary probutton">View this project</button>
                     </form>
                 </div>
-                </div>
             </div>
+        </div>
 
-            <div class="card col-lg-3 col-md-5 col-sm-12  pro" align="center">
-                <div class="pro2">
-                    <h3><u>Languages:</u></h3>
+        <div class="card col-lg-3 col-md-5 col-sm-12  pro" align="center">
+            <div class="pro2">
+                <h3><u>Languages:</u></h3>
                 <p class="card-text" th:each="language : ${langs}" th:text="${language.language}">
                 </p>
-                </div>
             </div>
+        </div>
 
-            <div class="card col-lg-3 col-md-5 col-sm-12  pro" align="center">
-                <div class="pro2">
-                    <h3><u>Completed Projects:</u></h3>
+        <div class="card col-lg-3 col-md-5 col-sm-12  pro" align="center">
+            <div class="pro2">
+                <h3><u>Completed Projects:</u></h3>
                 <br />
                 <div th:each="completedProject : ${completedProjects}">
                     <h4 th:text="${completedProject.title}"></h4>
                 </div>
-                </div>
             </div>
         </div>
-
     </div>
+
+</div>
 
 <footer th:replace="partials/footer :: footer"></footer>
 
 </body>
 </html>
+
 

@@ -27,6 +27,9 @@ h3{
     background-color: #f2c078;
     color: #151E3F;
     border-radius: 8px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.2em;
 }
 .btn-style:hover{
     background-color: #ffa95e;

@@ -29,9 +29,9 @@ h4{
 }
 
 .joinbutton{
-    background-color: #5cb85c;
-    color: #000000;
-    border-color: #5cb85c;
+    background-color: #468a46;
+    color: #ffffff;
+    border-color: #468a46;
     border-radius: 8px;
     margin: .5em;
     padding: .2em;
@@ -40,9 +40,9 @@ h4{
     font-size: 1.2em;
 }
 .joinbutton:hover{
-    background-color: #468a46;
-    color: #000000;
-    border-color: #468a46;
+    background-color: #306130;
+    color: #ffffff;
+    border-color: #306130;
     border-radius: 8px;
     font-size: 1.2em;
 }

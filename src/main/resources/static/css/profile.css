@@ -6,10 +6,6 @@ body {
     text-align: center;
 }
 
-#userbutton:hover {
-    color: #ffa95e; !important;
-}
-
 .card {
     /* Add shadows to create the "card" effect */
     /*box-shadow: 0 4px 8px 0 rgba(255,131,0,0.5);*/
@@ -43,20 +39,24 @@ body {
     margin: 4%;
 }
 
+#userbutton {
+    color: #ffffff;
+}
+
 .probutton {
     border-radius: 8px;
     border: none;
     height: 50px;
     width: 200px;
-    background-color: #5cb85c;
-    color: #000000;
+    background-color: #468a46;
+    color: #ffffff;
     align-content: center;
     text-align: center;
 }
 
 .probutton:hover {
-    background-color: #468a46;
-    color: black;
+    background-color: #306130;
+    color: #ffffff;
 }
 
 .editbutton {

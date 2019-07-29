@@ -19,7 +19,9 @@ body{
 .btn-style{
     background-color: #f2c078;
     color: black;
-    margin-top: .2em
+    margin-top: .2em;
+    height: 50px;
+    width: 200px;
 
 }
 .btn-style:hover{

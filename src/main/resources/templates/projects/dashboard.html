@@ -24,7 +24,7 @@
                 <h5 class="card-subtitle mb-2 text-muted">Date/Time Created: <span th:text="${{projects.creatingDate}}"></span></h5>
                 <form th:action="@{'/projects/' + ${projects.id} + '/single-project'}" th:method="GET">
                     <input type="hidden" name="idEdit" th:value="${projects.id}" />
-                    <button type="submit" class="btn-style">View this project</button>
+                    <button type="submit" class="btn-style">View Project</button>
                 </form>
             </div>
         </div>
