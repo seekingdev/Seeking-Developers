@@ -48,6 +48,7 @@ nav a:hover{
 }
 .a-style{
     color: #FFA95E;
+    margin: .5em;
 }
 .a-style:hover{
     color: #FFF9EE;
