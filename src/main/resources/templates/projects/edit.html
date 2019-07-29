@@ -14,7 +14,8 @@
 
     <div class="card main-card" id="creatform">
         <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" class="card-body" th:method="POST" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')" >
-
+            <h1>Edit Project</h1>
+            <br/>
             <label for="title"><b>Title</b></label>
             <br/>
             <input type="text" th:field="*{title}" id="title" class="form-control textbox-style textbox-title" style="margin: auto;"/>

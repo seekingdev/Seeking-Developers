@@ -34,8 +34,8 @@
     <div class="row">
         <div class="card user-box col-lg-4 col-md-7 col-sm-12  pro">
             <div class="pro2">
-                <img class="user mx-auto" th:src="${user.photo}" />
                 <h3 align="center" th:text="${user.username}"></h3>
+                <img class="user mx-auto" th:src="${user.photo}" />
                 <h5 align="center" th:text="${user.email}"></h5>
                 <form th:action="@{/profile}" class="mx-auto" id="imageForm" th:method="post">
                     <input name="imageURL" id="imageURL" type="hidden"/>

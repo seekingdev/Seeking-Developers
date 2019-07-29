@@ -33,7 +33,7 @@
                 <li th:text="${contributor.username}"></li></span></h4>
         <form th:action="@{/dashboard}" th:method="POST" onsubmit="return confirm('Are you sure you want to join this project?')">
             <input type="hidden" name="joinProject" th:value="${project.id}" />
-            <button type="submit" class="btn-style joinbutton">Join this project</button>
+            <button type="submit" class="btn-style joinbutton">Request to join</button>
         </form>
 
         <form th:action="@{'/projects/' + ${project.id} + '/single-project' + '/edit'}" th:method="GET">
