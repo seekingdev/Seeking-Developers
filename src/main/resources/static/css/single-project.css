@@ -65,4 +65,19 @@ h4{
     border-radius: 8px;
     font-size: 1.2em;
 }
-
+@media screen and (max-width: 378px) {
+    #createDate{
+        position: relative;
+        top: 10px;
+        width: 100px;
+        left: 52px;
+        max-width: 100px;
+    }
+    #projectTitle{
+        position: relative;
+        left: 36px;
+        width: 90%;
+        max-width: 90%;
+        margin: -21px;
+    }
+}
