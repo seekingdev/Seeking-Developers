@@ -80,7 +80,7 @@ public class ProfileController {
     }
 
     @PostMapping("/profile/edit")
-    public String editProfile(@Valid User user, Errors validation, Model model, @RequestParam(name = "dev_type") Long id, @RequestParam(name = "language")long[] languages){
+    public String editProfile(@Valid User user, Errors validation, Model model, @RequestParam(name = "dev_type") Long id, @RequestParam(name = "languages",required = false)long[] languages){
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User currentUser = userDao.findOne(loggedinUser.getId());
         user.setId(currentUser.getId());
@@ -98,18 +98,20 @@ public class ProfileController {
         user.setDev_type(dev_type);
         user.setPassword(hash);
         user = userDao.save(user);
-        List<Language> languageList = new ArrayList<>();
-        for (long langId: languages) {
-            System.out.println(user.getId());
-            System.out.println(langId);
-            Language language = languageDao.findOne(langId);
-            languageList.add(language);
-        }
-        for (Language lang: languageList) {
-            System.out.println(lang.getLanguage());
+        if(languages != null) {
+            List<Language> languageList = new ArrayList<>();
+            for (long langId : languages) {
+                System.out.println(user.getId());
+                System.out.println(langId);
+                Language language = languageDao.findOne(langId);
+                languageList.add(language);
+            }
+            for (Language lang : languageList) {
+                System.out.println(lang.getLanguage());
+            }
+            user.setLanguage(languageList);
         }
 
-        user.setLanguage(languageList);
         userDao.save(user);
         return "redirect:/profile";
 

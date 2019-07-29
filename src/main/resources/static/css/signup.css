@@ -2,13 +2,15 @@
 body {
     background-color: #696D87;
     text-align: center;
-    color: #FF8300;
+    color: black;
     font-family: 'Roboto Slab', serif;
     margin: 0 auto;
 }
-
 ::-webkit-input-placeholder {
     color: #ffa95e;
+}
+h1{
+    color: black;
 }
 
 input[type=checkbox] {
@@ -34,20 +36,12 @@ input[type=checkbox] {
     padding: 30px 0;
 }
 .signup-form h2{
-    color: #efe9f4;
+    color: black;
     margin: 0 0 15px;
     position: relative;
     text-align: center;
 }
-.signup-form h2:before, .signup-form h2:after{
-    content: "";
-    height: 2px;
-    width: 30%;
-    background: #efe9f4;
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-}
+
 .signup-form h2:before{
     left: 0;
 }
@@ -60,7 +54,7 @@ input[type=checkbox] {
     text-align: center;
 }
 .signup-form form{
-    color: #999;
+    color: black;
     border-radius: 8px;
     margin-bottom: 15px;
     background: #f2f3f7;
@@ -104,6 +98,9 @@ input[type=checkbox] {
 }
 #submit:hover {
     background-color: #ffa95e;
+}
+#labels{
+    text-align: left;
 }
 
 @media screen and (max-width:425px) {
