@@ -34,9 +34,10 @@
         <div class="row">
             <div class="card user-box col-lg-4 col-md-7 col-sm-12  pro">
                 <div class="pro2">
-                <img class="user mx-auto" th:src="${user.photo}" />
-                <h3 align="center" th:text="${user.username}"></h3>
-                <h5 align="center" th:text="${user.email}"></h5>
+                    <h3 align="center" th:text="${user.username}"></h3>
+                    <img class="user mx-auto" th:src="${user.photo}" />
+                    <a th:href="'mailto:' + ${user.email}"><h5 align="center" th:text="${user.email}"></h5>
+                    </a>
                 <form th:action="@{/profile}" class="mx-auto" id="imageForm" th:method="post">
                     <input name="imageURL" id="imageURL" type="hidden"/>
                     <input type="button" class="btn btn-primary mx-auto upload probutton" style="color: #000000" id="userbutton" onclick="client.picker(options).open();" value="Upload Picture"/>
