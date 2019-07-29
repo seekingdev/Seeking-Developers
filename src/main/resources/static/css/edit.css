@@ -33,22 +33,22 @@ body{
 }
 
 .edit{
-    background-color: #5cb85c;
-    color: black;
+    background-color: #468a46;
+    color: #ffffff;
     margin-top: .2em;
     border-radius: 8px;
     height: 50px;
     width: 200px;
 }
 .edit:hover{
-    background-color: #468a46;
-    color: black;
+    background-color: #306130;
+    color: #ffffff;
     border-radius: 8px;
 }
 
 .delete{
-    background-color: #f21707;
-    color: black;
+    background-color: #a32b22;
+    color: #ffffff;
     margin-top: .2em;
     border-radius: 8px;
     height: 50px;
@@ -56,8 +56,8 @@ body{
 
 }
 .delete:hover{
-    background-color: #c41616;
-    color: black;
+    background-color: #701a13;
+    color: #ffffff;
     border-radius: 8px;
 }
 
