@@ -60,6 +60,8 @@ public class SearchController {
         model.addAttribute("lastProject",lastProject);
         ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(user);
         model.addAttribute("projects", projects);
+        List<Project> completedProjectList = projectDao.findAllByCreatorAndIsCompleteTrue(user);
+        model.addAttribute("completedProjects",completedProjectList);
         return "users/single-user";
     }
     @PostMapping("/users/{id}/profile")
