@@ -46,3 +46,9 @@ nav a:hover{
     color: #ffa95e;
     border-radius: 8px;
 }
+.a-style{
+    color: #FFA95E;
+}
+.a-style:hover{
+    color: #FFF9EE;
+}

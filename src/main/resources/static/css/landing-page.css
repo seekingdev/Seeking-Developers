@@ -12,7 +12,6 @@ h1{
     background-color: rgba(105, 109, 135, 0.72);
     margin-left: 0;
     margin-right: 0;
-    /*position: absolute;*/
 }
 .carousel-style{
     margin-top: 3em;
@@ -20,7 +19,7 @@ h1{
     font-family: ‘Roboto Slab’, serif;
     color: #F2C078;
     width: 100%;
-    height: 20%;
+    height: 15%; !important
 }
 .caption-style{
     font-family: ‘Roboto Slab’, serif;
@@ -28,7 +27,8 @@ h1{
     /*size: 5em; !important*/
 }
 .landing-title{
-    position: marker;
+    position: static;
+    color: #f2c078;
 }
 .car-shadow{
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
