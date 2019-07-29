@@ -14,6 +14,8 @@
 
 <div class="signup-form">
 <form th:action="@{/signup}" method="POST" th:object="${user}">
+    <h1>Sign-Up</h1>
+    <br />
     <div class="form-group">
     <div class="row">
         <div class="col-6">
@@ -43,12 +45,12 @@
     </div>
 
         <label for="dev_type">What type of developer are you?</label>
-        <select name="dev_type" style="color: #999" id="dev_type">
+        <select name="dev_type" style="color: black" id="dev_type">
             <option value="1">Front-End</option>
             <option value="2">Back-End</option>
             <option value="3">Full-Stack</option>
         </select>
-        <p>What programming language do you know?</p>
+        <p>What programming languages or frameworks do you know?</p>
 
         <div class="row">
             <div class="col-6">
