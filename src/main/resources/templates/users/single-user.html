@@ -34,13 +34,12 @@
     <div class="row">
         <div class="card user-box col-lg-4 col-md-7 col-sm-12  pro">
             <div class="pro2">
-                <h3 align="center" th:text="${user.username}"></h3>
                 <img class="user mx-auto" th:src="${user.photo}" />
-                <a th:href="'mailto:' + ${user.email}"><h5 align="center" th:text="${user.email}"></h5>
-                </a>
+                <h3 align="center" th:text="${user.username}"></h3>
+                <h5 align="center" th:text="${user.email}"></h5>
                 <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="POST">
                     <input type="hidden" value="${user.id}" name="favorite" />
-                    <input type="submit" class="btn btn-primary probutton" style="color: #000000" value="Add to my favorites" />
+                    <input type="submit" class="btn btn-primary probutton" value="Add To Favorites" />
                 </form>
             </div>
         </div>
@@ -106,4 +105,5 @@
 
 </body>
 </html>
+
 

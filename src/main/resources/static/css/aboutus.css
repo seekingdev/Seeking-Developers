@@ -64,6 +64,9 @@ h6.bio {
     margin: 10px;
 }
 
-.links {
-
+@media screen and (max-width: 992px) {
+    .content-row {
+        padding: 0px;
+        margin-left: 0%;
+    }
 }
