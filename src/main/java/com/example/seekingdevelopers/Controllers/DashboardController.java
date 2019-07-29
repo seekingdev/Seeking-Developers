@@ -42,7 +42,7 @@ public class DashboardController {
         Project project = projectDao.findDistinctById(joinId);
         ArrayList<Project> listOfProjects = projectDao.findAllByisCompleteFalseOrderByCreatingDateDesc();
         model.addAttribute("listOfProjects", listOfProjects);
-        emailService.prepareAndSend(project, loggedInUser.getUsername() + " is applying.", "They want to help you.");
+        emailService.prepareAndSend(project, loggedInUser.getUsername() + " is applying.", "They want to help you on " + project.getTitle() + "they are a " + loggedInUser.getDev_type().getTitle() + " developer. You can email them at " + loggedInUser.getEmail());
         return "projects/dashboard";
     }
 

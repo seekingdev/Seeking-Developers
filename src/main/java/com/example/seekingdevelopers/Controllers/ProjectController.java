@@ -59,6 +59,8 @@ public class ProjectController {
 
     @PostMapping("/projects/{id}/single-project")
     public String contribute(@PathVariable long id, @RequestParam(name = "contributor") String contributor){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User loggedInUser = userDao.findOne(user.getId());
         User userContributor = userDao.findByUsername(contributor);
         Project singleProject = projectDao.findDistinctById(id);
         List<Project> projects = userContributor.getUserProjects();
@@ -71,7 +73,7 @@ public class ProjectController {
         projects.add(singleProject);
         userContributor.setUserProjects(projects);
         userDao.save(userContributor);
-        emailService.prepareAndSend(singleProject, "Contributor Applying.", "Someone wants to help you.");
+        emailService.prepareAndSend(singleProject, loggedInUser.getUsername() + " added you as a contributor to " + singleProject.getTitle() , "For more information you can email them at " + loggedInUser.getEmail());
         return "redirect:/dashboard";
     }
 
