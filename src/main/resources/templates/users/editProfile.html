@@ -28,7 +28,7 @@
                 <div class="col-6" id="labels">
                     <label for="password"><b>Password</b></label>
                     <br />
-                    <input type="password" id="password" class="form-control" placeholder="Password" th:field="*{password}" />
+                    <input type="password" id="password" class="form-control" placeholder="Please re-enter" th:field="*{password}" />
                     <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
                 </div>
             </div>
