@@ -14,17 +14,19 @@
 
 <div class="signup-form">
 <form th:action="@{/signup}" method="POST" th:object="${user}">
+    <h1>Sign-Up</h1>
+    <br />
     <div class="form-group">
     <div class="row">
         <div class="col-6">
             <label for="username"><b>Username</b></label>
-            <input type="text" id="username" class="form-control" placeholder="Username" th:field="*{username}" />
+            <input type="text" id="username" class="form-control" th:field="*{username}" />
         <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
         </div>
 
         <div class="col-6">
             <label for="password"><b>Password</b></label>
-            <input type="password" id="password" class="form-control" placeholder="Password" th:field="*{password}" />
+            <input type="password" id="password" class="form-control" th:field="*{password}" />
         <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
         </div>
     </div>
@@ -33,22 +35,22 @@
     <div class="form-group">
         <label for="email"><b>Email</b></label>
 
-        <input type="email" class="form-control" placeholder="Email" id="email" th:field="*{email}" />
+        <input type="email" class="form-control" id="email" th:field="*{email}" />
         <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
     </div>
 
     <div class="form-group">
         <label for="bio"><b>Biography</b></label>
-        <textarea class="form-control" placeholder="Biography" style="height: 80px" id="bio" th:field="*{bio}"></textarea>
+        <textarea class="form-control" style="height: 80px" id="bio" th:field="*{bio}"></textarea>
     </div>
 
         <label for="dev_type">What type of developer are you?</label>
-        <select name="dev_type" style="color: #999" id="dev_type">
+        <select name="dev_type" style="color: black" id="dev_type">
             <option value="1">Front-End</option>
             <option value="2">Back-End</option>
             <option value="3">Full-Stack</option>
         </select>
-        <p>What programming language do you know?</p>
+        <p>What programming languages or frameworks do you know?</p>
 
         <div class="row">
             <div class="col-6">

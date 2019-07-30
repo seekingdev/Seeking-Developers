@@ -78,3 +78,13 @@ body{
     color: black;
     border-radius: 8px;
 }
+@media screen and (max-width:425px) {
+    .main-card{
+        width: 75%;
+    }
+    #creatform{
+        width: 75%;
+    }
+
+
+}
