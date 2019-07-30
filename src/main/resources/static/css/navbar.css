@@ -18,6 +18,7 @@ nav a:hover{
 .ul-style{
     padding-bottom: .5em;
     padding-top: 0;
+    margin: .5em;
 }
 .nav-link {
     color: #151E3F;
@@ -29,6 +30,7 @@ nav a:hover{
     padding: 0;
     width: 4em;
     height: auto;
+    border-radius: 20px;
 }
 .nav-img-pos {
     padding-left: 0;
@@ -39,7 +41,6 @@ nav a:hover{
 .a-style{
     color: #FFA95E;
     margin: .5em;
-
 }
 .a-style:hover{
     color: #FFF9EE;
