@@ -8,9 +8,23 @@ body{
 h1{
     margin: .5em 1.5em 1.5em 1.5em;
 }
-.card-style{
-    background-color: rgba(105, 109, 135, 0.72);
+.card>img{
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.card-style{
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.bottom-style{
+    margin: 2em;
+}
+.img-card-style{
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
 /*.carousel-style{*/
 /*    margin-top: 3em;*/
 /*    margin-bottom: 3em;*/
@@ -23,19 +37,34 @@ h1{
 .caption-style{
     font-family: ‘Roboto Slab’, serif;
     color: #f2c078;
-    /*size: 5em; !important*/
+    background-color: rgba(105, 109, 135, 0.72);
 }
 .landing-title{
-    position: static;
+    /*background-color: rgba(105, 109, 135, 0.72);*/
     color: #f2c078;
+    font-weight: bold;
+    position: static;
+    /*top: 85%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
 }
-.car-shadow{
+.card-shadow{
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.carousel-main{
-    height: 15%; !important;
+.back-img{
+    opacity: .2;
+    position: fixed;
+    width: 30%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.jumbo-style{
-    background-color: #696D87;
-    height: 20%;
+.card-img-stlye {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+.row-style{
+    margin: .5em;
 }
