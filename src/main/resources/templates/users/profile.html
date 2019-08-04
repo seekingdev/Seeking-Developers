@@ -30,6 +30,8 @@
 </script>
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
+<div class="container">
+
 <div class="container-fluid" th:each="user : ${user}">
     <div class="row">
         <div class="card user-box col-lg-4 col-md-7 col-sm-12  pro">
@@ -96,12 +98,15 @@
                 <h3><u>Completed Projects:</u></h3>
                 <br />
                 <div th:each="completedProject : ${completedProjects}">
-                    <h4 th:text="${completedProject.title}"></h4>
+                    <a th:href="'/projects/' + ${completedProject.id} + '/single-project'">
+                        <h4 th:text="${completedProject.title}"></h4>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
+</div>
 </div>
 
 <footer th:replace="partials/footer :: footer"></footer>
