@@ -96,7 +96,9 @@
                 <h3><u>Completed Projects:</u></h3>
                 <br />
                 <div th:each="completedProject : ${completedProjects}">
-                    <h4 th:text="${completedProject.title}"></h4>
+                    <a th:href="'/projects/' + ${completedProject.id} + '/single-project'">
+                        <h4 th:text="${completedProject.title}"></h4>
+                    </a>
                 </div>
             </div>
         </div>
