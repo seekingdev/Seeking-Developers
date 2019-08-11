@@ -96,6 +96,9 @@ public class ProjectController {
         }
         project.setComplete(isComplete);
         projectDao.save(project);
+        if(project.isComplete()){
+            return "redirect:/complete";
+        }
         return "redirect:/dashboard";
     }
 

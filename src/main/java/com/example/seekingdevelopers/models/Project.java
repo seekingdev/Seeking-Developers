@@ -31,6 +31,9 @@ public class Project {
     @Column(columnDefinition = "Boolean default false")
     private boolean isComplete;
 
+    @Column
+    private String github;
+
     @ManyToOne
     @JoinColumn(name="creator_id")
     private User creator;
