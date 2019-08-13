@@ -117,6 +117,15 @@ public class ProjectController {
         return "projects/delete";
     }
 
+    @GetMapping("projects/complete")
+    public String completeProject(Model model){
+        return "projects/complete";
+    }
+    @PostMapping("projects/complete")
+    public String completeProject(@RequestParam(name= "git")String link){
+        //TODO: Add github link to SQL database
+        return "redirect/dashboard";
 
+    }
 }
 
