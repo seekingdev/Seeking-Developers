@@ -61,13 +61,14 @@ public class Project {
         this.creator = creator;
         this.contributors= contributors;
     }
-    public Project(String title, String description, Dev_type dev_type, User creator, List<User> contributors, boolean isComplete){
+    public Project(String title, String description, Dev_type dev_type, User creator, List<User> contributors, boolean isComplete, String github){
         this.title = title;
         this.description = description;
         this.dev_type = dev_type;
         this.creator = creator;
         this.contributors= contributors;
         this.isComplete = isComplete;
+        this.github = github;
     }
 
 
@@ -134,5 +135,13 @@ public class Project {
 
     public void setContributors(List<User> contributors) {
         this.contributors = contributors;
+    }
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
     }
 }
