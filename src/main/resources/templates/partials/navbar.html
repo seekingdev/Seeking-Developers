@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <nav th:fragment="nav">
+    <nav th:fragment="nav" class="navbar-style">
         <div class="nav-wrapper">
             <a th:href="@{/}" class="brand-logo"><img src="/img/seek-devs(cropped).png" width="60" height="60" alt="logo"/></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="nav-link-style">
                     <a th:href="@{/login}" >Login</a>
@@ -24,9 +24,8 @@
                 </li>
             </ul>
         </div>
-    </nav>
 
-    <ul class="sidenav" id="mobile-demo">
+    <ul id="slide-out" class="sidenav">
         <li class="nav-link-style">
             <a th:href="@{/login}" >Login</a>
         </li>
@@ -37,12 +36,20 @@
             <a th:href="@{/about}" >About</a>
         </li>
     </ul>
+    </nav>
 
-<script>
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-    });
-</script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });
+
+    </script>
 
 </body>
 </html>
