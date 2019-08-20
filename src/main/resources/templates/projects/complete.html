@@ -12,11 +12,12 @@
 <nav th:replace="partials/navbar-user :: user-nav"></nav>
 
 <h3>Your Project is Complete!.</h3>
-
+<div th:each="project : ${project}">
 <form action="/projects/complete" method="post">
-    <label for="git">Please enter project's Github URL</label>
+    <label for="git">Please enter <span th:text="${project.title}"></span> Github URL</label>
     <input type="text" name="git" id="git" />
 </form>
+</div>
 
 
 <footer th:replace="partials/footer :: footer"></footer>

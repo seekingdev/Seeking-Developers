@@ -97,7 +97,7 @@ public class ProjectController {
         project.setComplete(isComplete);
         projectDao.save(project);
         if(project.isComplete()){
-            return "redirect:/complete";
+            return "redirect:/projects/"+project.getId() +"/complete";
         }
         return "redirect:/dashboard";
     }
@@ -117,13 +117,16 @@ public class ProjectController {
         return "projects/delete";
     }
 
-    @GetMapping("projects/complete")
-    public String completeProject(Model model){
+    @GetMapping("projects/{id}/complete")
+    public String completeProject(@PathVariable Long id, Model model){
+       Project project = projectDao.findDistinctById(id);
+        model.addAttribute("project", project);
         return "projects/complete";
     }
     @PostMapping("projects/complete")
     public String completeProject(@RequestParam(name= "git")String link){
         //TODO: Add github link to SQL database
+
         return "redirect/dashboard";
 
     }
