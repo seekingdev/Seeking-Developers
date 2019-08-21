@@ -123,11 +123,14 @@ public class ProjectController {
         model.addAttribute("project", project);
         return "projects/complete";
     }
-    @PostMapping("projects/complete")
-    public String completeProject(@RequestParam(name= "git")String link){
+    @PostMapping("projects/{id}/complete")
+    public String completeProject(@PathVariable Long id, @RequestParam(name= "git")String link){
         //TODO: Add github link to SQL database
-
-        return "redirect/dashboard";
+        Project project = projectDao.findDistinctById(id);
+        System.out.println(link);
+        project.setGithub(link);
+        projectDao.save(project);
+        return "redirect:/profile";
 
     }
 }
