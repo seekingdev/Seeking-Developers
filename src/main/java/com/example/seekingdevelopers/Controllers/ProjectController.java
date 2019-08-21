@@ -130,7 +130,7 @@ public class ProjectController {
         System.out.println(link);
         project.setGithub(link);
         projectDao.save(project);
-        return "redirect:/dashboard";
+        return "redirect:/profile";
 
     }
 }
