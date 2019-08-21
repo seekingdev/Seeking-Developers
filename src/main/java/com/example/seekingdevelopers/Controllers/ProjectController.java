@@ -127,9 +127,10 @@ public class ProjectController {
     public String completeProject(@PathVariable Long id, @RequestParam(name= "git")String link){
         //TODO: Add github link to SQL database
         Project project = projectDao.findDistinctById(id);
+        System.out.println(link);
         project.setGithub(link);
         projectDao.save(project);
-        return "redirect/dashboard";
+        return "redirect:/dashboard";
 
     }
 }
