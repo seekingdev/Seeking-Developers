@@ -30,7 +30,9 @@
             <h4 class="justify-content-center" id="description">Description: <span th:text="${project.description}"></span></h4>
             <h4 class="justify-content-center">Help Needed: <span th:text="${project.dev_type.title}"></span></h4>
             <h4 class="justify-content-center">Contributors: <span th:each="contributor : ${contributors}">
-                <li th:text="${contributor.username}"></li></span></h4>
+                <!--<li th:text="${contributor.username}"></li>-->
+                <a th:href="'/users/' + ${contributor.id} + '/profile' "><h4 th:text="${contributor.username}"></h4></a>
+            </span></h4>
         <form th:action="@{/dashboard}" th:method="POST" onsubmit="return confirm('Are you sure you want to join this project?')">
             <input type="hidden" name="joinProject" th:value="${project.id}" />
             <button type="submit" class="btn-style joinbutton">Request to join</button>

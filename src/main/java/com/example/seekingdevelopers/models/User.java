@@ -33,7 +33,7 @@ public class User {
     @Column(columnDefinition = "TEXT")
     private String bio;
 
-    @Column(columnDefinition = "default 'https://cdn.filestackcontent.com/ZPaWlB4RrSuRB2dPZvwQ' ")
+    @Column
     private String photo;
 
     @Column
