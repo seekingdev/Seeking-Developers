@@ -33,7 +33,7 @@ public class User {
     @Column(columnDefinition = "TEXT")
     private String bio;
 
-    @Column(columnDefinition = "TEXT default 'https://cdn.filestackcontent.com/UrT1CLBVSYGCReZQ1nnA'")
+    @Column(columnDefinition = "varchar(255) not null default 'https://cdn.filestackcontent.com/UrT1CLBVSYGCReZQ1nnA'")
     private String photo;
 
     @Column
