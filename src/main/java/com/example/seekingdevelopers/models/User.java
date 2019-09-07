@@ -81,6 +81,7 @@ public class User {
         password = copy.password;
         languages = copy.languages;
         userProjects = copy.userProjects;
+        photo = copy.photo;
     }
 
 
@@ -93,13 +94,14 @@ public class User {
 
     public User(){};
 
-    public User(String username, String password, String email, String bio, List<Language> languages, Long id){
+    public User(String username, String password, String email, String bio, List<Language> languages, Long id, String photo){
         this.username = username;
         this.password = password;
         this.email = email;
         this.bio = bio;
         this.languages = languages;
         this.id = id;
+        this.photo = photo;
     }
 
 
