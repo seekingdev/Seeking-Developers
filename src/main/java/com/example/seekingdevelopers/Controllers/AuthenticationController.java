@@ -57,6 +57,7 @@ public class AuthenticationController {
         Dev_type dev_type = dev_typeDao.findOne(id);
         user.setDev_type(dev_type);
         user.setPassword(hash);
+        user.setPhoto("https://cdn.filestackcontent.com/UrT1CLBVSYGCReZQ1nnA");
         user = userDao.save(user);
         List<Language> languageList = new ArrayList<>();
         for (long langId: languages) {
