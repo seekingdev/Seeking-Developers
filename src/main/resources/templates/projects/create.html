@@ -18,11 +18,13 @@
             <label for="title"><b>Title</b></label>
             <br/>
             <input type="text" th:field="*{title}" id="title" />
+            <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></p>
             <br />
             <br/>
             <label for="description"><b>Description</b></label>
             <br />
             <textarea type="text" th:field="*{description}" class="textbox-style" id="description" ></textarea>
+            <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
             <br />
             <label for="helpNeeded"><b>What type of help is needed?</b></label>
             <br/>
