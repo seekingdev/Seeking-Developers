@@ -11,10 +11,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +41,11 @@ public class ProjectController {
         return "projects/create";
     }
     @PostMapping("/projects/create")
-    public String create(@ModelAttribute Project project, Model model, @RequestParam(name = "helpNeeded") Long id){
+    public String create(@Valid Project project, Errors validation , Model model, @RequestParam(name = "helpNeeded") Long id){
+        if(validation.hasErrors()){
+            model.addAttribute("errors",validation);
+            return "projects/create";
+        }
         User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Dev_type dev_type = dev_typeDao.findOne(id);
         project.setDev_type(dev_type);

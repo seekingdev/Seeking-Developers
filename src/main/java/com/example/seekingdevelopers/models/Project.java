@@ -1,6 +1,7 @@
 package com.example.seekingdevelopers.models;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -16,9 +17,11 @@ public class Project {
     @Column(columnDefinition = "int(11) unsigned")
     private long id;
 
+    @NotBlank(message = "Must have title")
     @Column(nullable = false)
     private String title;
 
+    @NotBlank (message = "Project must have description")
     @Column(nullable = false)
     private String description;
 
