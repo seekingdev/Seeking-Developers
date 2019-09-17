@@ -56,8 +56,11 @@ public class ProjectController {
 
     @GetMapping("/projects/{id}/single-project")
     public String singleProject(@PathVariable long id, Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User loggedInUser = userDao.findOne(user.getId());
         Project singleProject = projectDao.findDistinctById(id);
         List<User> contributors =  singleProject.getContributors();
+        model.addAttribute("currentUser",loggedInUser);
         model.addAttribute("contributors", contributors);
         model.addAttribute("project", singleProject);
         return "projects/single-project";
