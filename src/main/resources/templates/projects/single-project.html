@@ -37,11 +37,12 @@
             <input type="hidden" name="joinProject" th:value="${project.id}" />
             <button type="submit" class="btn-style joinbutton">Request to join</button>
         </form>
-
+        <div th:if="${currentUser} == ${project.creator}">
         <form th:action="@{'/projects/' + ${project.id} + '/single-project' + '/edit'}" th:method="GET">
             <input type="hidden" name="editProject" th:value="${project.id}" />
             <button th:type="submit" class="btn-style editbutton">Edit Project</button>
         </form>
+        </div>
     </div>
 </div>
 <footer th:replace="partials/footer :: footer"></footer>
