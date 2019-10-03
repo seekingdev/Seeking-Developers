@@ -32,7 +32,7 @@ public class DashboardController {
     public String dashboard(Model model){
         ArrayList<Project> listOfProjects = projectDao.findAllByisCompleteFalseOrderByCreatingDateDesc();
         model.addAttribute("listOfProjects", listOfProjects);
-        return "projects/dashboard";
+        return "projects/dashboard-foundation";
     }
 
     @PostMapping("/dashboard")
