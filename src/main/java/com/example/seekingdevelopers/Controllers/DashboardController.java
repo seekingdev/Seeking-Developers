@@ -1,8 +1,10 @@
 package com.example.seekingdevelopers.Controllers;
 
+import com.example.seekingdevelopers.Repositories.Dev_typeRepository;
 import com.example.seekingdevelopers.Repositories.ProjectRepository;
 import com.example.seekingdevelopers.Repositories.UserRepository;
 import com.example.seekingdevelopers.Services.EmailService;
+import com.example.seekingdevelopers.models.Dev_type;
 import com.example.seekingdevelopers.models.Project;
 import com.example.seekingdevelopers.models.User;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,18 +22,32 @@ public class DashboardController {
     private final ProjectRepository projectDao;
     private final UserRepository userDao;
     private final EmailService emailService;
+    private final Dev_typeRepository devDao;
 
 
-    public DashboardController(ProjectRepository projectDao, UserRepository userDao, EmailService emailService){
+    public DashboardController(ProjectRepository projectDao, UserRepository userDao, EmailService emailService, Dev_typeRepository devDao){
         this.projectDao = projectDao;
         this.userDao = userDao;
         this.emailService = emailService;
+        this.devDao = devDao;
     }
 
     @GetMapping("/dashboard")
     public String dashboard(Model model){
         ArrayList<Project> listOfProjects = projectDao.findAllByisCompleteFalseOrderByCreatingDateDesc();
-        model.addAttribute("listOfProjects", listOfProjects);
+        Dev_type dev_typeFrontEnd = devDao.findOne((long) 1);
+        ArrayList<Project> frontEndProjects = new ArrayList<>();
+        ArrayList<Project> backEndProjects = new ArrayList<>();
+        for (Project project: listOfProjects) {
+            if(project.getDev_type() == dev_typeFrontEnd){
+                frontEndProjects.add(project);
+            } else {
+                backEndProjects.add(project);
+            }
+        }
+        model.addAttribute("frontEndProjects", frontEndProjects);
+        model.addAttribute("backEndProjects", backEndProjects);
+
         return "projects/dashboard-foundation";
     }
 
