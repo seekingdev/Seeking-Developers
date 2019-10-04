@@ -34,11 +34,28 @@
 
 <!--Dashboard Foundation-->
 
-<div class="row" th:each="frontEndProject : ${frontEndProjects}">
-    <div class="columns small-4">6 columns</div>
+<div class="row">
+    <div class="columns small-2" th:each="frontEndProject : ${frontEndProjects}">
+        <div class="card" style="width: 300px;">
+            <div class="card-divider" th:text="${frontEndProject.title}"></div>
+            <div class="card-section">
+                <h4 th:text="${frontEndProject.creator.username}"></h4>
+                <p th:text="${frontEndProject.description}"></p>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row">
-    <div class="columns small-4">12/6/4 columns</div>
+    <div class="columns small-2" th:each="backEndProject : ${backEndProjects}" >
+        <div class="card" style="width: 300px;">
+            <div class="card-divider" th:text="${backEndProject.title}"></div>
+            <div class="card-section">
+                <h4 th:text="${backEndProject.creator.username}"></h4>
+                <p th:text="${backEndProject.description}"></p>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 
