@@ -58,7 +58,7 @@ public class ProfileController {
         model.addAttribute("projects", projects);
 
 
-        return "users/profile";
+        return "users/profile-foundation";
     }
     @PostMapping("/profile")
     public String uploadImage(@RequestParam(name="imageURL") String imageURL){
