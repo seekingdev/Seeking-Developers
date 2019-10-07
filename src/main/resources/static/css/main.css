@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.sd-landing-img {
+    width: 100%;
+}
+
+.sd-landing-text {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.sd-landing-slogan-text {
+    font-weight: bold;
+}
+
+/*.sd-card-default {*/
+/*    margin: 3px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+.sd-landing-slogan {
+    height: 60vh;
+}
+
+.sd-landing-slogan {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal center alignment */
+}
+
+.sd-steps,
+.sd-explore {
+    font-weight: bolder;
+}
+
+.sd-project-card {
+    height: 200px;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 6px;
+    padding: 3px;
+}
+
+.sd-profile-projects:hover {
+    -webkit-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+    -moz-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+    box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+}
+
+.sd-project-card:hover {
+    -webkit-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+    -moz-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+    box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+}
+
+.sd-user-card {
+    width: 100%;
+    height: auto;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 6px;
+    padding: 3px;
+}
+
+.sd-open-projects {
+
+}
+
+footer {
+    margin-top: 6%;
+}
+
+.sd-profile-img {
+    width: 100%;
+    height: auto;
+}
+
+.sd-profile-bio {
+    margin: 6px;
+}
