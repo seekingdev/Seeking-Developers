@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Create a Project</title>
+    <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/foundation.css" />
+
+</head>
+<body>
+
+<nav th:replace="partials/navbar-foundation :: navbar"></nav>
+
+<form th:action="@{/projects/create}" th:method="POST" th:object="${project}">
+    <div class="row">
+        <div class="columns">
+            <h1>Create a Project</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns">
+        <label>Title
+            <input type="text" th:field="*{title}" />
+            <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></p>
+        </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns">
+            <label>Description
+                <textarea th:field="*{description}"></textarea>
+                <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns">
+            <label>What kind of help is needed?
+                <select name="helpNeeded">
+                    <option value="1">Front-End</option>
+                    <option value="2">Back-End</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns">
+            <button class="button" type="submit">Create Project</button>
+        </div>
+    </div>
+</form>
+
+
+<!-- Compressed JavaScript -->
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/what-input.js"></script>
+<script src="/js/vendor/foundation.js"></script>
+<script src="/js/app.js"></script>
+
+</body>
+</html>

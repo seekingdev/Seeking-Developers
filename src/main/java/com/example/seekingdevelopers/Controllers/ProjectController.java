@@ -38,13 +38,13 @@ public class ProjectController {
     @GetMapping("/projects/create")
     public String create(Model model){
         model.addAttribute("project", new Project());
-        return "projects/create";
+        return "projects/create-foundation";
     }
     @PostMapping("/projects/create")
     public String create(@Valid Project project, Errors validation , Model model, @RequestParam(name = "helpNeeded") Long id){
         if(validation.hasErrors()){
             model.addAttribute("errors",validation);
-            return "projects/create";
+            return "projects/create-foundation";
         }
         User creator = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Dev_type dev_type = dev_typeDao.findOne(id);
