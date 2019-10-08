@@ -4,44 +4,46 @@
     <meta charset="UTF-8"/>
     <title>Seeking Devs</title>
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/skeleton.css" />
+    <link rel="stylesheet" href="/css/foundation.css" />
+<!--    <link rel="stylesheet" href="/css/skeleton.css" />-->
     <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
+<div class="container">
 
 <!--// Nav-->
+<nav th:replace="partials/navbar-foundation :: navbar"></nav>
 
 <!--// Landing 4 / 8-->
-<div class="container">
     <!-- Landing Information-->
     <div class="row">
-        <div class="columns four sd-landing-slogan">
+        <div class="columns small-4 sd-landing-slogan">
             <div>
                 <h1 class="sd-landing-text">Seeking Developers</h1>
                 <h5 class="sd-landing-slogan-text">A Collaborative Community for Developers</h5>
                 <a class="button button-primary" href="#">Register</a>
             </div>
         </div>
-        <div class="columns eight">
+        <div class="columns small-8">
             <img src="/img/landing_img.png" class="sd-landing-img" alt="" />
         </div>
     </div>
 
     <!-- Steps 1 2 3 -->
     <div class="row">
-        <div class="columns six">
+        <div class="columns small-6">
             <h5 class="sd-steps">How it works</h5>
         </div>
     </div>
     <div class="row">
-        <div class="columns four sd-card-default">
+        <div class="columns small-4 sd-card-default">
             <img src="img/step_1.png" class="sd-landing-img" alt="" />
             <h5 class="sd-steps">1. Sign Up</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
         </div>
 
-        <div class="columns four sd-card-default">
+        <div class="columns small-4 sd-card-default">
             <img src="img/step_2.png" class="sd-landing-img" alt="" />
             <h5 class="sd-steps">2. Create A Profile</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -49,7 +51,7 @@
         </div>
 
 
-        <div class="columns four sd-card-default">
+        <div class="columns small-4 sd-card-default">
             <img src="img/step_3.png" class="sd-landing-img" alt="" />
             <h5 class="sd-steps">3. Join a Project</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -58,10 +60,10 @@
     </div>
 
     <div class="row">
-        <div class="columns six">
+        <div class="columns small-6">
             <h5 class="sd-explore">Explore Projects</h5>
         </div>
-        <div class="columns six"></div>
+        <div class="columns small-6"></div>
     </div>
 
     <div class="row">
@@ -72,10 +74,10 @@
     </div>
     <footer>
         <div class="row">
-            <div class="columns six">
+            <div class="columns small-6">
 
             </div>
-            <div class="columns six">
+            <div class="columns small-6">
 
             </div>
         </div>
