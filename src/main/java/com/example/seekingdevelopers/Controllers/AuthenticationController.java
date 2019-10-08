@@ -51,7 +51,7 @@ public class AuthenticationController {
         }
         if(validation.hasErrors()){
             model.addAttribute("errors",validation);
-            return "users/signup";
+            return "users/signup-foundation";
         }
         String hash = passwordEncoder.encode(user.getPassword());
         Dev_type dev_type = dev_typeDao.findOne(id);

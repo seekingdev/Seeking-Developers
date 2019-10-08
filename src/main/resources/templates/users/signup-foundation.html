@@ -14,30 +14,33 @@
 <nav th:replace="partials/navbar-foundation :: navbar"></nav>
 
 
-<form>
+<form th:action="@{/signup}" method="post" th:object="${user}">
     <div class="row">
             <div class="columns medium-6 cell">
                 <label>Username
-                    <input type="text" />
+                    <input type="text" id="username" th:field="*{username}"/>
+                    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
                 </label>
             </div>
             <div class="columns medium-6 cell">
                 <label>Password
-                    <input type="password" />
+                    <input type="password" th:field="*{password}" />
+                    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
                 </label>
             </div>
     </div>
     <div class="row">
         <div class="column">
             <label>Email
-                <input type="email" />
+                <input type="email" th:field="*{email}" />
+                <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
             </label>
         </div>
     </div>
     <div class="row">
         <div class="column">
             <label>Biography
-                <textarea></textarea>
+                <textarea th:field="*{bio}"></textarea>
             </label>
         </div>
     </div>
@@ -82,6 +85,7 @@
             <label for="Bootstrap">Bootstrap</label>
         </div>
     </div>
+    <button type="submit" class="button align-center">Register</button>
 </form>
 
 
