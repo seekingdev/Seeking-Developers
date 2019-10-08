@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8"/>
-    <title>View All</title>
+    <title>View All Users</title>
     <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/foundation.css" />
@@ -14,40 +14,18 @@
 <nav th:replace="partials/navbar-foundation :: navbar"></nav>
 
 <div class="row">
-    <div class="columns small-4" th:each="frontEndProject : ${frontEndProjects}">
+    <div class="columns small-4" th:each="user : ${users}">
         <div class="card" style="width: 300px;">
-            <div class="card-divider" th:text="${frontEndProject.title}"></div>
+            <div class="card-divider" th:text="${user.username}"></div>
             <div class="card-section">
-                <h4 th:text="${frontEndProject.creator.username}"></h4>
-                <p th:text="${frontEndProject.description}"></p>
+            <img th:src="${user.photo}" />
+            </div>
+            <div class="card-section">
+                <h4 th:text="${user.dev_type.title}"></h4>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="columns small-4" th:each="backEndProject : ${backEndProjects}" >
-        <div class="card" style="width: 300px;">
-            <div class="card-divider" th:text="${backEndProject.title}"></div>
-            <div class="card-section">
-                <h4 th:text="${backEndProject.creator.username}"></h4>
-                <p th:text="${backEndProject.description}"></p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

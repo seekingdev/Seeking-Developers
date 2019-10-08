@@ -35,38 +35,13 @@
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-            <li><input type="search" placeholder="Search" /></li>
+            <form th:action="@{/users}" th:method="post">
+            <li><input type="search" placeholder="Search" name="search" /></li>
             <li><button type="button" class="button">Search</button></li>
+            </form>
         </ul>
     </div>
 </div>
-
-<!--<nav th:fragment="user-nav" class="navbar-style">-->
-    <!--<div class="nav-wrapper">-->
-        <!--<a th:href="@{/dashboard}" class="brand-logo"><img src="/img/seek-devs(cropped).png" width="60" height="60" alt="logo"/></a>-->
-        <!--<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
-        <!--<ul id="nav-mobile" class="right hide-on-med-and-down">-->
-            <!--<li class="nav-link-style">-->
-                <!--<a th:href="@{/profile}">Profile</a>-->
-            <!--</li>-->
-            <!--<li class="nav-link-style">-->
-                <!--<a th:href="@{/projects/create}">Create Project</a>-->
-            <!--</li>-->
-            <!--<li class="nav-link-style">-->
-                <!--<a th:href="@{/users}" >Users</a>-->
-            <!--</li>-->
-            <!--<li class="nav-link-style">-->
-                <!--<a th:href="@{/login}" tabindex="-1" ><form th:action="@{/logout}" th:method="post">-->
-                <!--</form>Logout</a>-->
-            <!--</li>-->
-        <!--</ul>-->
-        <!--<form th:action="@{/users}" th:method="post">-->
-            <!--<div class="input-field">-->
-                <!--<a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">search</i></a>-->
-            <!--</div>-->
-        <!--</form>-->
-    <!--</div>-->
-<!--</nav>-->
 
 
 <script src="/js/vendor/jquery.js"></script>
