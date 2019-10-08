@@ -82,6 +82,162 @@ body {
 
 }
 
+/* Profile Cards */
+
+.card-profile-stats {
+    border: 1px solid #cacaca;
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    background: #fefefe;
+}
+
+.card-profile-stats .card-profile-stats-intro {
+    text-align: center;
+}
+
+.card-profile-stats .card-profile-stats-intro .card-profile-stats-intro-pic {
+    border-radius: 50%;
+    margin: 0 0 1.25rem;
+}
+
+.card-profile-stats .card-profile-stats-intro .card-profile-stats-intro-content p:last-child {
+    margin: 0;
+}
+
+.card-profile-stats .card-profile-stats-container {
+    text-align: center;
+}
+
+.card-profile-stats .card-profile-stats-container .card-profile-stats-statistic {
+    margin: 0 0 1.25rem;
+}
+
+.card-profile-stats .card-profile-stats-container .card-profile-stats-statistic p:last-child {
+    margin: 0;
+}
+
+.card-profile-stats .card-profile-stats-more .card-profile-stats-more-link {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0a0a0a;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.card-profile-stats .card-profile-stats-more .card-profile-stats-more-content {
+    display: none;
+}
+
+
+@media print, screen and (min-width: 64em) {
+    .card-profile-stats .card-profile-stats-intro {
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    .card-profile-stats .card-profile-stats-intro .card-profile-stats-intro-pic {
+        margin: 0 1.25rem 0 0;
+        max-width: 250px;
+    }
+    .card-profile-stats .card-profile-stats-container {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+}
+
+/* CSS List Group */
+
+
+.list-group {
+    margin-bottom: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    background: #fefefe;
+    box-shadow: none;
+    overflow: hidden;
+    color: #0a0a0a;
+}
+
+.list-group > :last-child {
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.list-group-item > :last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.list-group-item.active {
+    color: #fefefe;
+    background-color: #1779ba;
+    border: 1px solid #1779ba;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+    background-color: #e6e6e6;
+}
+
+.list-group-item:hover.active, .list-group-item:focus.active {
+    background-color: #1779ba;
+}
+
+.list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus, .list-group-item[disabled], .list-group-item[disabled]:hover, .list-group-item[disabled]:focus {
+    color: #8a8a8a;
+    cursor: not-allowed;
+    background-color: #fefefe;
+}
+
+
+/* Pill Badges */
+
+.pill-badges {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.badge-red {
+    background-color: lightcoral;
+}
+
+.badge-blue {
+    background-color: lightblue;
+}
+
+.badge-green {
+    background-color: lightgreen;
+}
+
+.badge-purple {
+    background-color: slateblue;
+}
+
 footer {
     margin-top: 6%;
 }

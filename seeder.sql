@@ -71,3 +71,15 @@ insert into user_projects (user_id, project_id) values (3, 17);
 insert into user_projects (user_id, project_id) values (3, 18);
 insert into user_projects (user_id, project_id) values (3, 19);
 insert into user_projects (user_id, project_id) values (3, 20);
+
+
+use seeking_db;
+
+insert into languages (id, language) values (1, 'HTML');
+insert into languages (id, language) values (2, 'jQuery');
+insert into languages (id, language) values (3, 'CSS');
+insert into languages (id, language) values (4, 'Javascript');
+insert into languages (id, language) values (5, 'Java');
+insert into languages (id, language) values (6, 'Spring');
+insert into languages (id, language) values (7, 'Node JS');
+insert into languages (id, language) values (8, 'Bootstrap Framework');

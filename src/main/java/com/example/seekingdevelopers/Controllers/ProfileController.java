@@ -40,6 +40,8 @@ public class ProfileController {
         this.dev_typeDao = dev_typeDao;
         this.languageDao = languageDao;
     }
+
+
     @GetMapping("/profile")
     public String loggedInProfile(Model model){
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -56,10 +58,10 @@ public class ProfileController {
        model.addAttribute("completedProjects",completedProjectList);
         ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(loggedinUser);
         model.addAttribute("projects", projects);
-
-
         return "users/profile-foundation";
     }
+
+
     @PostMapping("/profile")
     public String uploadImage(@RequestParam(name="imageURL") String imageURL){
         System.out.println(imageURL);
