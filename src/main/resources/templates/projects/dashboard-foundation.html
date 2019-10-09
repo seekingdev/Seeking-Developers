@@ -7,7 +7,8 @@
     <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/foundation.css" />
-
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
 </head>
 <body>
 
@@ -19,48 +20,56 @@
 
 <div class="row">
     <div class="columns small-4" th:each="frontEndProject : ${frontEndProjects}">
-        <div class="card" style="width: 300px;">
-            <div class="card-divider" th:text="${frontEndProject.title}"></div>
+        <div class="sd-card-default border-right">
+            <div class="" th:text="${frontEndProject.title}"></div>
             <div class="card-section">
                 <h4 th:text="${frontEndProject.creator.username}"></h4>
                 <p>Date Created: <span th:text="${frontEndProject.creatingDate}"></span></p>
                 <form th:action="@{'/projects/' + ${frontEndProject.id} + '/single-project'}" th:method="GET">
                     <input type="hidden" name="idEdit" th:value="${frontEndProject.id}" />
-                    <button type="submit" class="button">View Project</button>
+                    <button type="submit" class="button sd-button">View Project</button>
                 </form>
             </div>
         </div>
     </div>
-    <form th:action="@{/dashboard/viewall}" th:method="GET">
-        <input type="hidden" value="1" name="viewAll" />
-        <button type="submit" class="button">View all Front-End</button>
-    </form>
+</div>
+<div class="row align-center">
+    <div class="columns small-2">
+        <form th:action="@{/dashboard/viewall}" th:method="GET">
+            <input type="hidden" value="1" name="viewAll" />
+            <button type="submit" class="button sd-button">All Front-End</button>
+        </form>
+    </div>
 </div>
 <div class="row">
     <div class="columns small-4" th:each="backEndProject : ${backEndProjects}" >
-        <div class="card" style="width: 300px;">
-            <div class="card-divider" th:text="${backEndProject.title}"></div>
+        <div class="sd-card-default border-right">
+            <div class="" th:text="${backEndProject.title}"></div>
             <div class="card-section">
                 <h4 th:text="${backEndProject.creator.username}"></h4>
                 <p>Date Created: <span th:text="${backEndProject.creatingDate}"></span></p>
                 <form th:action="@{'/projects/' + ${backEndProject.id} + '/single-project'}" th:method="GET">
                     <input type="hidden" name="idEdit" th:value="${backEndProject.id}" />
-                    <button type="submit" class="button">View Project</button>
+                    <button type="submit" class="button sd-button">View Project</button>
                 </form>
             </div>
         </div>
     </div>
-    <form th:action="@{/dashboard/viewall}" th:method="GET">
-        <input type="hidden" value="2" name="viewAll" />
-        <button type="submit" class="button">View all Back-End</button>
-    </form>
+</div>
+<div class="row align-center">
+    <div class="columns small-2">
+        <form th:action="@{/dashboard/viewall}" th:method="GET">
+            <input type="hidden" value="2" name="viewAll" />
+            <button type="submit" class="button sd-button">All Back-End</button>
+        </form>
+    </div>
 </div>
 
 
 
 
 
-
+<div th:replace="partials/footer :: footer"></div>
 
 
 
