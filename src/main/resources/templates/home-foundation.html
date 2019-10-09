@@ -5,6 +5,7 @@
     <title>Seeking Devs</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
@@ -65,16 +66,8 @@
         <div class="columns three sd-project-card"></div>
         <div class="columns three sd-project-card"></div>
     </div>
-    <footer>
-        <div class="row">
-            <div class="columns small-6">
 
-            </div>
-            <div class="columns small-6">
-
-            </div>
-        </div>
-    </footer>
+    <div th:replace="partials/footer :: footer"></div>
 </div>
 <!-- Compressed JavaScript-->
 <script src="/js/vendor/jquery.js"></script>
