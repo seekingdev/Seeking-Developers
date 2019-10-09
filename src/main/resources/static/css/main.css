@@ -121,12 +121,19 @@ h5 {
     padding: 3px;
 }
 
+.sd-list-card {
+    background-color: #2E3247;
+}
+
 /* Profile Cards */
 .card-profile-stats {
-    border: 1px solid #cacaca;
+    background-color: #2E3247;
     margin: 0 0 1.25rem;
     padding: 1.25rem;
-    background: #fefefe;
+}
+
+.list-group-item {
+    background-color: #2E3247;
 }
 
 .card-profile-stats .card-profile-stats-intro {
@@ -158,7 +165,7 @@ h5 {
     margin: 0;
     text-align: center;
     font-size: 1.5rem;
-    color: #0a0a0a;
+    color: #FFF;
     padding: 0.5rem;
     cursor: pointer;
 }
@@ -199,12 +206,10 @@ h5 {
 /* CSS List Group */
 .list-group {
     margin-bottom: 1rem;
-    border: 1px solid #e6e6e6;
     border-radius: 0;
     background: #fefefe;
     box-shadow: none;
     overflow: hidden;
-    color: #0a0a0a;
 }
 
 .list-group > :last-child {
@@ -213,7 +218,6 @@ h5 {
 
 .list-group-item {
     padding: 1rem;
-    border-bottom: 1px solid #e6e6e6;
 }
 
 .list-group-item > :last-child {
@@ -227,9 +231,9 @@ h5 {
     border: 1px solid #1779ba;
 }
 
-.list-group-item:hover, .list-group-item:focus {
-    background-color: #e6e6e6;
-}
+/*.list-group-item:hover, .list-group-item:focus {*/
+/*    background-color: #e6e6e6;*/
+/*}*/
 
 .list-group-item:hover.active, .list-group-item:focus.active {
     background-color: #1779ba;
@@ -290,6 +294,10 @@ footer {
 .pad-right {
     padding-right: 6px;
     margin-right: 6px;
+}
+
+.pad-top {
+    padding-top: 9px;
 }
 
 .border-right {
