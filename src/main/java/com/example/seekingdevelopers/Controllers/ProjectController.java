@@ -63,7 +63,7 @@ public class ProjectController {
         model.addAttribute("currentUser",loggedInUser);
         model.addAttribute("contributors", contributors);
         model.addAttribute("project", singleProject);
-        return "projects/single-project";
+        return "projects/single-project-foundation";
     }
 
     @PostMapping("/projects/{id}/single-project")
