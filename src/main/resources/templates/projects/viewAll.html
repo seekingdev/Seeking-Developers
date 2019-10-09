@@ -19,7 +19,11 @@
             <div class="card-divider" th:text="${frontEndProject.title}"></div>
             <div class="card-section">
                 <h4 th:text="${frontEndProject.creator.username}"></h4>
-                <p th:text="${frontEndProject.description}"></p>
+                <p>Date Created: <span th:text="${frontEndProject.creatingDate}"></span></p>
+                <form th:action="@{'/projects/' + ${frontEndProject.id} + '/single-project'}" th:method="GET">
+                    <input type="hidden" name="idEdit" th:value="${frontEndProject.id}" />
+                    <button type="submit" class="button">View Project</button>
+                </form>
             </div>
         </div>
     </div>
@@ -30,7 +34,11 @@
             <div class="card-divider" th:text="${backEndProject.title}"></div>
             <div class="card-section">
                 <h4 th:text="${backEndProject.creator.username}"></h4>
-                <p th:text="${backEndProject.description}"></p>
+                <p>Date Created: <span th:text="${backEndProject.creatingDate}"></span></p>
+                <form th:action="@{'/projects/' + ${backEndProject.id} + '/single-project'}" th:method="GET">
+                    <input type="hidden" name="idEdit" th:value="${backEndProject.id}" />
+                    <button type="submit" class="button">View Project</button>
+                </form>
             </div>
         </div>
 
