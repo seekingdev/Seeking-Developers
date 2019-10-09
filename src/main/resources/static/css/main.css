@@ -2,18 +2,39 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2B2E44;
+    color: lightgreen;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
     font-family: 'Roboto Mono', monospace;
+    color: #FFF;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFF;
+.top-bar {
+    background-color: #2E3247;
 }
+
+.sd-main-nav, .dropdown {
+    background-color: #2E3247 !important;
+    font-family: 'Roboto Mono', monospace;
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.sd-nav-text {
+    font-weight: bolder;
+    font-size: large;
+    font-style: italic;
+    text-shadow: #2B2E44;
+}
+
 .sd-landing-img {
     width: 100%;
 }
@@ -23,15 +44,35 @@ body {
     font-size: xx-large;
 }
 
+.sd-landing-img {
+    text-align: center;
+    position: relative;
+}
+
+.sd-landing-img img{
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: auto;
+    height: 256px;
+    opacity: 0.5%;
+}
+
 .sd-landing-slogan-text {
     font-weight: bold;
 }
 
-/*.sd-card-default {*/
-/*    margin: 3px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
+.sd-card-default {
+    text-align: center;
+    /*background-color: #2E3247;*/
+    height: auto;
+}
+
+.sd-card-default img {
+    height: 64px;
+    width: auto;
+    margin: 9px;
+}
 
 .sd-landing-slogan {
     height: 60vh;
@@ -49,27 +90,29 @@ body {
 }
 
 .sd-project-card {
+    background-color: #2E3247;
     height: 200px;
     width: 100%;
-    border: 1px solid lightgray;
+    border: 1px solid #2E3247;
     border-radius: 3px;
     margin: 6px;
     padding: 3px;
 }
 
 .sd-profile-projects:hover {
-    -webkit-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
-    -moz-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
-    box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+    -webkit-box-shadow: 0px 2px 29px -7px rgba(144,238,144,1);
+    -moz-box-shadow: 0px 2px 29px -7px rgba(144,238,144,1);
+    box-shadow: 0px 2px 29px -7px rgba(144,238,144,1);
 }
 
 .sd-project-card:hover {
-    -webkit-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
-    -moz-box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
-    box-shadow: 0px 2px 29px -7px rgba(150,123,182,1);
+    -webkit-box-shadow: 0px 2px 29px -7px rgba(144,238,144,1);
+    -moz-box-shadow: 0px 2px 29px -7px rgba(144,238,144,1);
+    box-shadow: 0px 2px 29px -7px rgba(144,238,144,1);
 }
 
 .sd-user-card {
+    background-color: #2E3247;
     width: 100%;
     height: auto;
     border: 1px solid lightgray;
@@ -78,12 +121,7 @@ body {
     padding: 3px;
 }
 
-.sd-open-projects {
-
-}
-
 /* Profile Cards */
-
 .card-profile-stats {
     border: 1px solid #cacaca;
     margin: 0 0 1.25rem;
@@ -129,7 +167,6 @@ body {
     display: none;
 }
 
-
 @media print, screen and (min-width: 64em) {
     .card-profile-stats .card-profile-stats-intro {
         -webkit-align-items: center;
@@ -160,8 +197,6 @@ body {
 }
 
 /* CSS List Group */
-
-
 .list-group {
     margin-bottom: 1rem;
     border: 1px solid #e6e6e6;
@@ -238,10 +273,6 @@ body {
     background-color: slateblue;
 }
 
-footer {
-    margin-top: 6%;
-}
-
 .sd-profile-img {
     width: 100%;
     height: auto;
@@ -250,3 +281,30 @@ footer {
 .sd-profile-bio {
     margin: 6px;
 }
+
+footer {
+    margin-top: 6%;
+}
+
+/* Utilities */
+.pad-right {
+    padding-right: 6px;
+    margin-right: 6px;
+}
+
+.border-right {
+    border-right: 1px solid lightgreen;
+    opacity: .5%;
+}
+
+.border-left {
+    border-left: 1px solid lightgreen;
+    opacity: .5%;
+}
+
+/* Buttons */
+.sd-button {
+    background-color: lightgreen;
+}
+
+
