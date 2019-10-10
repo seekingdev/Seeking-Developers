@@ -1,0 +1,17 @@
+.sd-login-main-wrapper {
+    height: 60vh;
+    width: 100vw;
+}
+
+.sd-login-form {
+    width: 300px;
+    height: 300px;
+}
+.sd-login-img {
+    height: 50%;
+}
+img.login-img {
+    opacity: .15;
+    height: 256px;
+    width: auto;
+}
