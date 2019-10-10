@@ -94,7 +94,7 @@ public class ProjectController {
             return "redirect:/dashboard";
         }
         model.addAttribute("project", editProject);
-        return "projects/edit";
+        return "projects/editProject-foundation";
     }
 
     @PostMapping("/projects/{id}/single-project/edit")

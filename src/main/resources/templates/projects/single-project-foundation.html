@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -15,29 +17,27 @@
 
 <div th:each="project : ${project}">
     <div class="row">
-    <div class="columns">
-        <div class="card">
-            <div class="card-divider">
-                <h1 th:text="${project.title}"></h1>
+        <div class="columns">
+            <div class="card">
+                <div class="card-divider">
+                    <h1 th:text="${project.title}"></h1>
+                </div>
+                <div class="columns" id="createDate">
+                    <h5>Date Created: <span th:text="${{project.creatingDate}}"></span></h5>
+                </div>
+                <div class="card-section">
+                    <h4> Created by:</h4>
+                    <h4 th:text="${project.creator.username}"></h4>
+                </div>
+                <div class="card-section">
+                    <p>Description: <span th:text="${project.description}"></span></p>
+                </div>
+                <div class="card-section">
+                    <p>Type of help needed: <span th:text="${project.dev_type.title}"></span></p>
+                </div>
             </div>
-            <div class="columns" id="createDate">
-                <h5>Date Created: <span th:text="${{project.creatingDate}}"></span></h5>
-            </div>
-            <div class="card-section">
-                <h4> Created by:</h4>
-                <h4 th:text="${project.creator.username}"></h4>
-            </div>
-            <div class="card-section">
-                <p>Description: <span th:text="${project.description}"></span></p>
-            </div>
-            <div class="card-section button-group">
-                <p>Type of help needed: <span th:text="${project.dev_type.title}"></span></p>
-                <a class="success button" th:if="${currentUser.id == project.creator.id}">Edit Project</a>
-                <a class="warning button" th:if="${currentUser.id != project.creator.id}">Request to Join</a>
-            </div>
-        </div>
 
-    </div>
+        </div>
     </div>
     <div class="row">
         <div class="columns small-4" th:each="user : ${contributors}">
@@ -53,7 +53,13 @@
         </div>
 
     </div>
+    <div th:if="${currentUser} == ${project.creator}">
+        <form th:action="@{'/projects/' + ${project.id} + '/single-project' + '/edit'}" th:method="GET">
+            <input type="hidden" name="editProject" th:value="${project.id}" />
+            <button th:type="submit" class="button success">Edit Project</button>
+        </form>
     </div>
+</div>
 
 
 
