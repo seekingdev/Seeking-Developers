@@ -409,6 +409,14 @@ footer {
     color: #2B2E44;
 }
 
+/* Home Page Projects */
+.sd-project-home {
+    text-align: center;
+}
+.sd-project-card img {
+    height: 64px;
+    width: auto;
+}
 
 
 
