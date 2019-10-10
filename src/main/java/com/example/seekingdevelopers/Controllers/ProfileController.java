@@ -58,6 +58,7 @@ public class ProfileController {
        model.addAttribute("completedProjects",completedProjectList);
         ArrayList<Project> projects = projectDao.findAllByCreatorOrderByCreatingDate(loggedinUser);
         model.addAttribute("projects", projects);
+
         return "users/profile-foundation";
     }
 
@@ -78,6 +79,7 @@ public class ProfileController {
         User loggedinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User currentUser = userDao.findOne(loggedinUser.getId());
         model.addAttribute("user", currentUser);
+
         return "users/editProfile";
     }
 
@@ -103,8 +105,6 @@ public class ProfileController {
         if(languages != null) {
             List<Language> languageList = new ArrayList<>();
             for (long langId : languages) {
-                System.out.println(user.getId());
-                System.out.println(langId);
                 Language language = languageDao.findOne(langId);
                 languageList.add(language);
             }

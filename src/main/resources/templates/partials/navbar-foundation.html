@@ -2,8 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <title>Nav Bar</title>
 <body>
-<nav th:fragment="navbar" class="top-bar sd-main-nav">
-    <div class="top-bar-left">
+<nav th:fragment="navbar" class="top-bar sd-main-nav" data-sticky-container="">
+    <div class="sticky  top-bar-left" data-sticky="" data-options="anchor: page; marginTop: 0; stickyOn: small;">
         <ul class="dropdown menu sd-main-nav" data-dropdown-menu="true">
             <li class="menu-text sd-main-nav sd-nav-text">SD</li>
             <li class="sd-main-nav">
