@@ -15,36 +15,36 @@
 
 <nav th:replace="partials/navbar-foundation :: navbar"></nav>
 
-<div class="sd-project-card border-right border-left">
+<div class="sd-card border-right border-left">
     <form th:action="@{'/projects/'+${project.id}+'/single-project/edit'}" th:object="${project}" onsubmit="return confirm('Are you sure you want to Edit this project?')">
         <div class="card-section">
             <h2 class="sd-landing-text">Edit Project</h2>
         </div>
         <div class="card-section">
-            <label>Title
+            <p>Title
                 <input type="text" th:field="${project.title}" />
-            </label>
+            </p>
         </div>
         <div class="card-section">
-            <label>Description
+            <p>Description
                 <input type="text" th:field="${project.description}" />
-            </label>
+            </p>
         </div>
         <div class="card-section">
-            <label>What type of help is needed?
+            <p>What type of help is needed?
                 <select class="" name="helpNeeded" id="helpNeeded">
                     <option value="1">Front-End</option>
                     <option value="2">Back-End</option>
                 </select>
-            </label>
+            </p>
         </div>
         <div class="card-section">
-            <label>Is the project complete?
+            <p>Is the project complete?
                 <select name="isComplete" id="isComplete">
                     <option value="false">No, it is not.</option>
                     <option value="true">Yes, the project is complete!</option>
                 </select>
-            </label>
+            </p>
         </div>
         <input type="hidden" th:field="*{creator}" />
         <input type="hidden" th:field="*{creatingDate}" />
@@ -56,10 +56,10 @@
     </form>
     <div class="card-section">
         <form th:action="@{'/projects/'+${project.id}+'/single-project'}" th:method="POST">
-            <label>Add Contributor
+            <p>Add Contributor
                 <input type="text" placeholder="Enter Username" name="contributor" id="contributor" />
                 <input class="button warning" type="submit" value="Add Contributor" />
-            </label>
+            </p>
         </form>
     </div>
     <div class="card-section">
