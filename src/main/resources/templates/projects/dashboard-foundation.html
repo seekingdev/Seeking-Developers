@@ -27,18 +27,10 @@
                 <p>Date Created: <span th:text="${frontEndProject.creatingDate}"></span></p>
                 <form th:action="@{'/projects/' + ${frontEndProject.id} + '/single-project'}" th:method="GET">
                     <input type="hidden" name="idEdit" th:value="${frontEndProject.id}" />
-                    <button type="submit" class="button sd-button">View Project</button>
+                    <button type="submit" class="button sd-success radius">View Project</button>
                 </form>
             </div>
         </div>
-    </div>
-</div>
-<div class="row align-center">
-    <div class="columns small-2">
-        <form th:action="@{/dashboard/viewall}" th:method="GET">
-            <input type="hidden" value="1" name="viewAll" />
-            <button type="submit" class="button sd-button">All Front-End</button>
-        </form>
     </div>
 </div>
 <div class="row">
@@ -50,23 +42,28 @@
                 <p>Date Created: <span th:text="${backEndProject.creatingDate}"></span></p>
                 <form th:action="@{'/projects/' + ${backEndProject.id} + '/single-project'}" th:method="GET">
                     <input type="hidden" name="idEdit" th:value="${backEndProject.id}" />
-                    <button type="submit" class="button sd-button">View Project</button>
+                    <button type="submit" class="button sd-success radius">View Project</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<div class="row align-center">
-    <div class="columns small-2">
-        <form th:action="@{/dashboard/viewall}" th:method="GET">
-            <input type="hidden" value="2" name="viewAll" />
-            <button type="submit" class="button sd-button">All Back-End</button>
-        </form>
+
+
+<div class="container">
+    <div class="row sd-cta">
+        <div class="button-group">
+            <form th:action="@{/dashboard/viewall}" th:method="GET">
+                <input type="hidden" value="1" name="viewAll" />
+                <button type="submit" class="button sd-success radius">View all Front-End</button>
+            </form>
+            <form th:action="@{/dashboard/viewall}" th:method="GET">
+                <input type="hidden" value="2" name="viewAll" />
+                <button type="submit" class="button primary radius">View all Back-End</button>
+            </form>
+        </div>
     </div>
 </div>
-
-
-
 
 
 <div th:replace="partials/footer :: footer"></div>
