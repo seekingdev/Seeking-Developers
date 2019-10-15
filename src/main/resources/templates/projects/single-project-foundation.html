@@ -9,6 +9,8 @@
     <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
 
 </head>
 <body>
@@ -18,8 +20,8 @@
 <div th:each="project : ${project}">
     <div class="row">
         <div class="columns">
-            <div class="card">
-                <div class="card-divider">
+            <div class="sd-card-default border-left border-right">
+                <div class="card-section">
                     <h1 th:text="${project.title}"></h1>
                 </div>
                 <div class="columns" id="createDate">
@@ -41,8 +43,8 @@
     </div>
     <div class="row">
         <div class="columns small-4" th:each="user : ${contributors}">
-            <div class="card">
-                <div class="card-divider" th:text="${user.username}"></div>
+            <div class="sd-card-default border-left border-right">
+                <div class="card-section" th:text="${user.username}"></div>
                 <div class="card-section">
                     <img th:src="${user.photo}" />
                 </div>
@@ -56,7 +58,7 @@
     <div th:if="${currentUser} == ${project.creator}">
         <form th:action="@{'/projects/' + ${project.id} + '/single-project' + '/edit'}" th:method="GET">
             <input type="hidden" name="editProject" th:value="${project.id}" />
-            <button th:type="submit" class="button success">Edit Project</button>
+            <button th:type="submit" class="button sd-success radius">Edit Project</button>
         </form>
     </div>
 </div>
