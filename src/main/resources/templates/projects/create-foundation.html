@@ -7,6 +7,9 @@
     <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+
 
 </head>
 <body>
@@ -16,42 +19,43 @@
 <form th:action="@{/projects/create}" th:method="POST" th:object="${project}">
     <div class="row">
         <div class="columns">
-            <h1>Create a Project</h1>
+            <h1 class="sd-landing-slogan-text">Create a Project</h1>
         </div>
     </div>
     <div class="row">
         <div class="columns">
-        <label>Title
+        <p>Title
             <input type="text" th:field="*{title}" />
             <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></p>
-        </label>
+        </p>
         </div>
     </div>
     <div class="row">
         <div class="columns">
-            <label>Description
+            <p>Description
                 <textarea th:field="*{description}"></textarea>
                 <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
-            </label>
+            </p>
         </div>
     </div>
     <div class="row">
         <div class="columns">
-            <label>What kind of help is needed?
+            <p>What kind of help is needed?
                 <select name="helpNeeded">
                     <option value="1">Front-End</option>
                     <option value="2">Back-End</option>
                 </select>
-            </label>
+            </p>
         </div>
     </div>
     <div class="row">
         <div class="columns">
-            <button class="button" type="submit">Create Project</button>
+            <button class="button sd-success radius" type="submit">Create Project</button>
         </div>
     </div>
 </form>
 
+<div th:replace="partials/footer :: footer"></div>
 
 <!-- Compressed JavaScript -->
 <script src="/js/vendor/jquery.js"></script>
