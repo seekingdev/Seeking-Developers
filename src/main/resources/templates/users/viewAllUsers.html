@@ -7,6 +7,8 @@
     <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
     <link rel="stylesheet" href="/css/app.css" />
     <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/main.css" />
 
 </head>
 <body>
@@ -15,14 +17,18 @@
 
 <div class="row">
     <div class="columns small-4" th:each="user : ${users}">
-        <div class="card" style="width: 300px;">
-            <div class="card-divider" th:text="${user.username}"></div>
+        <div class="sd-card-default border-right">
+            <h3 class="card-section" th:text="${user.username}"></h3>
             <div class="card-section">
             <img th:src="${user.photo}" />
             </div>
             <div class="card-section">
                 <h4 th:text="${user.dev_type.title}"></h4>
             </div>
+            <form th:action="@{'/users/' + ${user.id} + '/profile'}" th:method="GET">
+                <input type="hidden" name="id" th:value="${user.id}" />
+                <button type="submit" class="button sd-success radius">View Profile</button>
+            </form>
         </div>
     </div>
 </div>
