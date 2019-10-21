@@ -1,27 +1,60 @@
 <!DOCTYPE html>
-<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <th:block th:include="partials/header :: header" >
-    </th:block>
-    <link rel="stylesheet" href="/css/login.css" />
-    <link rel="stylesheet" href="/css/navbar.css"/>
-    <title>Error</title>
+
+    <meta charset="UTF-8"/>
+    <title>dashboard</title>
+    <!--<link rel="stylesheet" href="/css/dashboard.css"/>-->
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
 </head>
 <body>
 
-<nav th:replace="partials/navbar :: nav"></nav>
+<nav th:replace="partials/navbar-foundation :: navbar"></nav>
 
-<div class="login mx-auto" id="login-form" align="center">
-    <form th:action="@{'/'}" method="get">
-        <h2 style="color: black">Oops! There was an error.</h2>
-        <input type="submit" value="Home" />
-    </form>
 
+
+<!--400 Error with Dashboard-->
+
+
+<div class="row">
+    <div class="columns">
+        <form th:action="@{'/'}" method="get">
+            <h2 class="sd-steps">Oops! There was an error.</h2>
+            <input class="button sd-success radius" type="submit" value="Home" />
+        </form>
+    </div>
 </div>
 
 
 
-<footer th:replace="partials/footer :: footer"></footer>
+<div th:replace="partials/footer :: footer"></div>
+
+
+
+
+
+
+
+
+
+<!-- Compressed JavaScript -->
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/what-input.js"></script>
+<script src="/js/vendor/foundation.js"></script>
+<script src="/js/app.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
